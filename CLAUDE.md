@@ -46,7 +46,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Voeding: "fueled by nature", zo weinig mogelijk bewerkt. **Niet "plantaardig"** (Life Bar was wel plantaardig).
 - Niet vermelden: verhalen onderweg verzamelen, rustdagen, koken voor vreemden, een bed onderweg vragen.
 - **Niets over de reden van zijn vlucht of over familie in Iran** zonder uitdrukkelijk akkoord van Maziar. Ook het zwangerschapsverlies van Maziar en Jolien staat bewust niet op de site.
-- **Geen zelfpromotie** van de beheerders (geen Hotel Anywhere, geen Hi!).
+- **Geen zelfpromotie** van de beheerders (geen Hotel Anywhere, geen Hi!). Eén uitzondering, op uitdrukkelijke vraag van Maziar: de podcastaflevering Hotel Anywhere #25 (8 december 2026) staat in de kalender.
 - Bijschrift onder citaten: enkel "Maziar".
 - De vzw die gesteund wordt, komt pas met naam op de site als de samenwerking bevestigd is.
 

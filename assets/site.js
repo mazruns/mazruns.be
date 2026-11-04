@@ -232,6 +232,7 @@ const RUNCARDS = [];
 /* tbd:true = month known, exact day not; such events are listed but not marked in the calendar grid */
 const EVENTS = [
  {date:"2026-10-31",kind:{nl:"Voorbereiding",en:"Preparation"},title:{nl:"100 km",en:"100 km"},sub:{nl:"Onderdeel van de voorbereiding.",en:"Part of the preparation."}},
+ {date:"2026-12-08",kind:{nl:"Podcast",en:"Podcast"},title:{nl:"Hotel Anywhere #25 online",en:"Hotel Anywhere #25 goes live"},sub:{nl:"Het gesprek met Maziar, op Spotify, YouTube en alle podcastplatformen.",en:"The conversation with Maziar, on Spotify, YouTube and all podcast platforms."}},
  {date:"2026-12-15",tbd:true,kind:{nl:"Training",en:"Training"},title:{nl:"Meerdaags testblok",en:"Multi-day test block"},sub:{nl:"December 2026.",en:"December 2026."}},
  {date:"2027-02-08",tbd:true,kind:{nl:"Training",en:"Training"},title:{nl:"Laatste trainingsblok",en:"Final training block"},sub:{nl:"Begin februari 2027.",en:"Early February 2027."}},
  {date:"2027-02-20",tbd:true,kind:{nl:"Diner",en:"Dinner"},title:{nl:"Afscheidsdiner",en:"Farewell dinner"},sub:{nl:"Perzische tafel in Keerbergen.",en:"A Persian table in Keerbergen."}},
