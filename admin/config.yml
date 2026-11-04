@@ -35,6 +35,7 @@ collections:
             label: Evenementen
             label_singular: Evenement
             widget: list
+            add_to_top: true
             summary: "{{fields.datum}} · {{fields.titel.nl}}"
             fields:
               - { name: datum, label: Datum, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
@@ -64,6 +65,7 @@ collections:
             label: Etappes per land (kleuren de dagen in de kalender)
             label_singular: Etappe
             widget: list
+            add_to_top: true
             required: false
             summary: "{{fields.land.nl}} {{fields.van}} → {{fields.tot}}"
             fields:
@@ -95,6 +97,7 @@ collections:
             label: Video's
             label_singular: Video
             widget: list
+            add_to_top: true
             summary: "{{fields.titel.nl}}"
             fields:
               - { name: youtube_id, label: YouTube-id, widget: string, hint: "Het stuk na v= in de link, bv. dQw4w9WgXcQ" }
@@ -131,6 +134,7 @@ collections:
             label: Partners
             label_singular: Partner
             widget: list
+            add_to_top: true
             summary: "{{fields.naam}}"
             fields:
               - { name: naam, label: Naam, widget: string }
@@ -167,6 +171,7 @@ collections:
             label: Producten
             label_singular: Product
             widget: list
+            add_to_top: true
             summary: "{{fields.naam.nl}}"
             fields:
               - name: naam
@@ -209,6 +214,7 @@ collections:
             label: Drie cijfers (ook op de homepagina)
             label_singular: Cijfer
             widget: list
+            add_to_top: true
             min: 3
             max: 3
             summary: "{{fields.getal}} {{fields.label.nl}}"
@@ -239,6 +245,7 @@ collections:
             label: De voorbereiding (tijdslijn)
             label_singular: Stap
             widget: list
+            add_to_top: true
             summary: "{{fields.periode.nl}} · {{fields.titel.nl}}"
             fields:
               - name: periode
@@ -273,6 +280,7 @@ collections:
             label: Vragen en antwoorden
             label_singular: Vraag
             widget: list
+            add_to_top: true
             summary: "{{fields.vraag.nl}}"
             fields:
               - name: vraag
