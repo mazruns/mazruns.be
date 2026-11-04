@@ -90,4 +90,4 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 ## Lancering
 
-Zet in `build.py` `LAUNCHED = True` en draai `python3 build.py`. Dat haalt de `noindex` weg, zodat zoekmachines de site mogen tonen. Doe dit pas als de plaatshouders hierboven opgelost of verwijderd zijn.
+Gelanceerd op 4 november 2026: `LAUNCHED = True` in `build.py`. Zoekmachines mogen de site tonen; `build.py` maakt ook `robots.txt` (met `/admin/` uitgesloten) en `sitemap.xml`. Zet `LAUNCHED` op `False` om de site tijdelijk weer uit de zoekresultaten te halen.

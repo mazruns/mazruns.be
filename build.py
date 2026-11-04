@@ -293,7 +293,7 @@ PAGES["contact"] = ("contact", "Contact · Mazruns", hero(
 # Set LAUNCHED = True on launch day: removes the "noindex" so search engines may list the site.
 # ---------------------------------------------------------------------------
 import sys
-LAUNCHED = False
+LAUNCHED = True
 SITE_URL = "https://mazruns.be"
 DESCRIPTION = "Ooit moest Maziar Toghraie vluchten uit Iran. Op 1 maart 2027 loopt hij terug: van Leuven naar Iran, elke dag een marathon."
 ARTIFACT = "--artifact" in sys.argv
@@ -322,6 +322,16 @@ def head(title, is_index, file):
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 {common}
 </head>"""
+
+# robots.txt en sitemap.xml, enkel zinvol na de lancering
+if LAUNCHED and not ARTIFACT:
+    with open(os.path.join(OUT,"robots.txt"),"w") as f:
+        f.write(f"User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: {SITE_URL}/sitemap.xml\n")
+    with open(os.path.join(OUT,"sitemap.xml"),"w") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for name in PAGES:
+            f.write(f"  <url><loc>{SITE_URL}/{'' if name=='index' else name}</loc></url>\n")
+        f.write("</urlset>\n")
 
 for name,(pid,title,body) in PAGES.items():
     is_index = name=="index"
