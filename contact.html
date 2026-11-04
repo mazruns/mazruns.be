@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Ooit moest Maziar Toghraie vluchten uit Iran. Op 1 maart 2027 loopt hij terug: van Leuven naar Iran, elke dag een marathon.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact · Mazruns">
+<meta property="og:description" content="Ooit moest Maziar Toghraie vluchten uit Iran. Op 1 maart 2027 loopt hij terug: van Leuven naar Iran, elke dag een marathon.">
+<meta property="og:image" content="https://mazruns.be/assets/img/hero-dunes.jpg">
+<meta property="og:url" content="https://mazruns.be/contact.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<title>Contact · Mazruns</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="contact">
+<header class="nav" id="hdr"></header>
+<main>
+<section class="hero on-photo short">
+  <img src="assets/img/beach.jpg" alt="" style="object-position:50% 50%" fetchpriority="high">
+  <div class="wrap"><div class="over">
+    <p class="label" data-t="contact.crumb">Contact</p>
+    <h1><span data-t="contact.title">Loop mee</span></h1>
+    <p class="lede" data-t="contact.lede">Pers, partners, en lopers die een stuk van de route willen meelopen.</p>
+    <div class="cta-row"></div>
+  </div></div>
+</section>
+<section class="band"><div class="wrap two" style="display:grid;gap:3rem">
+  <form class="form" id="contactForm">
+    <label><span data-t="form.name">Naam</span><input id="f-name" name="name" required></label>
+    <label><span data-t="form.email">E-mail</span><input id="f-email" name="email" type="email" required></label>
+    <label><span data-t="form.why">Waarvoor</span><select id="f-why" name="why">
+      <option data-t="form.o1">Pers</option><option data-t="form.o2">Partner</option><option data-t="form.o3">Een stuk meelopen</option><option data-t="form.o4">Iets anders</option></select></label>
+    <label><span data-t="form.msg">Bericht</span><textarea id="f-msg" name="msg" required></textarea></label>
+    <div><button class="btn fill" type="submit" data-t="form.send">Verstuur</button></div>
+    <p class="toast" id="formToast" hidden></p>
+  </form>
+  <div class="stack lg">
+    <div class="card"><span class="pill">PDF</span><h3 data-t="contact.press">Perskit</h3><p class="s" data-t="contact.press.p"></p><span class="link muted" data-t="shop.soon.long"></span></div>
+    <div class="card"><span class="pill">Instagram</span><p><a href="https://www.instagram.com/maz.runs/">@maz.runs</a> · <a href="https://www.instagram.com/lifebar_be/">@lifebar_be</a></p></div>
+  </div>
+</div></section>
+
+</main>
+<footer id="ftr"></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
