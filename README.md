@@ -24,7 +24,7 @@ Elke wijziging op `main` staat binnen een minuut online. Elke andere tak krijgt 
 
 Ga naar [mazruns.be/admin](https://mazruns.be/admin) en meld je aan met GitHub. Je hebt schrijfrechten op deze repository nodig. Wat je opslaat, staat binnen een minuut online.
 
-Het inloggen loopt via een kleine hulpdienst (`sveltia-cms-auth.hinnovation.workers.dev`, in het Cloudflare-account van Hans) en de GitHub OAuth App "Hotel Anywhere CMS". Beide worden gedeeld met hotelanywhere.world. Wil je dat loskoppelen, zet dan een eigen [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) in het Cloudflare-account Mazruns, maak een OAuth App aan onder de GitHub-organisatie mazruns en pas `base_url` in `admin/config.yml` aan.
+Het inloggen loopt via een eigen hulpdienst van Mazruns: de Cloudflare Worker `cms-login` (code in [mazruns/cms-login](https://github.com/mazruns/cms-login), draait op cms-login.mazruns.workers.dev) en de GitHub OAuth App "Mazruns CMS" onder de organisatie mazruns. Niets wordt gedeeld met andere sites.
 
 ## Aanpassen
 

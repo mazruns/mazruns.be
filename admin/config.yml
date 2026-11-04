@@ -2,7 +2,7 @@ backend:
   name: github
   repo: mazruns/mazruns.be
   branch: main
-  base_url: https://sveltia-cms-auth.hinnovation.workers.dev
+  base_url: https://cms-login.mazruns.workers.dev
 
 # simple: wat je opslaat gaat meteen online (binnen een minuut).
 publish_mode: simple
