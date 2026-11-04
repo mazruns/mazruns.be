@@ -1,0 +1,20 @@
+{
+  "intro": {
+    "nl": "Schoenen, kledij, voeding, verzekering, kilometers. Elke partner krijgt hier een plek, en een plek in de vlog van onderweg.",
+    "en": "Shoes, clothing, food, insurance, kilometres. Every partner gets a place here, and a place in the vlog from the road.",
+    "fa": ""
+  },
+  "lege_plekken": 5,
+  "partners": [
+    {
+      "naam": "AfterLife",
+      "rol": {
+        "nl": "Perzische tafels",
+        "en": "Persian tables",
+        "fa": ""
+      },
+      "url": "https://www.lifebar.be/",
+      "logo": ""
+    }
+  ]
+}

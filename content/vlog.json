@@ -1,0 +1,52 @@
+{
+  "kanaal": "https://www.youtube.com/@maz.runs",
+  "intro": {
+    "nl": "Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.",
+    "en": "A short video for every stage. Subscribe to the channel and don't miss a kilometre.",
+    "fa": ""
+  },
+  "videos": [
+    {
+      "youtube_id": "VIDEO_ID_1",
+      "uitgelicht": true,
+      "titel": {
+        "nl": "#0 Waarom ik loop",
+        "en": "#0 Why I run",
+        "fa": ""
+      },
+      "ondertitel": {
+        "nl": "Leuven, voor het vertrek",
+        "en": "Leuven, before departure",
+        "fa": ""
+      }
+    },
+    {
+      "youtube_id": "VIDEO_ID_2",
+      "uitgelicht": false,
+      "titel": {
+        "nl": "#1 De eerste kilometers",
+        "en": "#1 The first kilometres",
+        "fa": ""
+      },
+      "ondertitel": {
+        "nl": "Etappe 1",
+        "en": "Stage 1",
+        "fa": ""
+      }
+    },
+    {
+      "youtube_id": "VIDEO_ID_3",
+      "uitgelicht": false,
+      "titel": {
+        "nl": "#2 Een stuk meelopen",
+        "en": "#2 Running part of the way",
+        "fa": ""
+      },
+      "ondertitel": {
+        "nl": "Lopers onderweg",
+        "en": "Runners along the route",
+        "fa": ""
+      }
+    }
+  ]
+}

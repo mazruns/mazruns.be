@@ -1,0 +1,195 @@
+{
+  "titel": {
+    "nl": "Elke dag een marathon, naar waar zijn verhaal begon",
+    "en": "A marathon every day, back to where his story began",
+    "fa": "هر روز یک ماراتن، تا جایی که داستانش آغاز شد"
+  },
+  "ondertitel": {
+    "nl": "Van België naar de stad waar ik geboren werd",
+    "en": "From Belgium to the city where I was born",
+    "fa": ""
+  },
+  "intro": {
+    "nl": "Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
+    "en": "Not to prove anything, he says, but to honour where he comes from. His future is in Belgium. Iran made him who he is.",
+    "fa": ""
+  },
+  "waarom_titel": {
+    "nl": "Waarom hij loopt",
+    "en": "Why he runs",
+    "fa": ""
+  },
+  "waarom_tekst": {
+    "nl": "Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen. Misschien omdat een deel van mij nog altijd onderweg is. Misschien omdat ik wil voelen hoe het is om terug te keren naar de plek waar mijn verhaal begon.",
+    "en": "Not because I want to prove something. But because I want to understand something. Perhaps because a part of me is still on the road. Perhaps because I want to feel what it is like to return to the place where my story began.",
+    "fa": ""
+  },
+  "cijfers": [
+    {
+      "getal": "5.000+",
+      "label": {
+        "nl": "kilometer",
+        "en": "kilometres",
+        "fa": "کیلومتر"
+      }
+    },
+    {
+      "getal": "42",
+      "label": {
+        "nl": "km per dag",
+        "en": "km per day",
+        "fa": "کیلومتر در روز"
+      }
+    },
+    {
+      "getal": "4–6",
+      "label": {
+        "nl": "maanden",
+        "en": "months",
+        "fa": "ماه"
+      }
+    }
+  ],
+  "voorbereiding": [
+    {
+      "periode": {
+        "nl": "3 jaar",
+        "en": "3 years",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Onafgebroken training",
+        "en": "Training without a break",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "",
+        "en": "",
+        "fa": ""
+      }
+    },
+    {
+      "periode": {
+        "nl": "feb 2026",
+        "en": "Feb 2026",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Marathon des Sables Atlantic Coast",
+        "en": "Marathon des Sables Atlantic Coast",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Marokko. 120 km in drie dagen, zelfvoorzienend met 9 kg op de rug. Tiende bij de mannen.",
+        "en": "Morocco. 120 km in three days, self-supported with 9 kg on his back. Tenth among the men.",
+        "fa": ""
+      }
+    },
+    {
+      "periode": {
+        "nl": "mei 2026",
+        "en": "May 2026",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "GTLC",
+        "en": "GTLC",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "88 km en 3.250 hoogtemeters.",
+        "en": "88 km with 3,250 m of climbing.",
+        "fa": ""
+      }
+    },
+    {
+      "periode": {
+        "nl": "sep 2026",
+        "en": "Sep 2026",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Testblok",
+        "en": "Test block",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "145 km in drie dagen.",
+        "en": "145 km in three days.",
+        "fa": ""
+      }
+    },
+    {
+      "periode": {
+        "nl": "31 okt 2026",
+        "en": "31 Oct 2026",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "100 km",
+        "en": "100 km",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "",
+        "en": "",
+        "fa": ""
+      }
+    }
+  ],
+  "route_opmerking": {
+    "nl": "indicatieve route, etappes volgen na vertrek",
+    "en": "indicative route, stages follow after departure",
+    "fa": ""
+  },
+  "faq": [
+    {
+      "vraag": {
+        "nl": "Waar slaapt hij?",
+        "en": "Where does he sleep?",
+        "fa": ""
+      },
+      "antwoord": {
+        "nl": "In een camper.",
+        "en": "In a camper van.",
+        "fa": ""
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Wat eet hij?",
+        "en": "What does he eat?",
+        "fa": ""
+      },
+      "antwoord": {
+        "nl": "“Fueled by nature”: zo weinig mogelijk bewerkte voeding.",
+        "en": "“Fueled by nature”: as little processed food as possible.",
+        "fa": ""
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Wie volgt hem?",
+        "en": "Who follows him?",
+        "fa": ""
+      },
+      "antwoord": {
+        "nl": "Zijn vrouw Jolien reist mee in de camper. Onderweg nodigt Maziar lopers uit om een stuk van de route mee te lopen.",
+        "en": "His wife Jolien travels with him in the camper van. Along the way, Maziar invites runners to join him for part of the route.",
+        "fa": ""
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Hoe eindigt het?",
+        "en": "How does it end?",
+        "fa": ""
+      },
+      "antwoord": {
+        "nl": "Dat ligt niet vast. Het kan in Iran zijn, of aan de grens. De veiligheid van Maziar en zijn familie gaat boven het verhaal.",
+        "en": "That isn't decided. It may be in Iran, or at the border. The safety of Maziar and his family comes before the story.",
+        "fa": ""
+      }
+    }
+  ]
+}

@@ -1,5 +1,17 @@
-import os
+import os, json
 OUT = os.path.dirname(os.path.abspath(__file__))
+
+# Inhoud die via /admin (Sveltia CMS) bewerkt wordt: content/*.json.
+# Die wordt hier gebundeld tot assets/content.js, zodat site.js ze kan lezen.
+CONTENT = {}
+for name in ["deloop","kalender","vlog","partners","shop"]:
+    with open(os.path.join(OUT,"content",name+".json"), encoding="utf-8") as f:
+        CONTENT[name] = json.load(f)
+with open(os.path.join(OUT,"assets","content.js"),"w",encoding="utf-8") as f:
+    f.write("/* Gegenereerd door build.py uit content/*.json. Niet bewerken: pas de JSON aan of gebruik /admin. */\n")
+    f.write("window.CONTENT = " + json.dumps(CONTENT, ensure_ascii=False) + ";\n")
+YT = CONTENT["vlog"].get("kanaal") or "https://www.youtube.com/@maz.runs"
+
 FONTS = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;700&display=swap'
 I = "assets/img/"
 
@@ -34,11 +46,9 @@ NEWS = '''<section class="band dark"><div class="wrap news">
   <p class="toast" id="newsToast" hidden></p>
 </div></section>'''
 
-FACTS = '''<div class="facts">
-  <div class="fact"><b>5.000+</b><span data-t="stat.km">kilometer</span></div>
-  <div class="fact"><b>42</b><span data-t="stat.day">km per dag</span></div>
-  <div class="fact"><b>4–6</b><span data-t="stat.months">maanden</span></div>
-</div>'''
+FACTS = '<div class="facts">' + "".join(
+    f'<div class="fact"><b>{c["getal"]}</b><span data-t="stat.{i}">{c["label"]["nl"]}</span></div>'
+    for i,c in enumerate(CONTENT["deloop"]["cijfers"][:3])) + '</div>'
 
 PAGES = {}
 
@@ -154,12 +164,7 @@ PAGES["deloop"] = ("deloop", "De loop · Mazruns", hero(
 </div></section>
 <section class="band alt"><div class="wrap two" style="display:grid;gap:3rem">
   <div class="stack"><p class="label" data-t="run.route">De route</p><h2 data-t="run.route.h">Leuven → Iran</h2><p class="note" data-t="route.note">indicatieve route, etappes volgen na vertrek</p></div>
-  <div>
-    <details><summary data-t="faq.q1">Waar slaapt hij?</summary><p data-t="faq.a1"></p></details>
-    <details><summary data-t="faq.q2">Wat eet hij?</summary><p data-t="faq.a2"></p></details>
-    <details><summary data-t="faq.q3">Wie volgt hem?</summary><p data-t="faq.a3"></p></details>
-    <details><summary data-t="faq.q4">Hoe eindigt het?</summary><p data-t="faq.a4"></p></details>
-  </div>
+  <div id="faq"></div>
 </div></section>
 {NEWS}
 ''')
@@ -190,12 +195,12 @@ PAGES["vlog"] = ("vlog", "Vlog · Mazruns", hero(
   "dune-wide.jpg","50% 50%","vlog.crumb","Vlog",
   '<span data-t="vlog.title">Volg de tocht</span>',None,None,
   "vlog.lede","Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.",
-  '<a class="btn fill" href="https://www.youtube.com/@maz.runs" data-t="vlog.sub">Abonneer op YouTube</a>',short=True,credit="Marathon des Sables") + '''
+  f'<a class="btn fill" href="{YT}" data-t="vlog.sub">Abonneer op YouTube</a>',short=True,credit="Marathon des Sables") + f'''
 <section class="band"><div class="wrap">
   <div id="vlogFeatured"></div>
 </div></section>
 <section class="band alt"><div class="wrap stack lg">
-  <div class="head"><div class="stack"><p class="label" data-t="vlog.all">Alle video's</p></div><a class="link" href="https://www.youtube.com/@maz.runs" data-t="vlog.more">Alle video's op YouTube</a></div>
+  <div class="head"><div class="stack"><p class="label" data-t="vlog.all">Alle video's</p></div><a class="link" href="{YT}" data-t="vlog.more">Alle video's op YouTube</a></div>
   <div class="tiles three" id="vlogCards"></div>
 </div></section>
 ''' + NEWS)
@@ -329,10 +334,11 @@ for name,(pid,title,body) in PAGES.items():
 {body}
 </main>
 <footer id="ftr"></footer>
+<script src="assets/content.js"></script>
 <script src="assets/site.js"></script>
 </body>""" + ("" if bare else "\n</html>\n")
     if bare:
         html = html.replace('<body data-page="home">','').replace('</body>','')
-        html = html.replace('<script src="assets/site.js"></script>','<script>document.body.dataset.page="home";</script>\n<script src="assets/site.js"></script>')
+        html = html.replace('<script src="assets/content.js"></script>','<script>document.body.dataset.page="home";</script>\n<script src="assets/content.js"></script>')
     with open(os.path.join(OUT, file),"w") as f: f.write(html)
     print("wrote", file, len(html), "(artifact)" if ARTIFACT else "(site)")

@@ -14,20 +14,29 @@ Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2
 
 | Bestand | Wat erin staat |
 |---|---|
-| `assets/site.js` | Alle teksten in drie talen (woordenboek `T`: `nl`, `en`, `fa`) en alle lijsten met inhoud |
+| `content/*.json` | De inhoud die Jolien via `/admin` beheert: De loop, Kalender, Vlog, Partners, Shop. Elke tekst heeft `nl`, `en` en `fa` |
+| `admin/` | Het beheerscherm (Sveltia CMS): `config.yml` beschrijft de velden, `sveltia-cms.js` is de CMS zelf |
+| `assets/content.js` | Gegenereerd door `build.py` uit `content/*.json`. Nooit rechtstreeks bewerken |
+| `assets/site.js` | De vaste teksten in drie talen (woordenboek `T`: `nl`, `en`, `fa`), de rest van de inhoud (Verhaal, Steun, homepagina) en alle pagina-logica |
 | `build.py` | De opbouw van elke pagina. Genereert de `.html`-bestanden |
 | `assets/site.css` | Vormgeving, merkkleuren, lettertypes |
 | `assets/img/` | Foto's (max 2400 px lange zijde) en het favicon |
 | `*.html` | Gegenereerd door `build.py`. Nooit rechtstreeks bewerken |
 
-### Inhoud aanpassen (meestal in `assets/site.js`)
+### Inhoud aanpassen
 
-- **Teksten**: zoek de sleutel in `T`. Pas `nl` en `en` altijd samen aan. `fa` (Farsi) mag ontbreken; dan toont de site Engels.
-- **Kalender**: lijst `EVENTS`. Velden: `date` (JJJJ-MM-DD), `kind` (label), `title`, `sub`. Zet `tbd:true` als enkel de maand vastligt; zo'n item komt in de lijst maar niet in het kalenderraster.
-- **Etappes per land**: lijst `STAGES`, met `from`, `to`, `country` en `color`. Elke etappe kleurt zijn dagen in de kalender en verschijnt in de legende. Gebruik per land een vaste kleur, afgeleid van de merkkleuren.
-- **Tijdslijn** (pagina Verhaal): `TIMELINE`. **Voorbereiding** (pagina De loop): `PREP`.
-- **Vlog**: `VLOG`, met het YouTube-id van elke video. **Partners**: `PARTNERS`. **Steun**: `FUND` (opgehaald bedrag, doel, verdeling, bedragen). **Shop**: `PRODUCTS`.
-- **Tegels op de homepagina**: `LIFE`. **Fotomuur op De loop**: `GALLERY`.
+**Via `/admin`** (Jolien): De loop, Kalender, Vlog, Partners en Shop. Opslaan = meteen online. De velden staan in `admin/config.yml`; wat daar niet in staat, kan Jolien niet aanpassen.
+
+**In `content/*.json`** (Claude, zelfde inhoud als `/admin`):
+- **Kalender** `kalender.json`: `evenementen` met `datum` (JJJJ-MM-DD), `soort`, `titel`, `tekst`. `enkel_maand: true` als enkel de maand vastligt; zo'n item komt in de lijst maar niet in het kalenderraster. `etappes` (`van`, `tot`, `land`, `kleur`) kleuren hun dagen in de kalender; één vaste kleur per land, afgeleid van de merkkleuren.
+- **De loop** `deloop.json`: titel, intro, de drie cijfers (ook op de homepagina), "waarom hij loopt", de voorbereiding, de FAQ.
+- **Vlog** `vlog.json`: kanaal-url en video's met YouTube-id. **Partners** `partners.json`: partners en het aantal lege plekken. **Shop** `shop.json`: producten met prijs (leeg = binnenkort).
+- Na een wijziging: `python3 build.py` (maakt `assets/content.js` en de html opnieuw). Cloudflare doet dat zelf bij elke push.
+
+**In `assets/site.js`** (enkel Claude):
+- **Teksten**: zoek de sleutel in `T`. Pas `nl` en `en` altijd samen aan. `fa` (Farsi) mag ontbreken; dan toont de site Engels. Teksten die ook in `content/*.json` staan, worden door die bestanden overschreven.
+- **Tijdslijn** (pagina Verhaal): `TIMELINE`. **Steun**: `FUND` (opgehaald bedrag, doel, verdeling, bedragen). **Tegels op de homepagina**: `LIFE`. **Fotomuur op De loop**: `GALLERY`.
+- Wil Jolien iets kunnen aanpassen dat nu nog in `site.js` zit? Verhuis het naar een `content/*.json`, voeg de velden toe in `admin/config.yml` en lees het uit `window.CONTENT` in `site.js`.
 
 ### Pagina-opbouw aanpassen
 
@@ -65,7 +74,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 ## Werkwijze
 
-- Kleine wijzigingen (een kalenderitem, een tekstcorrectie) mogen rechtstreeks op `main`.
+- Kleine wijzigingen (een kalenderitem, een tekstcorrectie) mogen rechtstreeks op `main`. Wat via `/admin` wordt opgeslagen, komt ook rechtstreeks op `main`.
 - Grotere wijzigingen (nieuwe pagina, andere opbouw, nieuwe foto's) op een aparte tak met een pull request. Cloudflare maakt automatisch een voorbeeldlink; Hans keurt goed voor het live gaat.
 - Leg in elke commit in gewone taal uit wat er veranderde.
 
