@@ -1,0 +1,291 @@
+backend:
+  name: github
+  repo: mazruns/mazruns.be
+  branch: main
+  base_url: https://sveltia-cms-auth.hinnovation.workers.dev
+
+# simple: wat je opslaat gaat meteen online (binnen een minuut).
+publish_mode: simple
+media_folder: assets/img/upload
+public_folder: assets/img/upload
+locale: nl
+show_preview_links: false
+
+# Elke tekst heeft drie vakjes: Nederlands, Engels, Farsi.
+# Farsi mag leeg blijven, dan toont de site het Engels.
+
+collections:
+  - name: site
+    label: Website
+    files:
+
+      - name: kalender
+        label: Kalender
+        file: content/kalender.json
+        format: json
+        fields:
+          - name: intro
+            label: Introtekst bovenaan
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - name: evenementen
+            label: Evenementen
+            label_singular: Evenement
+            widget: list
+            summary: "{{fields.datum}} · {{fields.titel.nl}}"
+            fields:
+              - { name: datum, label: Datum, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: enkel_maand, label: "Enkel de maand ligt vast (dag nog niet)", widget: boolean, default: false, hint: "Aan: het staat in de lijst, maar niet in het kalenderraster." }
+              - name: soort
+                label: Soort (korte label, bv. Training, Diner, Vertrek)
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: titel
+                label: Titel
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: tekst
+                label: Korte tekst
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string, required: false }
+                  - { name: en, label: Engels, widget: string, required: false }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+          - name: etappes
+            label: Etappes per land (kleuren de dagen in de kalender)
+            label_singular: Etappe
+            widget: list
+            required: false
+            summary: "{{fields.land.nl}} {{fields.van}} → {{fields.tot}}"
+            fields:
+              - { name: van, label: Van, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: tot, label: Tot en met, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - name: land
+                label: Land
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - { name: kleur, label: Kleur, widget: color, default: "#123C74", hint: "Merkkleuren: navy #123C74, roest #9C421C, salie #587D55." }
+
+      - name: vlog
+        label: Vlog
+        file: content/vlog.json
+        format: json
+        fields:
+          - { name: kanaal, label: Link naar het YouTube-kanaal, widget: string }
+          - name: intro
+            label: Introtekst bovenaan
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - name: videos
+            label: Video's
+            label_singular: Video
+            widget: list
+            summary: "{{fields.titel.nl}}"
+            fields:
+              - { name: youtube_id, label: YouTube-id, widget: string, hint: "Het stuk na v= in de link, bv. dQw4w9WgXcQ" }
+              - { name: uitgelicht, label: Uitgelicht (grote video bovenaan en op de homepagina), widget: boolean, default: false }
+              - name: titel
+                label: Titel
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: ondertitel
+                label: Ondertitel
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string, required: false }
+                  - { name: en, label: Engels, widget: string, required: false }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+
+      - name: partners
+        label: Partners
+        file: content/partners.json
+        format: json
+        fields:
+          - name: intro
+            label: Introtekst bovenaan
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - { name: lege_plekken, label: Aantal lege plekken ("jouw logo hier"), widget: number, value_type: int, min: 0, max: 12, default: 5 }
+          - name: partners
+            label: Partners
+            label_singular: Partner
+            widget: list
+            summary: "{{fields.naam}}"
+            fields:
+              - { name: naam, label: Naam, widget: string }
+              - name: rol
+                label: Rol (bv. Perzische tafels, schoenen)
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - { name: url, label: Website, widget: string, required: false }
+              - { name: logo, label: Logo (liefst png of svg met doorzichtige achtergrond), widget: image, required: false, choose_url: false }
+
+      - name: shop
+        label: Shop
+        file: content/shop.json
+        format: json
+        fields:
+          - name: intro
+            label: Introtekst bovenaan
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - name: verzending
+            label: Tekst over verzending
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: string }
+              - { name: en, label: Engels, widget: string }
+              - { name: fa, label: Farsi, widget: string, required: false }
+          - name: producten
+            label: Producten
+            label_singular: Product
+            widget: list
+            summary: "{{fields.naam.nl}}"
+            fields:
+              - name: naam
+                label: Naam
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - { name: prijs, label: Prijs in euro (leeg = "binnenkort"), widget: number, value_type: float, required: false, min: 0 }
+              - { name: foto, label: Foto, widget: image, required: false, choose_url: false }
+
+      - name: deloop
+        label: De loop
+        file: content/deloop.json
+        format: json
+        fields:
+          - name: titel
+            label: Titel bovenaan
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: string }
+              - { name: en, label: Engels, widget: string }
+              - { name: fa, label: Farsi, widget: string, required: false }
+          - name: ondertitel
+            label: Ondertitel
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: string }
+              - { name: en, label: Engels, widget: string }
+              - { name: fa, label: Farsi, widget: string, required: false }
+          - name: intro
+            label: Introtekst
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - name: cijfers
+            label: Drie cijfers (ook op de homepagina)
+            label_singular: Cijfer
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.getal}} {{fields.label.nl}}"
+            fields:
+              - { name: getal, label: Getal, widget: string }
+              - name: label
+                label: Wat het is
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+          - name: waarom_titel
+            label: Kop "Waarom hij loopt"
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: string }
+              - { name: en, label: Engels, widget: string }
+              - { name: fa, label: Farsi, widget: string, required: false }
+          - name: waarom_tekst
+            label: Tekst "Waarom hij loopt"
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: text }
+              - { name: en, label: Engels, widget: text }
+              - { name: fa, label: Farsi, widget: text, required: false }
+          - name: voorbereiding
+            label: De voorbereiding (tijdslijn)
+            label_singular: Stap
+            widget: list
+            summary: "{{fields.periode.nl}} · {{fields.titel.nl}}"
+            fields:
+              - name: periode
+                label: Wanneer (bv. feb 2026)
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: titel
+                label: Titel
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: tekst
+                label: Korte tekst
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string, required: false }
+                  - { name: en, label: Engels, widget: string, required: false }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+          - name: route_opmerking
+            label: Opmerking bij de route
+            widget: object
+            fields:
+              - { name: nl, label: Nederlands, widget: string }
+              - { name: en, label: Engels, widget: string }
+              - { name: fa, label: Farsi, widget: string, required: false }
+          - name: faq
+            label: Vragen en antwoorden
+            label_singular: Vraag
+            widget: list
+            summary: "{{fields.vraag.nl}}"
+            fields:
+              - name: vraag
+                label: Vraag
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: string }
+                  - { name: en, label: Engels, widget: string }
+                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: antwoord
+                label: Antwoord
+                widget: object
+                fields:
+                  - { name: nl, label: Nederlands, widget: text }
+                  - { name: en, label: Engels, widget: text }
+                  - { name: fa, label: Farsi, widget: text, required: false }

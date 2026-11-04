@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <title>Mazruns - beheer</title>
+  </head>
+  <body>
+    <!--
+      Sveltia CMS, zelf gehost (zelfde bestand als op hotelanywhere.world).
+      Zo blijft /admin werken als een CDN hapert.
+      Opwaarderen: nieuwe versie van
+      https://unpkg.com/@sveltia/cms@<versie>/dist/sveltia-cms.js
+      downloaden en dit bestand vervangen.
+    -->
+    <script src="/admin/sveltia-cms.js" type="module"></script>
+
+    <nav class="mz-links" aria-label="Snelkoppelingen">
+      <a href="https://mazruns.be/" target="_blank" rel="noopener">De site</a>
+    </nav>
+
+    <style>
+      .mz-links {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        z-index: 2147483647;
+        display: flex;
+        gap: 8px;
+        font: 500 12px/1 ui-sans-serif, system-ui, sans-serif;
+      }
+      .mz-links a {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #123c74;
+        color: #f1ede6;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+      .mz-links a:hover,
+      .mz-links a:focus-visible {
+        opacity: 1;
+      }
+    </style>
+  </body>
+</html>

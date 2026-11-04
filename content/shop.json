@@ -1,0 +1,50 @@
+{
+  "intro": {
+    "nl": "Elke aankoop steunt de tocht. Het assortiment en de prijzen zijn voorlopig.",
+    "en": "Every purchase supports the run. Range and prices are provisional.",
+    "fa": ""
+  },
+  "verzending": {
+    "nl": "Verzending in België en Nederland. Afhalen in Leuven kan ook.",
+    "en": "Shipping within Belgium and the Netherlands, or pick up in Leuven.",
+    "fa": ""
+  },
+  "producten": [
+    {
+      "naam": {
+        "nl": "T-shirt Leuven → Iran",
+        "en": "T-shirt Leuven → Iran",
+        "fa": ""
+      },
+      "prijs": 35,
+      "foto": ""
+    },
+    {
+      "naam": {
+        "nl": "Pet",
+        "en": "Cap",
+        "fa": ""
+      },
+      "prijs": 25,
+      "foto": ""
+    },
+    {
+      "naam": {
+        "nl": "Perzische kruidenmix AfterLife",
+        "en": "AfterLife Persian spice mix",
+        "fa": ""
+      },
+      "prijs": 12,
+      "foto": ""
+    },
+    {
+      "naam": {
+        "nl": "Fotoprint van onderweg",
+        "en": "Photo print from the road",
+        "fa": ""
+      },
+      "prijs": null,
+      "foto": ""
+    }
+  ]
+}

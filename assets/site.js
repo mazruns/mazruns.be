@@ -220,36 +220,18 @@ const TIMELINE = [
  {y:"26 jul 2026",title:{nl:"Life Bar sluit",en:"Life Bar closes"},txt:{nl:"Na negen jaar, uit eigen keuze. AfterLife begint.",en:"After nine years, by choice. AfterLife begins."}},
  {y:"mrt 2027",title:{nl:"Richting Iran",en:"Towards Iran"},txt:{nl:"Vertrek in Leuven, te voet.",en:"Departure from Leuven, on foot."}}
 ];
-/* The preparation, shown as a list on "De loop" */
-const PREP = [
- {y:{nl:"3 jaar",en:"3 years"},title:{nl:"Onafgebroken training",en:"Training without a break"},txt:{nl:"",en:""}},
- {y:{nl:"feb 2026",en:"Feb 2026"},title:{nl:"Marathon des Sables Atlantic Coast",en:"Marathon des Sables Atlantic Coast"},txt:{nl:"Marokko. 120 km in drie dagen, zelfvoorzienend met 9 kg op de rug. Tiende bij de mannen.",en:"Morocco. 120 km in three days, self-supported with 9 kg on his back. Tenth among the men."}},
- {y:{nl:"mei 2026",en:"May 2026"},title:{nl:"GTLC",en:"GTLC"},txt:{nl:"88 km en 3.250 hoogtemeters.",en:"88 km with 3,250 m of climbing."}},
- {y:{nl:"sep 2026",en:"Sep 2026"},title:{nl:"Testblok",en:"Test block"},txt:{nl:"145 km in drie dagen.",en:"145 km in three days."}},
- {y:{nl:"31 okt 2026",en:"31 Oct 2026"},title:{nl:"100 km",en:"100 km"},txt:{nl:"",en:""}}
-];
+/* ===== Inhoud uit content/*.json (via /admin bewerkbaar), gebundeld in assets/content.js ===== */
+const C = window.CONTENT || {deloop:{},kalender:{},vlog:{},partners:{},shop:{}};
 const RUNCARDS = [];
-/* tbd:true = month known, exact day not; such events are listed but not marked in the calendar grid */
-const EVENTS = [
- {date:"2026-10-31",kind:{nl:"Voorbereiding",en:"Preparation"},title:{nl:"100 km",en:"100 km"},sub:{nl:"Onderdeel van de voorbereiding.",en:"Part of the preparation."}},
- {date:"2026-12-08",kind:{nl:"Podcast",en:"Podcast"},title:{nl:"Hotel Anywhere #25 online",en:"Hotel Anywhere #25 goes live"},sub:{nl:"Het gesprek met Maziar, op Spotify, YouTube en alle podcastplatformen.",en:"The conversation with Maziar, on Spotify, YouTube and all podcast platforms."}},
- {date:"2026-12-15",tbd:true,kind:{nl:"Training",en:"Training"},title:{nl:"Meerdaags testblok",en:"Multi-day test block"},sub:{nl:"December 2026.",en:"December 2026."}},
- {date:"2027-02-08",tbd:true,kind:{nl:"Training",en:"Training"},title:{nl:"Laatste trainingsblok",en:"Final training block"},sub:{nl:"Begin februari 2027.",en:"Early February 2027."}},
- {date:"2027-02-20",tbd:true,kind:{nl:"Diner",en:"Dinner"},title:{nl:"Afscheidsdiner",en:"Farewell dinner"},sub:{nl:"Perzische tafel in Keerbergen.",en:"A Persian table in Keerbergen."}},
- {date:"2027-03-01",kind:{nl:"Vertrek",en:"Departure"},title:{nl:"Vertrek uit Leuven",en:"Departure from Leuven"},sub:{nl:"Richting Iran. Voorlopige datum.",en:"Towards Iran. Provisional date."}}
-];
-/* Route by country: fill in once the route is set. Each stage colours its days in the calendar.
-   Example: {from:"2027-03-01", to:"2027-03-04", country:{nl:"België",en:"Belgium"}, color:"#123C74"} */
-const STAGES = [];
-const VLOG = [
- {id:"VIDEO_ID_1",featured:true,title:{nl:"#0 Waarom ik loop",en:"#0 Why I run"},sub:{nl:"Leuven, voor het vertrek",en:"Leuven, before departure"}},
- {id:"VIDEO_ID_2",title:{nl:"#1 De eerste kilometers",en:"#1 The first kilometres"},sub:{nl:"Etappe 1",en:"Stage 1"}},
- {id:"VIDEO_ID_3",title:{nl:"#2 Een stuk meelopen",en:"#2 Running part of the way"},sub:{nl:"Lopers onderweg",en:"Runners along the route"}}
-];
-const PARTNERS = [
- {real:true,name:"AfterLife",role:{nl:"Perzische tafels",en:"Persian tables"},url:"https://www.lifebar.be/"},
- {slot:true},{slot:true},{slot:true},{slot:true},{slot:true}
-];
+const PREP = (C.deloop.voorbereiding||[]).map(p=>({y:p.periode,title:p.titel,txt:p.tekst}));
+const FAQ = C.deloop.faq||[];
+/* enkel_maand:true = maand bekend, dag niet; staat in de lijst maar niet in het raster */
+const EVENTS = (C.kalender.evenementen||[]).map(e=>({date:e.datum,tbd:!!e.enkel_maand,kind:e.soort,title:e.titel,sub:e.tekst}));
+/* Etappes per land kleuren hun dagen in de kalender */
+const STAGES = (C.kalender.etappes||[]).map(x=>({from:x.van,to:x.tot,country:x.land,color:x.kleur||"#123C74"}));
+const VLOG = (C.vlog.videos||[]).map(v=>({id:v.youtube_id,featured:!!v.uitgelicht,title:v.titel,sub:v.ondertitel}));
+const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p.rol,url:p.url,logo:p.logo}))
+  .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
 const FUND = {raised:0,goal:null,splitA:50,splitB:50,tiers:[
  {amount:10,title:{nl:"Eén kilometer",en:"One kilometre"},txt:{nl:"Je naam op de kilometerlijst.",en:"Your name on the kilometre list."}},
  {amount:42,featured:true,title:{nl:"Eén marathon",en:"One marathon"},txt:{nl:"Een dag van de tocht op jouw naam, met een groet uit die etappe.",en:"One day of the run in your name, with a greeting from that stage."}},
@@ -262,12 +244,15 @@ const LIFE = [
  {img:"portrait-laugh.jpg",title:{nl:"De ondernemer",en:"The entrepreneur"},meta:{nl:"Negen jaar Life Bar",en:"Nine years of Life Bar"},credit:"Elke Smit"}
 ];
 const GALLERY = ["dune-wide.jpg","sand-kick.jpg","finish-prague.jpg","trail-forest.jpg","beach.jpg","road-run.jpg","winter-run.jpg","city-run.jpg","bib-mds.jpg"];
-const PRODUCTS = [
- {name:{nl:"T-shirt Leuven → Iran",en:"T-shirt Leuven → Iran"},price:35},
- {name:{nl:"Pet",en:"Cap"},price:25},
- {name:{nl:"Perzische kruidenmix AfterLife",en:"AfterLife Persian spice mix"},price:12},
- {name:{nl:"Fotoprint van onderweg",en:"Photo print from the road"},price:null}
-];
+const PRODUCTS = (C.shop.producten||[]).map(p=>({name:p.naam,price:(p.prijs===""||p.prijs==null)?null:+p.prijs,img:p.foto}));
+
+/* Teksten uit de inhoudsbestanden overschrijven de vaste teksten in T */
+(function(){
+  const put=(k,o)=>{ if(!o) return; ["nl","en","fa"].forEach(l=>{ if(o[l]) (T[l]=T[l]||{})[k]=o[l]; }); };
+  const d=C.deloop; put("run.title",d.titel); put("run.sub",d.ondertitel); put("run.lede",d.intro); put("run.why",d.waarom_titel); put("run.why.p",d.waarom_tekst); put("route.note",d.route_opmerking);
+  (d.cijfers||[]).forEach((c,i)=>put("stat."+i,c.label));
+  put("cal.lede",C.kalender.intro); put("vlog.lede",C.vlog.intro); put("partners.lede",C.partners.intro); put("shop.lede",C.shop.intro); put("shop.ship",C.shop.verzending);
+})();
 
 /* ===== helpers ===== */
 const $ = id => document.getElementById(id);
@@ -335,6 +320,10 @@ function renderRun(){
   const c = $("runCards"); if(!c) return; c.innerHTML="";
   RUNCARDS.forEach(r => c.append(el(`<div class="tile"><div class="num">${esc(r.num)}</div><h3>${esc(L(r.title))}</h3><p class="muted">${esc(L(r.txt))}</p></div>`)));
 }
+function renderFaq(){
+  const c = $("faq"); if(!c) return; c.innerHTML="";
+  FAQ.forEach(q => c.append(el(`<details><summary>${esc(L(q.vraag))}</summary><p>${esc(L(q.antwoord))}</p></details>`)));
+}
 function renderPrep(){
   const ol = $("prepList"); if(!ol) return; ol.innerHTML="";
   PREP.forEach(e => ol.append(el(`<li><time>${esc(L(e.y))}</time><div><strong>${esc(L(e.title))}</strong>${L(e.txt)?`<span>${esc(L(e.txt))}</span>`:""}</div></li>`)));
@@ -396,7 +385,7 @@ function renderPartners(){
   const list = c.dataset.limit ? PARTNERS.slice(0, +c.dataset.limit) : PARTNERS;
   list.forEach(p => c.append(p.slot
     ? el(`<div class="logo"><span>${esc(t("partners.slot"))}</span></div>`)
-    : el(`<a class="logo real" href="${esc(p.url)}"><div><strong>${esc(p.name)}</strong><br><span>${esc(L(p.role))}</span></div></a>`)));
+    : el(`<a class="logo real" href="${esc(p.url||"#")}">${p.logo?`<img src="${esc(p.logo)}" alt="${esc(p.name)}" loading="lazy">`:""}<div><strong>${esc(p.name)}</strong><br><span>${esc(L(p.role))}</span></div></a>`)));
 }
 function renderFund(){
   const bar = $("meterBar"); if(!bar) return;
@@ -411,7 +400,7 @@ function renderFund(){
 const PIMG = ["portrait-stand.jpg","greens.jpg","hands-mortar.jpg","veg-board.jpg"];
 function renderShop(){
   const c = $("products"); if(!c) return; c.innerHTML="";
-  PRODUCTS.forEach((p,i) => c.append(el(`<div class="tile">${photo(PIMG[i%PIMG.length],"square",L(p.name))}<h3>${esc(L(p.name))}</h3><div class="price-tag">${p.price!=null?eur(p.price):esc(t("shop.soon"))}</div><span class="link muted">${esc(t("shop.soon.long"))}</span></div>`)));
+  PRODUCTS.forEach((p,i) => c.append(el(`<div class="tile">${p.img?`<div class="photo square"><img src="${esc(p.img)}" alt="${esc(L(p.name))}" loading="lazy"></div>`:photo(PIMG[i%PIMG.length],"square",L(p.name))}<h3>${esc(L(p.name))}</h3><div class="price-tag">${p.price!=null?eur(p.price):esc(t("shop.soon"))}</div><span class="link muted">${esc(t("shop.soon.long"))}</span></div>`)));
 }
 function wireForms(){
   const f = $("contactForm");
@@ -424,7 +413,7 @@ function wireCalendar(){
   $("calPrev").addEventListener("click", () => { calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth()-1, 1); renderCalendar(); });
   $("calNext").addEventListener("click", () => { calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth()+1, 1); renderCalendar(); });
 }
-function renderAll(){ renderTimeline(); renderPrep(); renderRun(); renderLife(); renderCalendar(); renderNextEvent(); renderVlog(); renderPartners(); renderFund(); renderShop(); renderStatic(); }
+function renderAll(){ renderTimeline(); renderPrep(); renderFaq(); renderRun(); renderLife(); renderCalendar(); renderNextEvent(); renderVlog(); renderPartners(); renderFund(); renderShop(); renderStatic(); }
 
 renderChrome(); wireForms(); wireCalendar(); renderAll();
 

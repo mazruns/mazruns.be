@@ -226,6 +226,7 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 @media (min-width:960px){.logos{grid-template-columns:repeat(6,1fr)}}
 .logo{aspect-ratio:3/2;background:var(--surface);border-radius:10px;display:grid;place-items:center;text-align:center;padding:1rem;min-width:0;text-decoration:none;color:inherit;border:1.5px dashed var(--line)}
 .logo.real{border-style:solid;border-color:var(--line)}
+.logo img{max-width:70%;max-height:48%;object-fit:contain;margin-bottom:.4rem}
 .logo strong{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.1;text-transform:uppercase}
 .logo span{font-family:var(--mono);font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .steps{display:grid;gap:1.2rem}

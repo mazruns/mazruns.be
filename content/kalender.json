@@ -1,0 +1,124 @@
+{
+  "intro": {
+    "nl": "Wat vastligt en wat nog volgt. Zodra de route bekend is, krijgt elk land hier een eigen kleur.",
+    "en": "What's set, and what's still to come. Once the route is known, each country gets its own colour here.",
+    "fa": ""
+  },
+  "evenementen": [
+    {
+      "datum": "2026-10-31",
+      "enkel_maand": false,
+      "soort": {
+        "nl": "Voorbereiding",
+        "en": "Preparation",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "100 km",
+        "en": "100 km",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Onderdeel van de voorbereiding.",
+        "en": "Part of the preparation.",
+        "fa": ""
+      }
+    },
+    {
+      "datum": "2026-12-08",
+      "enkel_maand": false,
+      "soort": {
+        "nl": "Podcast",
+        "en": "Podcast",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Hotel Anywhere #25 online",
+        "en": "Hotel Anywhere #25 goes live",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Het gesprek met Maziar, op Spotify, YouTube en alle podcastplatformen.",
+        "en": "The conversation with Maziar, on Spotify, YouTube and all podcast platforms.",
+        "fa": ""
+      }
+    },
+    {
+      "datum": "2026-12-15",
+      "enkel_maand": true,
+      "soort": {
+        "nl": "Training",
+        "en": "Training",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Meerdaags testblok",
+        "en": "Multi-day test block",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "December 2026.",
+        "en": "December 2026.",
+        "fa": ""
+      }
+    },
+    {
+      "datum": "2027-02-08",
+      "enkel_maand": true,
+      "soort": {
+        "nl": "Training",
+        "en": "Training",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Laatste trainingsblok",
+        "en": "Final training block",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Begin februari 2027.",
+        "en": "Early February 2027.",
+        "fa": ""
+      }
+    },
+    {
+      "datum": "2027-02-20",
+      "enkel_maand": true,
+      "soort": {
+        "nl": "Diner",
+        "en": "Dinner",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Afscheidsdiner",
+        "en": "Farewell dinner",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Perzische tafel in Keerbergen.",
+        "en": "A Persian table in Keerbergen.",
+        "fa": ""
+      }
+    },
+    {
+      "datum": "2027-03-01",
+      "enkel_maand": false,
+      "soort": {
+        "nl": "Vertrek",
+        "en": "Departure",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Vertrek uit Leuven",
+        "en": "Departure from Leuven",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "Richting Iran. Voorlopige datum.",
+        "en": "Towards Iran. Provisional date.",
+        "fa": ""
+      }
+    }
+  ],
+  "etappes": []
+}
