@@ -60,10 +60,18 @@ FACTS = '<div class="facts">' + "".join(
     f'<div class="fact"><b>{c["getal"]}</b><span data-t="stat.{i}">{c["label"]["nl"]}</span></div>'
     for i,c in enumerate(CONTENT["deloop"]["cijfers"][:3])) + '</div>'
 
+# Vlog-blok op de homepagina: verborgen tot de vlog effectief start. Zet op True om het terug te tonen.
+VLOG_ON_HOME = False
+VLOG_HOME = '''<section class="band alt"><div class="wrap stack lg">
+  <div class="head"><div class="stack"><p class="label" data-t="home.vlog">Volg de tocht</p><h2>Vlog</h2></div><a class="link" href="vlog.html" data-t="home.allvideos">Alle video's</a></div>
+  <div id="homeVideo"></div>
+</div></section>
+'''
+
 PAGES = {}
 
-PAGES["index"] = ("home", "Mazruns", hero(
-  "hero-dunes.jpg","68% 55%","hero.eyebrow","Leuven → Iran · vertrek 1 maart 2027",
+PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
+  "hero-dunes.jpg","68% 55%","hero.eyebrow","Eigen Koers · Leuven → Iran · vertrek 1 maart 2027",
   '<span data-t="story.title.a">Ooit moest hij vluchten.</span><br><em data-t="story.title.b">Nu loopt hij terug.</em>',
   "hero.sub","Elke dag een marathon, van België naar Iran",
   "hero.lede","Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw. Deze keer loopt hij van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
@@ -71,11 +79,11 @@ PAGES["index"] = ("home", "Mazruns", hero(
   credit="Marathon des Sables", mobile_img="dune-ridge.jpg", mobile_pos="48% 50%") + f'''
 <section class="band"><div class="wrap">
   <div class="feature">
-    {photo("portrait-bowl.jpg","",credit="Elke Smit Photography")}
+    {photo("greens.jpg","",credit="Elke Smit Photography")}
     <div class="txt">
       <p class="label" data-t="home.about">Over Maziar</p>
-      <h2 data-t="home.about.h">Achter de loper zit een lang verhaal.</h2>
-      <p class="lede" data-t="home.about.p">Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij te voet richting Iran.</p>
+      <h2 data-t="home.about.h">Achter de loper zit een bijzonder verhaal.</h2>
+      <p class="lede" data-t="home.about.p">Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij al lopend richting Iran.</p>
       <div class="actions"><a class="btn fill" href="verhaal.html" data-t="home.read">Lees zijn verhaal</a><a class="link" href="deloop.html" data-t="home.run">Over de loop</a></div>
     </div>
   </div>
@@ -85,7 +93,7 @@ PAGES["index"] = ("home", "Mazruns", hero(
 
 <section class="band alt"><div class="wrap stack lg">
   <div class="head"><div class="stack"><p class="label" data-t="home.when">Wanneer</p><h2 data-t="home.when.h">Tussen nu en vertrek</h2></div><a class="link" href="kalender.html" data-t="home.all">Volledige kalender</a></div>
-  <div class="cards three" id="nextEvent"></div>
+  <div class="cards four" id="nextEvent"></div>
 </div></section>
 
 <section class="band"><div class="wrap stack lg">
@@ -101,21 +109,18 @@ PAGES["index"] = ("home", "Mazruns", hero(
 
 <section class="band"><div class="wrap">
   <div class="feature rev">
-    {photo("greens.jpg","",credit="Elke Smit Photography")}
+    {photo("field-sun.jpg","")}
     <div class="txt">
       <p class="label" data-t="home.cause">Het goede doel</p>
       <h2 data-t="home.cause.h">Eén mens kan het verschil maken.</h2>
-      <p class="lede" data-t="home.cause.p">Toen Maziar te horen kreeg dat hij het land moest verlaten, gaf een advocaat hem tijd, en vooral hoop. Daarom gaat een deel van elke bijdrage naar een vzw. Welke, maken we binnenkort bekend.</p>
+      <p class="lede" data-t="home.cause.p">Toen Maziar te horen kreeg dat hij het land moest verlaten, gaf een advocaat hem tijd, en vooral hoop.</p>
+      <p data-t="home.cause.p2"></p>
       <div class="actions"><a class="btn fill" href="steun.html" data-t="home.support">Steun een kilometer</a></div>
     </div>
   </div>
 </div></section>
 
-<section class="band alt"><div class="wrap stack lg">
-  <div class="head"><div class="stack"><p class="label" data-t="home.vlog">Volg de tocht</p><h2>Vlog</h2></div><a class="link" href="vlog.html" data-t="home.allvideos">Alle video's</a></div>
-  <div id="homeVideo"></div>
-</div></section>
-
+{VLOG_HOME if VLOG_ON_HOME else ""}
 <section class="band"><div class="wrap stack lg">
   <div class="head"><div class="stack"><p class="label" data-t="home.partners">Zij lopen mee</p><h2>Partners</h2></div><a class="link" href="partners.html" data-t="home.partner">Loop mee als partner</a></div>
   <div class="logos" id="logos"></div>
@@ -149,7 +154,7 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
 ''')
 
 PAGES["deloop"] = ("deloop", "De loop · Mazruns", hero(
-  "rocks.jpg","62% 45%","run.crumb","De loop",
+  "rocks.jpg","62% 45%","run.eyebrow","Eigen Koers · De loop",
   '<span data-t="run.title">Elke dag een marathon, naar waar zijn verhaal begon</span>',
   "run.sub","Van België naar de stad waar ik geboren werd",
   "run.lede","Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
@@ -312,7 +317,7 @@ CSS, CONTENT_JS, SITE_JS = versioned("assets/site.css"), versioned("assets/conte
 
 LAUNCHED = True
 SITE_URL = "https://mazruns.be"
-DESCRIPTION = "Ooit moest Maziar Toghraie vluchten uit Iran. Op 1 maart 2027 loopt hij terug: van Leuven naar Iran, elke dag een marathon."
+DESCRIPTION = "Ooit moest Maziar Toghraie vluchten uit Iran. Met Eigen Koers loopt hij vanaf 1 maart 2027 terug: van Leuven naar Iran, elke dag een marathon."
 ARTIFACT = "--artifact" in sys.argv
 
 def head(title, is_index, file):

@@ -25,6 +25,25 @@
       }
     },
     {
+      "datum": "2026-11-22",
+      "enkel_maand": false,
+      "soort": {
+        "nl": "Lancering",
+        "en": "Launch",
+        "fa": ""
+      },
+      "titel": {
+        "nl": "Website live",
+        "en": "Website live",
+        "fa": ""
+      },
+      "tekst": {
+        "nl": "mazruns.be gaat officieel van start.",
+        "en": "mazruns.be officially launches.",
+        "fa": ""
+      }
+    },
+    {
       "datum": "2026-12-08",
       "enkel_maand": false,
       "soort": {
@@ -44,7 +63,7 @@
       }
     },
     {
-      "datum": "2026-12-15",
+      "datum": "2027-01-15",
       "enkel_maand": true,
       "soort": {
         "nl": "Training",
@@ -57,8 +76,8 @@
         "fa": ""
       },
       "tekst": {
-        "nl": "December 2026.",
-        "en": "December 2026.",
+        "nl": "Januari 2027.",
+        "en": "January 2027.",
         "fa": ""
       }
     },
@@ -114,8 +133,8 @@
         "fa": ""
       },
       "tekst": {
-        "nl": "Richting Iran. Voorlopige datum.",
-        "en": "Towards Iran. Provisional date.",
+        "nl": "Start van Eigen Koers, richting Iran. Voorlopige datum.",
+        "en": "Eigen Koers begins, towards Iran. Provisional date.",
         "fa": ""
       }
     }
