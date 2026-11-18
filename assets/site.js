@@ -364,7 +364,7 @@ function renderCalendar(){
   const lg = $("calCountries");
   if(lg){ lg.innerHTML=""; const seen={};
     STAGES.forEach(x=>{ const n=L(x.country); if(seen[n]) return; seen[n]=1; lg.append(el(`<span><i style="background:${esc(x.color)}"></i>${esc(n)}</span>`)); });
-    if(!STAGES.length) lg.append(el(`<span><i style="background:repeating-linear-gradient(45deg,var(--green) 0 3px,var(--blue) 3px 6px)"></i>${esc(t("cal.legend.country"))}</span>`)); }
+    if(!STAGES.length) lg.append(el(`<span><i style="background:repeating-linear-gradient(45deg,var(--wine) 0 3px,var(--blue) 3px 6px)"></i>${esc(t("cal.legend.country"))}</span>`)); }
   const list = $("eventList"); list.innerHTML=""; upcoming().forEach(e => list.append(eventCard(e)));
 }
 function renderNextEvent(){

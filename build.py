@@ -88,7 +88,7 @@ PAGES["index"] = ("home", "Mazruns", hero(
   <div class="tiles three" id="life"></div>
 </div></section>
 
-<section class="band dark"><a class="wrap quote quote-link" href="deloop.html">
+<section class="band dark wine"><a class="wrap quote quote-link" href="deloop.html">
   <blockquote data-t="home.quote">Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen.</blockquote>
   <cite data-t="home.quote.cite">Maziar, over de loop naar Iran</cite>
   <span class="more" data-t="home.quote.more">Waarom ik loop</span>
@@ -127,7 +127,7 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
   {frag("road-run.jpg","f2",rev=True)}
   {frag("hands-mortar.jpg","f3",credit="Elke Smit Photography")}
 </div></section>
-<section class="band dark"><div class="wrap quote">
+<section class="band dark wine"><div class="wrap quote">
   <blockquote data-t="story.quote">Ik ben niet boos op wat me overkomen is. Integendeel. De pijn heeft me gevormd.</blockquote>
   <cite data-t="story.cite">Maziar</cite>
 </div></section>
@@ -242,7 +242,7 @@ PAGES["steun"] = ("steun", "Steun · Mazruns", hero(
   <ul class="tiers" id="tiers"></ul>
   <p class="note" data-t="fund.note"></p>
 </div></section>
-<section class="band dark"><div class="wrap quote">
+<section class="band dark wine"><div class="wrap quote">
   <blockquote data-t="fund.quote"></blockquote>
   <cite data-t="story.cite">Maziar</cite>
 </div></section>

@@ -1,10 +1,10 @@
 /* Maziar naar Shiraz — shared stylesheet.
    Layout: photo-led. Full-bleed hero with gradient, condensed uppercase headings, photo cards with mono labels, dark footer. */
-/* Brand colours from Maziar: #123C74 navy, #9C421C rust, #587D55 sage, #F1EDE6 sand */
+/* Merkkleuren (uit het logo): #123C74 navy, #722F2B bordeaux (beide merkkleur), #C98B3B goud (accent), #F1EDE6 zand */
 :root{
   --bg:#F1EDE6; --surface:#FFFFFF; --sand:#E7E1D6; --ink:#14213A; --muted:#5C6473; --line:#DAD3C6;
-  --accent:#9C421C; --accent-ink:#9C421C; --accent-bright:#E08A5E;
-  --blue:#123C74; --green:#587D55;
+  --accent:#722F2B; --accent-ink:#722F2B; --accent-bright:#E3A853;
+  --blue:#123C74; --wine:#722F2B; --wine-2:#5E2622; --gold:#C98B3B; --on-wine-muted:#E6CFC8;
   --dark:#123C74; --dark-2:#0E3263; --on-dark:#F1EDE6; --on-dark-muted:#BCC7D8;
   --display:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
   --body:"Barlow","Helvetica Neue",Arial,sans-serif;
@@ -13,8 +13,8 @@
   --r:14px;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#0E1726; --surface:#162236; --sand:#1A2940; --ink:#F1EDE6; --muted:#A7B1C0; --line:#25354E; --accent:#D9774A; --accent-ink:#E99A73; --accent-bright:#E99A73; --blue:#7FA6DE; --green:#8DB08A; --dark:#0A1322; --dark-2:#13213A; color-scheme:dark } }
-:root[data-theme="dark"]{ --bg:#0E1726; --surface:#162236; --sand:#1A2940; --ink:#F1EDE6; --muted:#A7B1C0; --line:#25354E; --accent:#D9774A; --accent-ink:#E99A73; --accent-bright:#E99A73; --blue:#7FA6DE; --green:#8DB08A; --dark:#0A1322; --dark-2:#13213A; color-scheme:dark }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#0E1726; --surface:#162236; --sand:#1A2940; --ink:#F1EDE6; --muted:#A7B1C0; --line:#25354E; --accent:#A8463F; --accent-ink:#E3A853; --accent-bright:#E3A853; --blue:#7FA6DE; --wine:#4A1F1C; --wine-2:#5A2723; --gold:#E3A853; --on-wine-muted:#E6CFC8; --dark:#0A1322; --dark-2:#13213A; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#0E1726; --surface:#162236; --sand:#1A2940; --ink:#F1EDE6; --muted:#A7B1C0; --line:#25354E; --accent:#A8463F; --accent-ink:#E3A853; --accent-bright:#E3A853; --blue:#7FA6DE; --wine:#4A1F1C; --wine-2:#5A2723; --gold:#E3A853; --on-wine-muted:#E6CFC8; --dark:#0A1322; --dark-2:#13213A; color-scheme:dark }
 
 *{box-sizing:border-box}
 html{height:100%}
@@ -62,7 +62,7 @@ html[dir="rtl"] .link::after{content:"←"}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 
 /* pills */
-.pill{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .6rem;border-radius:6px;background:color-mix(in srgb,var(--green) 16%,var(--surface));color:var(--green)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .6rem;border-radius:6px;background:color-mix(in srgb,var(--blue) 14%,var(--surface));color:var(--blue)}
 .pill.accent{background:color-mix(in srgb,var(--accent) 18%,var(--surface));color:var(--accent-ink)}
 .pill.on-photo{background:rgba(255,255,255,.9);color:#1E1A17}
 
@@ -91,7 +91,7 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 }
 .langs{display:flex;gap:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em}
 .langs button{background:none;border:0;padding:0;color:var(--muted);cursor:pointer;font:inherit;letter-spacing:inherit}
-.langs button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+.langs button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
 .menu-btn{font-family:var(--body);font-weight:600;font-size:.9rem;background:none;border:1.5px solid var(--ink);color:var(--ink);cursor:pointer;padding:.45rem .9rem;border-radius:8px}
 .menu ul{list-style:none;margin:0;padding:.4rem 0 1.1rem;display:grid;gap:.1rem}
 .menu a{display:block;font-family:var(--display);font-weight:700;font-size:1.7rem;text-decoration:none;color:var(--ink);padding:.35rem 0;text-transform:uppercase}
@@ -126,7 +126,7 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 
 /* facts strip */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.fact{min-width:0;border-top:3px solid var(--accent);padding-top:.7rem}
+.fact{min-width:0;border-top:3px solid var(--gold);padding-top:.7rem}
 .fact b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(2rem,7vw,3.6rem);line-height:1;font-variant-numeric:tabular-nums}
 .fact span{display:block;margin-top:.3rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
@@ -162,6 +162,9 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 .card .t{font-weight:600}
 .card .s{color:var(--muted);font-size:.95rem}
 .band.dark .card{background:var(--dark-2);box-shadow:none}
+.band.wine{background:var(--wine)}
+.band.wine .card{background:var(--wine-2)}
+.band.wine .muted,.band.wine p.lede{color:var(--on-wine-muted)}
 .band.dark .card .s{color:var(--on-dark-muted)}
 
 /* photo tiles */
@@ -281,7 +284,7 @@ html[dir="rtl"] a.quote-link .more::after{content:"←"}
 a.quote-link:hover .more::after{transform:translateX(3px)}
 a.quote-link:hover blockquote{color:#fff}
 /* preparation list */
-.timeline.prep time{color:var(--green)}
+.timeline.prep time{color:var(--blue)}
 
 /* two-column sections (calendar, route + FAQ, split + FAQ, contact) */
 .two{display:grid;gap:3rem}
