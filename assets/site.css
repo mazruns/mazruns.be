@@ -123,6 +123,14 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 .hero .label{color:var(--accent-bright)}
 .hero.short{min-height:min(62vh,560px)}
 .hero.short h1{font-size:clamp(2.6rem,8vw,5.4rem)}
+/* hero met aparte gsm-foto: op smalle schermen staat de foto boven de tekst, niet erachter */
+@media (max-width:899px){
+  .hero.stack{display:block;min-height:0}
+  .hero.stack img{position:relative;display:block;height:clamp(280px,80vw,460px);object-position:var(--mpos,50% 50%)!important}
+  .hero.stack::after{bottom:auto;height:clamp(280px,80vw,460px);background:linear-gradient(180deg,rgba(8,22,46,.25) 0%,transparent 30%,transparent 62%,var(--dark) 100%)}
+  .hero.stack .over{padding-top:.4rem}
+  .hero.stack .credit{bottom:auto;top:calc(clamp(280px,80vw,460px) - 22px)}
+}
 
 /* facts strip */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}

@@ -24,12 +24,17 @@ def photo(img, cls="", alt="", credit="", extra=""):
     c = f'<span class="credit">© {credit}</span>' if credit else ''
     return f'<div class="photo {cls}" {extra}><img src="{I}{img}" alt="{alt}" loading="lazy">{c}</div>'
 
-def hero(img, pos, label_key, label, h1_html, sub_key=None, sub=None, lede_key=None, lede=None, ctas="", short=False, credit=""):
+def hero(img, pos, label_key, label, h1_html, sub_key=None, sub=None, lede_key=None, lede=None, ctas="", short=False, credit="", mobile_img=None, mobile_pos="50% 50%"):
     s = f'<p class="sub" data-t="{sub_key}">{sub}</p>' if sub_key else ''
     l = f'<p class="lede" data-t="{lede_key}">{lede}</p>' if lede_key else ''
     cr = f'<span class="credit">© {credit}</span>' if credit else ''
-    return f'''<section class="hero on-photo{' short' if short else ''}">
-  <img src="{I}{img}" alt="" style="object-position:{pos}" fetchpriority="high">
+    # mobile_img: op gsm staat de foto boven de tekst (klasse "stack") in plaats van erachter.
+    if mobile_img:
+        pic = f'''<picture><source media="(max-width:899px)" srcset="{I}{mobile_img}"><img src="{I}{img}" alt="" style="object-position:{pos};--mpos:{mobile_pos}" fetchpriority="high"></picture>'''
+    else:
+        pic = f'<img src="{I}{img}" alt="" style="object-position:{pos}" fetchpriority="high">'
+    return f'''<section class="hero on-photo{' short' if short else ''}{' stack' if mobile_img else ''}">
+  {pic}
   <div class="wrap"><div class="over">
     <p class="label" data-t="{label_key}">{label}</p>
     <h1>{h1_html}</h1>
@@ -61,9 +66,9 @@ PAGES["index"] = ("home", "Mazruns", hero(
   "hero-dunes.jpg","68% 55%","hero.eyebrow","Leuven → Iran · vertrek 1 maart 2027",
   '<span data-t="story.title.a">Ooit moest hij vluchten.</span><br><em data-t="story.title.b">Nu loopt hij terug.</em>',
   "hero.sub","Elke dag een marathon, van België naar Iran",
-  "hero.lede","Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw, deze keer te voet van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
+  "hero.lede","Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw. Deze keer loopt hij van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
   '<a class="btn fill" href="steun.html" data-t="home.support">Steun een kilometer</a><a class="btn" href="verhaal.html" data-t="home.read">Lees zijn verhaal</a>',
-  credit="Marathon des Sables") + f'''
+  credit="Marathon des Sables", mobile_img="dune-ridge.jpg", mobile_pos="48% 50%") + f'''
 <section class="band"><div class="wrap">
   <div class="feature">
     {photo("portrait-bowl.jpg","",credit="Elke Smit Photography")}
