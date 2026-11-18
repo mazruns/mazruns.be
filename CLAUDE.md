@@ -55,9 +55,10 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Voeding: "fueled by nature", zo weinig mogelijk bewerkt. **Niet "plantaardig"** (Life Bar was wel plantaardig).
 - Niet vermelden: verhalen onderweg verzamelen, rustdagen, koken voor vreemden, een bed onderweg vragen.
 - **Niets over de reden van zijn vlucht of over familie in Iran** zonder uitdrukkelijk akkoord van Maziar. Ook het zwangerschapsverlies van Maziar en Jolien staat bewust niet op de site.
-- **Geen zelfpromotie** van de beheerders (geen Hotel Anywhere, geen Hi!). Eén uitzondering, op uitdrukkelijke vraag van Maziar: de podcastaflevering Hotel Anywhere #25 (8 december 2026) staat in de kalender.
+- **Geen zelfpromotie** van de beheerders (geen Hi!). Uitzonderingen: de podcastaflevering Hotel Anywhere #25 (8 december 2026) staat in de kalender (vraag van Maziar), en Hotel Anywhere staat als partner bij Partners (vraag van Jolien, 18 november 2026).
 - Bijschrift onder citaten: enkel "Maziar".
-- De vzw die gesteund wordt, komt pas met naam op de site als de samenwerking bevestigd is.
+- De vzw die gesteund wordt is **Casa Legal** (Brussel): advocaten en maatschappelijk werkers die samen mensen in een kwetsbare positie bijstaan. Op de homepagina sinds 18 november 2026, op vraag van Jolien.
+- De naam van de expeditie is **Eigen Koers**. Altijd zo geschreven, ook in het Engels (eigennaam). Staat in de kop van elke pagina, de hero van Home en De loop, de footer, de paginatitel en beschrijving, en bij het vertrek in de kalender.
 
 ## Stijl
 
@@ -86,7 +87,9 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Shop: producten en prijzen zijn voorlopig; nog geen betaling. De pagina is tijdelijk verborgen (`SHOP_OPEN = False` bovenaan `build.py`): niet in het menu, niet in de sitemap, `noindex`. Zet op `True` en draai `python3 build.py` wanneer de shop opent.
 - Contactformulier en nieuwsbrief tonen enkel een bevestiging; ze zijn nog nergens aan gekoppeld.
 - Perskit: nog niet beschikbaar.
-- Naam van de expeditie (waarschijnlijk "Eigen Koers") en eventueel een logo.
+- Logo van de expeditie.
+- Hotel Anywhere bij Partners: logo en link ontbreken nog (toe te voegen via `/admin` → Partners).
+- Vlog staat niet op de homepagina tot de vlog start (`VLOG_ON_HOME = False` in `build.py`).
 
 ## Lancering
 

@@ -16,13 +16,14 @@ const PAGES = [
 const T = {
 nl:{
  "cal.legend.country":"kleur per land, zodra de route bekend is",
- "home.cause.p":"Toen Maziar te horen kreeg dat hij het land moest verlaten, gaf een advocaat hem tijd, en vooral hoop. Daarom gaat een deel van elke bijdrage naar een vzw. Welke, maken we binnenkort bekend.",
+ "home.cause.p":"Toen Maziar te horen kreeg dat hij het land moest verlaten, gaf een advocaat hem tijd, en vooral hoop. Wie naar België vlucht, staat vaak alleen tegenover procedures, papieren en lange onzekerheid. Juridische hulp en psychosociale steun maken dan een groot verschil.",
+ "home.cause.p2":"Daarom zamelt Maziar met Eigen Koers geld in voor Casa Legal, een Brusselse vzw waar advocaten en maatschappelijk werkers samen mensen in een kwetsbare positie bijstaan. Hij wil ook de mensen achter de cijfers over migratie tonen: de verhalen van vluchtelingen en asielzoekers die hier hun leven opbouwen.",
  "home.cause.h":"Eén mens kan het verschil maken.",
  "home.cause":"Het goede doel",
  "home.quote.more":"Waarom ik loop",
  "nav.home":"Home","nav.story":"Verhaal","nav.run":"De loop","nav.calendar":"Kalender","nav.vlog":"Vlog","nav.partners":"Partners","nav.support":"Steun","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
- "hero.eyebrow":"Leuven → Iran · vertrek 1 maart 2027","hero.arrow":"te voet naar",
- "hero.lede":"Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw, deze keer te voet van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
+ "hero.eyebrow":"Eigen Koers · Leuven → Iran · vertrek 1 maart 2027","hero.arrow":"te voet naar",
+ "hero.lede":"Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw. Deze keer loopt hij van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
  "hero.cta1":"Steun de tocht","hero.cta2":"Lees zijn verhaal",
  "stat.km":"kilometer","stat.day":"km per dag","stat.months":"maanden","ph.portrait":"Placeholder portret","ph":"placeholder beeld",
  "route.note":"indicatieve route, etappes volgen na vertrek",
@@ -38,7 +39,7 @@ nl:{
  "story.timeline":"Tijdslijn","story.food":"Eten als brandstof",
  "story.food.p":"Eten moet kracht geven, zegt hij. Niet alleen om te overleven, maar om op te staan. Hij kookt met de kruiden waarmee hij opgroeide. In Life Bar deed hij Perzische dineravonden, Diner aan een Perzische tafel. Met AfterLife kookt hij nu voor groepen tot twintig mensen: verse, lokale ingrediënten, groenten in de hoofdrol, Perzische specerijen.",
  "story.mom":"Zijn moeder zei dat hij altijd het moeilijke pad koos: je draait de lepel rond je hoofd voor je hem in je mond steekt.",
- "run.crumb":"De loop","run.title":"Elke dag een marathon, naar waar zijn verhaal begon","run.lede":"Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
+ "run.crumb":"De loop","run.eyebrow":"Eigen Koers · De loop","run.title":"Elke dag een marathon, naar waar zijn verhaal begon","run.lede":"Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
  "run.route":"De route","run.stories.title":"De verhalen onderweg",
  "run.stories.p":"Verhalen van mensen die hun thuis verloren. Mensen die moesten vertrekken. Mensen die nog altijd onderweg zijn. Ik wil een ander gezicht tonen van vluchtelingen en migranten. Niet de cijfers. Niet de dossiers. Maar de mensen. Want niemand verlaat zomaar zijn thuis.",
  "run.prep.title":"De voorbereiding",
@@ -68,7 +69,7 @@ nl:{
  "form.name":"Naam","form.email":"E-mail","form.why":"Waarvoor","form.msg":"Bericht","form.send":"Verstuur","form.ok":"Bedankt. Je bericht is klaar om te verzenden zodra het formulier gekoppeld is.",
  "form.o1":"Pers","form.o2":"Partner","form.o3":"Een stuk meelopen","form.o4":"Iets anders",
  "contact.press":"Perskit","contact.press.p":"Foto's, bio en de feiten op een rij. Binnenkort beschikbaar.",
- "foot.p":"Maziar Toghraie loopt in 2027 van Leuven naar Iran. Elke dag een marathon, vier tot zes maanden lang.","foot.copy":"kopieer","foot.copied":"gekopieerd","foot.follow":"Volg","foot.pages":"Foto's",
+ "foot.p":"Met Eigen Koers loopt Maziar Toghraie in 2027 van Leuven naar Iran. Elke dag een marathon, vier tot zes maanden lang.","foot.copy":"kopieer","foot.copied":"gekopieerd","foot.follow":"Volg","foot.pages":"Foto's",
 "home.intro":"Als wij onze koffer pakken, gaan we op reis. Maziar pakte zijn koffer en er was geen weg terug. Drieëntwintig jaar later keert hij terug naar Iran. Te voet, en deze keer op zijn eigen voorwaarden.",
  "home.read":"Lees het verhaal","home.run":"Over de loop","home.support":"Steun een kilometer","home.stories":"Verhalen onderweg","home.stories.p":"Onderweg zoekt Maziar mensen op die hun thuis verloren. Niet de cijfers, de mensen.",
  "home.when":"Wanneer","home.all":"Alle data","home.allvideos":"Alle video's","home.partner":"Loop mee als partner",
@@ -76,8 +77,8 @@ nl:{
  "story.read.run":"Over de loop","run.read.support":"Steun de tocht","cal.read.contact":"Heb je een bed onderweg?","fund.choose":"Kies","fund.soon":"binnenkort","shop.soon.long":"Binnenkort beschikbaar","vlog.more":"Alle video's op YouTube","partners.contact":"Neem contact op",
  "story.title.a":"Ooit moest hij vluchten.","story.title.b":"Nu loopt hij terug.","run.route.h":"Leuven → Iran",
 "hero.sub":"Elke dag een marathon, van België naar Iran",
- "home.about":"Over Maziar","home.about.h":"Achter de loper zit een lang verhaal.",
- "home.about.p":"Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij te voet richting Iran.","home.when.h":"Tussen nu en vertrek",
+ "home.about":"Over Maziar","home.about.h":"Achter de loper zit een bijzonder verhaal.",
+ "home.about.p":"Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij al lopend richting Iran.","home.when.h":"Tussen nu en vertrek",
  "home.life":"Het leven van Maziar","home.life.h":"Koken, lopen, leven. Op zijn eigen ritme.",
  "home.quote":"Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen.","home.quote.cite":"Maziar, over de loop naar Iran",
  "f1.big":"Ooit liep ik weg uit Iran.","f1.p1":"Niet omdat ik dat wilde. Niet omdat ik avontuur zocht. Ik liep weg omdat blijven geen optie meer was.","f1.p2":"Ik liet alles achter. Mijn familie. Mijn vrienden. Mijn thuis. Zelfs het bedrijf dat ik samen met een vriend had opgebouwd. Een leven waar niets mis mee leek. Maar soms kiest het leven voor jou.",
@@ -96,13 +97,14 @@ nl:{
 },
 en:{
  "cal.legend.country":"one colour per country, once the route is known",
- "home.cause.p":"When Maziar was told he had to leave the country, a lawyer gave him time, and above all hope. That is why part of every contribution goes to a non-profit. We'll announce which one soon.",
+ "home.cause.p":"When Maziar was told he had to leave the country, a lawyer gave him time, and above all hope. People who flee to Belgium often face procedures, paperwork and long uncertainty on their own. Legal and psychosocial support can make all the difference.",
+ "home.cause.p2":"That is why Maziar is using Eigen Koers to raise money for Casa Legal, a Brussels non-profit where lawyers and social workers work side by side to support people in vulnerable situations. He also wants to show the people behind the migration figures: the stories of refugees and asylum seekers building their lives here.",
  "home.cause.h":"One person can make all the difference.",
  "home.cause":"The cause",
  "home.quote.more":"Why I run",
  "nav.home":"Home","nav.story":"Story","nav.run":"The run","nav.calendar":"Calendar","nav.vlog":"Vlog","nav.partners":"Partners","nav.support":"Support","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
- "hero.eyebrow":"Leuven → Iran · departure 1 March 2027","hero.arrow":"on foot to",
- "hero.lede":"Once, Maziar Toghraie fled Iran because staying was no longer an option. On 1 March 2027 he sets off again, this time on foot, from Belgium to Iran. Four to six months on the road, a marathon every day.",
+ "hero.eyebrow":"Eigen Koers · Leuven → Iran · departure 1 March 2027","hero.arrow":"on foot to",
+ "hero.lede":"Once, Maziar Toghraie fled Iran because staying was no longer an option. On 1 March 2027 he sets off again. This time he runs from Belgium to Iran. Four to six months on the road, a marathon every day.",
  "hero.cta1":"Support the run","hero.cta2":"Read his story",
  "stat.km":"kilometres","stat.day":"km per day","stat.months":"months","ph.portrait":"Placeholder portrait","ph":"placeholder image",
  "route.note":"indicative route, stages follow after departure",
@@ -118,7 +120,7 @@ en:{
  "story.timeline":"Timeline","story.food":"Food as fuel",
  "story.food.p":"Food has to give strength, he says. Not just to survive, but to get up. He cooks with the spices he grew up with. At Life Bar he hosted Persian dinner nights. With AfterLife he now cooks for groups of up to twenty: fresh local ingredients, vegetables in the lead, Persian spices.",
  "story.mom":"His mother said he always chose the hard path: you spin the spoon around your head before you put it in your mouth.",
- "run.crumb":"The run","run.title":"A marathon every day, back to where his story began","run.lede":"Not to prove anything, he says, but to honour where he comes from. His future is in Belgium. Iran made him who he is.",
+ "run.crumb":"The run","run.eyebrow":"Eigen Koers · The run","run.title":"A marathon every day, back to where his story began","run.lede":"Not to prove anything, he says, but to honour where he comes from. His future is in Belgium. Iran made him who he is.",
  "run.route":"The route","run.stories.title":"The stories along the way",
  "run.stories.p":"Stories of people who lost their home. People who had to leave. People who are still on their way. I want to show another side of refugees and migrants. Not the numbers. Not the case files. The people. Because nobody leaves home for no reason.",
  "run.prep.title":"The preparation",
@@ -148,7 +150,7 @@ en:{
  "form.name":"Name","form.email":"Email","form.why":"Reason","form.msg":"Message","form.send":"Send","form.ok":"Thank you. Your message is ready to send once the form is connected.",
  "form.o1":"Press","form.o2":"Partner","form.o3":"Running part of the route","form.o4":"Something else",
  "contact.press":"Press kit","contact.press.p":"Photos, bio and the key facts in one place. Available soon.",
- "foot.p":"In 2027 Maziar Toghraie runs from Leuven to Iran. A marathon every day, for four to six months.","foot.copy":"copy","foot.copied":"copied","foot.follow":"Follow","foot.pages":"Photos",
+ "foot.p":"With Eigen Koers, Maziar Toghraie runs from Leuven to Iran in 2027. A marathon every day, for four to six months.","foot.copy":"copy","foot.copied":"copied","foot.follow":"Follow","foot.pages":"Photos",
 "home.intro":"When we pack a suitcase, we go on a trip. Maziar packed his suitcase and there was no way back. Twenty-three years later he returns to Iran. On foot, and this time on his own terms.",
  "home.read":"Read the story","home.run":"About the run","home.support":"Support a kilometre","home.stories":"Stories on the road","home.stories.p":"Along the way Maziar seeks out people who lost their home. Not the numbers, the people.",
  "home.when":"When","home.all":"All dates","home.allvideos":"All videos","home.partner":"Join as a partner",
@@ -156,8 +158,8 @@ en:{
  "story.read.run":"About the run","run.read.support":"Support the run","cal.read.contact":"Do you have a bed on the route?","fund.choose":"Choose this amount","fund.soon":"soon","shop.soon.long":"Available soon","vlog.more":"All videos on YouTube","partners.contact":"Get in touch",
  "story.title.a":"Once he had to flee.","story.title.b":"Now he runs back.","run.route.h":"Leuven → Iran",
 "hero.sub":"A marathon every day, from Belgium to Iran",
- "home.about":"About Maziar","home.about.h":"Behind the runner lies a long story.",
- "home.about.p":"Cook, entrepreneur and ultrarunner from Leuven. Born in southern Iran. Ten years waiting for his papers, nine years of Life Bar. On 1 March 2027 he sets off on foot towards Iran.","home.when.h":"Between now and departure",
+ "home.about":"About Maziar","home.about.h":"Behind the runner lies a remarkable story.",
+ "home.about.p":"Cook, entrepreneur and ultrarunner from Leuven. Born in southern Iran. Ten years waiting for his papers, nine years of Life Bar. On 1 March 2027 he sets off running towards Iran.","home.when.h":"Between now and departure",
  "home.life":"Maziar's life","home.life.h":"Cooking, running, living. At his own pace.",
  "home.quote":"Not because I want to prove something. But because I want to understand something.","home.quote.cite":"Maziar, about the run to Iran",
  "f1.big":"Once, I fled Iran.","f1.p1":"Not because I wanted to. Not because I was looking for adventure. I left because staying was no longer an option.","f1.p2":"I left everything behind. My family. My friends. My home. Even the business I had built with a friend. A life that seemed to have nothing wrong with it. But sometimes life chooses for you.",
@@ -242,7 +244,7 @@ const FUND = {raised:0,goal:null,splitA:50,splitB:50,tiers:[
 ]};
 const IMG = "assets/img/";
 const LIFE = [
- {img:"kitchen-cut.jpg",title:{nl:"De kok",en:"The cook"},meta:{nl:"AfterLife · locatie volgt",en:"AfterLife · location to be announced"},credit:"Elke Smit"},
+ {img:"kitchen-cut.jpg",title:{nl:"De kok",en:"The cook"},meta:{nl:"Gezonde voeding als basis",en:"Healthy food as the foundation"},credit:"Elke Smit"},
  {img:"trail-red.jpg",title:{nl:"De ultraloper",en:"The ultrarunner"},meta:{nl:"Drie jaar onafgebroken training",en:"Three years of training without a break"},credit:"Sergio Pro Foto"},
  {img:"portrait-laugh.jpg",title:{nl:"De ondernemer",en:"The entrepreneur"},meta:{nl:"Negen jaar Life Bar",en:"Nine years of Life Bar"},credit:"Elke Smit"}
 ];
@@ -271,7 +273,7 @@ function renderChrome(){
   $("hdr").innerHTML = `
     <div class="wrap">
       <div class="bar">
-        <a class="brand" href="index.html"><b>Maziar Toghraie</b><small>Leuven → Iran · 2027</small></a>
+        <a class="brand" href="index.html"><b>Maziar Toghraie</b><small>Eigen Koers · Leuven → Iran</small></a>
         <div class="right">
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" data-t="nav.menu"></button>
           <nav class="menu" id="menu" hidden><ul>${links}<li><a class="cta" href="steun.html" data-t="nav.support"></a></li></ul></nav>
@@ -369,7 +371,7 @@ function renderCalendar(){
 }
 function renderNextEvent(){
   const box = $("nextEvent"); if(!box) return; box.innerHTML="";
-  upcoming().slice(0,3).forEach(e => box.append(eventCard(e)));
+  upcoming().slice(0,4).forEach(e => box.append(eventCard(e)));
 }
 function videoCard(v, big, img){
   /* Live site: this <a class="video"> becomes <iframe src="https://www.youtube-nocookie.com/embed/ID"> */
