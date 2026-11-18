@@ -83,6 +83,12 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 .brand b{font-family:var(--mono);font-weight:500;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase}
 .brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .nav .right{display:flex;align-items:center;gap:1rem}
+@media (max-width:899px){
+  .nav .bar{flex-wrap:wrap}
+  .nav .right{display:contents}
+  .brand{margin-inline-end:auto}
+  .menu{order:10;flex-basis:100%}
+}
 .langs{display:flex;gap:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em}
 .langs button{background:none;border:0;padding:0;color:var(--muted);cursor:pointer;font:inherit;letter-spacing:inherit}
 .langs button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}

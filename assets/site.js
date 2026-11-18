@@ -273,9 +273,9 @@ function renderChrome(){
       <div class="bar">
         <a class="brand" href="index.html"><b>Maziar Toghraie</b><small>Leuven → Iran · 2027</small></a>
         <div class="right">
-          <div class="langs" role="group" aria-label="Language">${LANGS.map(l=>`<button data-lang="${l}">${l.toUpperCase()}</button>`).join("")}</div>
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" data-t="nav.menu"></button>
           <nav class="menu" id="menu" hidden><ul>${links}<li><a class="cta" href="steun.html" data-t="nav.support"></a></li></ul></nav>
+          <div class="langs" role="group" aria-label="Language">${LANGS.map(l=>`<button data-lang="${l}">${l.toUpperCase()}</button>`).join("")}</div>
         </div>
       </div>
     </div>`;
