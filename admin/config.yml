@@ -78,7 +78,7 @@ collections:
                   - { name: nl, label: Nederlands, widget: string }
                   - { name: en, label: Engels, widget: string }
                   - { name: fa, label: Farsi, widget: string, required: false }
-              - { name: kleur, label: Kleur, widget: color, default: "#123C74", hint: "Merkkleuren: navy #123C74, roest #9C421C, salie #587D55." }
+              - { name: kleur, label: Kleur, widget: color, default: "#123C74", hint: "Merkkleuren: navy #123C74, bordeaux #722F2B, goud #C98B3B." }
 
       - name: vlog
         label: Vlog
