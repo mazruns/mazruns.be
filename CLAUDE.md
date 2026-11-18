@@ -62,7 +62,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 ## Stijl
 
-- Merkkleuren van Maziar: navy `#123C74`, roest `#9C421C`, salie `#587D55`, zand `#F1EDE6`. Afgeleid: tekst `#14213A`, lichte roest `#E08A5E` (op foto's en navy), donker zand `#E7E1D6`. Alle kleuren staan als variabelen bovenaan `site.css`; gebruik die variabelen.
+- Merkkleuren (uit het logo): navy `#123C74` en bordeaux `#722F2B` zijn de twee merkkleuren, goud `#C98B3B` is de accentkleur. Zand `#F1EDE6` is de achtergrond. Afgeleid: tekst `#14213A`, licht goud `#E3A853` (tekst op foto's, navy en bordeaux), donker bordeaux `#5E2622` (kaarten op bordeaux), donker zand `#E7E1D6`. Goud nooit als tekstkleur op een lichte achtergrond (te weinig contrast). Het oude roest en salie zijn vervallen. Alle kleuren staan als variabelen bovenaan `site.css`; gebruik die variabelen.
 - Lettertypes: Barlow Condensed (koppen), Barlow (tekst), IBM Plex Mono (labels), Vazirmatn (Farsi).
 - Schrijf kort, concreet en warm. Liever zijn eigen woorden dan een slogan. Geen gedachtestreepjes (—).
 
