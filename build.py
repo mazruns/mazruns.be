@@ -3,6 +3,10 @@ OUT = os.path.dirname(os.path.abspath(__file__))
 
 # Inhoud die via /admin (Sveltia CMS) bewerkt wordt: content/*.json.
 # Die wordt hier gebundeld tot assets/content.js, zodat site.js ze kan lezen.
+# Shop tijdelijk verborgen: niet in het menu, niet in de sitemap, niet in zoekmachines.
+# De pagina, de producten en /admin blijven bestaan. Zet op True wanneer de shop opent.
+SHOP_OPEN = False
+
 CONTENT = {}
 for name in ["deloop","kalender","vlog","partners","shop"]:
     with open(os.path.join(OUT,"content",name+".json"), encoding="utf-8") as f:
@@ -10,6 +14,7 @@ for name in ["deloop","kalender","vlog","partners","shop"]:
 with open(os.path.join(OUT,"assets","content.js"),"w",encoding="utf-8") as f:
     f.write("/* Gegenereerd door build.py uit content/*.json. Niet bewerken: pas de JSON aan of gebruik /admin. */\n")
     f.write("window.CONTENT = " + json.dumps(CONTENT, ensure_ascii=False) + ";\n")
+    f.write("window.SHOP_OPEN = " + ("true" if SHOP_OPEN else "false") + ";\n")
 YT = CONTENT["vlog"].get("kanaal") or "https://www.youtube.com/@maz.runs"
 
 FONTS = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;700&display=swap'
@@ -306,7 +311,8 @@ def head(title, is_index, file):
         common = '<meta name="claude:viewport-fit-sides" content="cover">\n' + common
         if is_index:
             return common
-    robots = "" if LAUNCHED else '<meta name="robots" content="noindex">\n'
+    hidden = not LAUNCHED or (file == "shop.html" and not SHOP_OPEN)
+    robots = '<meta name="robots" content="noindex">\n' if hidden else ""
     url = SITE_URL + "/" + ("" if file == "index.html" else file)
     return f"""<!doctype html>
 <html lang="nl">
@@ -330,6 +336,7 @@ if LAUNCHED and not ARTIFACT:
     with open(os.path.join(OUT,"sitemap.xml"),"w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for name in PAGES:
+            if name == "shop" and not SHOP_OPEN: continue
             f.write(f"  <url><loc>{SITE_URL}/{'' if name=='index' else name}</loc></url>\n")
         f.write("</urlset>\n")
 

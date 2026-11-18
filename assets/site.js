@@ -267,7 +267,7 @@ const photo = (img, cls, alt, credit) => `<div class="photo ${cls||""}"><img src
 
 /* ===== header & footer ===== */
 function renderChrome(){
-  const links = PAGES.filter(p=>p.id!=="home" && p.id!=="steun").map(p => `<li><a href="${p.file}"${p.id===page?' aria-current="page"':''} data-t="${p.t}"></a></li>`).join("");
+  const links = PAGES.filter(p=>p.id!=="home" && p.id!=="steun" && (p.id!=="shop" || window.SHOP_OPEN!==false)).map(p => `<li><a href="${p.file}"${p.id===page?' aria-current="page"':''} data-t="${p.t}"></a></li>`).join("");
   $("hdr").innerHTML = `
     <div class="wrap">
       <div class="bar">
