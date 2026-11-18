@@ -133,7 +133,7 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
 <section class="band"><div class="wrap stack" style="gap:clamp(3rem,7vw,5rem)">
   {frag("desert-empty.jpg","f1",credit="Marathon des Sables")}
   {frag("road-run.jpg","f2",rev=True)}
-  {frag("hands-mortar.jpg","f3",credit="Elke Smit Photography",cta=SUPPORT_BTN)}
+  {frag("beach.jpg","f3",cta=SUPPORT_BTN)}
 </div></section>
 <section class="band dark wine"><div class="wrap quote">
   <blockquote data-t="story.quote">Ik ben niet boos op wat me overkomen is. Integendeel. De pijn heeft me gevormd.</blockquote>
