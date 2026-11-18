@@ -297,7 +297,14 @@ PAGES["contact"] = ("contact", "Contact · Mazruns", hero(
 #   python3 build.py --artifact -> preview version for the Claude artifact (index without skeleton)
 # Set LAUNCHED = True on launch day: removes the "noindex" so search engines may list the site.
 # ---------------------------------------------------------------------------
-import sys
+import sys, hashlib
+# Elke versie van css/js krijgt een eigen adres (?v=...), zodat browsers na een wijziging
+# meteen de nieuwe versie laden in plaats van een oude uit hun cache.
+def versioned(path):
+    with open(os.path.join(OUT, path), "rb") as f:
+        return path + "?v=" + hashlib.sha1(f.read()).hexdigest()[:8]
+CSS, CONTENT_JS, SITE_JS = versioned("assets/site.css"), versioned("assets/content.js"), versioned("assets/site.js")
+
 LAUNCHED = True
 SITE_URL = "https://mazruns.be"
 DESCRIPTION = "Ooit moest Maziar Toghraie vluchten uit Iran. Op 1 maart 2027 loopt hij terug: van Leuven naar Iran, elke dag een marathon."
@@ -306,7 +313,7 @@ ARTIFACT = "--artifact" in sys.argv
 def head(title, is_index, file):
     common = f"""<title>{title}</title>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="assets/site.css">"""
+<link rel="stylesheet" href="{CSS}">"""
     if ARTIFACT:
         common = '<meta name="claude:viewport-fit-sides" content="cover">\n' + common
         if is_index:
@@ -351,11 +358,11 @@ for name,(pid,title,body) in PAGES.items():
 {body}
 </main>
 <footer id="ftr"></footer>
-<script src="assets/content.js"></script>
-<script src="assets/site.js"></script>
+<script src="{CONTENT_JS}"></script>
+<script src="{SITE_JS}"></script>
 </body>""" + ("" if bare else "\n</html>\n")
     if bare:
         html = html.replace('<body data-page="home">','').replace('</body>','')
-        html = html.replace('<script src="assets/content.js"></script>','<script>document.body.dataset.page="home";</script>\n<script src="assets/content.js"></script>')
+        html = html.replace(f'<script src="{CONTENT_JS}"></script>',f'<script>document.body.dataset.page="home";</script>\n<script src="{CONTENT_JS}"></script>')
     with open(os.path.join(OUT, file),"w") as f: f.write(html)
     print("wrote", file, len(html), "(artifact)" if ARTIFACT else "(site)")
