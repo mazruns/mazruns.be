@@ -269,9 +269,10 @@ PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
   <div class="stack">
     <p class="label" data-t="fund.cl">Het goede doel</p>
     <h2 data-t="fund.cl.h">Casa Legal: alle hulp onder één dak</h2>
-    <p class="lede" data-t="fund.cl.p1">Casa Legal in Brussel is de eerste vzw van advocaten in België. Hun vertrekpunt: het recht alleen is niet genoeg. Wie er binnenstapt, vindt advocaten met verschillende expertises, maatschappelijk werkers en psychologen onder één dak.</p>
-    <p data-t="fund.cl.p2">Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om die hulp ook te kunnen gebruiken.</p>
-    <p data-t="fund.cl.p3">Die holistische aanpak is zo vernieuwend dat ze wetenschappelijk onderzocht wordt. In het project Scala Legal (2025 tot 2028) bestuderen onderzoekers van de ULB en UCLouvain welke impact de werking van Casa Legal heeft, en hoe ze ook elders kan werken.</p>
+    <p class="lede" data-t="fund.cl.p1">Casa Legal is een innoverende vzw met een holistische aanpak. Het is een one-stop shop voor juridische hulp op verschillende domeinen en psychosociale ondersteuning.</p>
+    <p data-t="fund.cl.p2">Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om hun leven op te bouwen. Het is exact de soort hulp die Maz gemist heeft toen hij 13 jaar geleden in een precaire situatie zat.</p>
+    <p data-t="fund.cl.p3">De holistische aanpak is zo vernieuwend dat ze wetenschappelijk onderzocht wordt. In het project Scala Legal (2025 tot 2028) bestuderen onderzoekers van de ULB en UCLouvain welke impact de werking van Casa Legal heeft, en hoe ze ook elders kan werken.</p>
+    <a class="link" href="https://casalegal.be" target="_blank" rel="noopener" data-t="fund.cl.more">Lees hier meer over Casa Legal</a>
   </div>
   <div class="roof">
     <p class="label" data-t="fund.cl.roof">Onder één dak</p>
@@ -283,7 +284,7 @@ PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
   </div>
 </div></section>
 <section class="band dark"><div class="wrap quote">
-  <blockquote class="long" data-t="fund.quote">Ik geloof dat één persoon het verschil kan maken. Eén advocaat veranderde mijn levensloop. Jouw bijdrage, hoe klein of groot ook, maakt een wezenlijk verschil voor mensen in een kwetsbare situatie.</blockquote>
+  <blockquote class="long" data-t="fund.quote">Ik geloof dat één persoon het verschil kan maken. Een advocaat veranderde mijn leven. Jouw bijdrage, hoe klein of groot ook, maakt een wezenlijk verschil voor mensen in een kwetsbare situatie.</blockquote>
   <cite data-t="story.cite">Maziar</cite>
 </div></section>
 <section class="band alt"><div class="wrap stack lg">
