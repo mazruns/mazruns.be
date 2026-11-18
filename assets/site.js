@@ -58,11 +58,11 @@ nl:{
  "ptier.1":"Hoofdpartner","ptier.1.p":"Eén partner die de hele tocht draagt. Naam op alle communicatie, eigen verhaal in de vlog.",
  "ptier.2":"Etappepartner","ptier.2.p":"Een week van de tocht op jouw naam. Vermelding in de kalender en in de video's van die etappe.",
  "ptier.3":"In natura","ptier.3.p":"Schoenen, kledij, voeding, verzekering. Alles wat de tocht lichter maakt.",
- "fund.crumb":"Steun","fund.title":"Koop een kilometer","fund.lede":"Een deel van elke bijdrage dekt de tocht. De rest gaat naar een vzw. Welke, maken we binnenkort bekend.",
- "fund.goal":"doel: nog te bepalen","fund.note":"Betaling wordt gekoppeld via Mollie of Stripe. Knoppen zijn nu nog placeholders.","fund.btn":"Steun","fund.split":"Waar je bijdrage naartoe gaat","fund.split.a":"de tocht","fund.split.b":"de vzw","fund.split.note":"verdeling voorlopig",
+ "fund.crumb":"Steun","fund.title":"Koop een kilometer","fund.lede":"Elke kilometer van Eigen Koers is € 12 waard. Daarvan gaat € 10 naar Casa Legal en € 2 naar de tocht.",
+ "fund.goal":"doel € 60.000","fund.note":"De betaalpagina volgt binnenkort.","fund.btn":"Steun","fund.split":"Waar je bijdrage naartoe gaat","fund.split.a":"naar de tocht","fund.split.b":"naar Casa Legal","fund.split.note":"5.000 kilometer × € 12 = € 60.000",
  "fund.faq":"Vragen",
- "ffaq.q1":"Wat gebeurt er als de tocht stopt?","ffaq.a1":"Dan gaat het deel voor de vzw er alsnog naartoe, en wordt het restant van het tochtbudget verantwoord op deze pagina.",
- "ffaq.q2":"Krijg ik een fiscaal attest?","ffaq.a2":"Dat hangt af van de vzw. Dit wordt uitgeklaard voor het vertrek.",
+ "ffaq.q1":"Wat gebeurt er als de tocht stopt?","ffaq.a1":"Dan gaat het deel voor Casa Legal er alsnog naartoe, en verantwoorden we het restant van het tochtbudget op deze pagina.",
+ "ffaq.q2":"Krijg ik een fiscaal attest?","ffaq.a2":"Dat klaren we uit met Casa Legal voor het vertrek.",
  "ffaq.q3":"Kan ik als bedrijf steunen?","ffaq.a3":"Ja. Kijk bij Partners, of neem contact op.",
  "shop.crumb":"Shop","shop.title":"Neem iets mee","shop.lede":"Elke aankoop steunt de tocht. Het assortiment en de prijzen zijn voorlopig.","shop.btn":"In winkelmand","shop.soon":"binnenkort","shop.ship":"Verzending in België en Nederland. Afhalen in Leuven kan ook.",
  "contact.crumb":"Contact","contact.title":"Loop mee","contact.lede":"Pers, partners, en lopers die een stuk van de route willen meelopen.",
@@ -91,7 +91,32 @@ nl:{
  "run.why":"Waarom hij loopt","run.why.p":"Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen. Misschien omdat een deel van mij nog altijd onderweg is. Misschien omdat ik wil voelen hoe het is om terug te keren naar de plek waar mijn verhaal begon.",
  "run.gallery":"Onderweg naar het vertrek",
  "partners.why":"Waarom bedrijven meelopen","partners.why.p":"Doorzettingsvermogen, ondernemerschap, een migratieverhaal, mentale veerkracht en maatschappelijke impact. Dat is wat deze tocht draagt, en wat een partner mee uitdraagt.",
- "fund.quote":"Ik geloof dat iedereen iets kan betekenen voor een ander. Dat hoeft niet altijd geld te zijn. Een gesprek, een kans, een kleine daad van steun kan een leven veranderen.",
+ "fund.quote":"Ik geloof dat één persoon het verschil kan maken. Eén advocaat veranderde mijn levensloop. Jouw bijdrage, hoe klein of groot ook, maakt een wezenlijk verschil voor mensen in een kwetsbare situatie.",
+ "fund.cl.r3.t":"voor wat iemand met zich meedraagt",
+ "fund.cl.r3":"Psychologen",
+ "fund.cl.r2.t":"voor alles wat rond een dossier speelt",
+ "fund.cl.r2":"Maatschappelijk werkers",
+ "fund.cl.r1.t":"met verschillende expertises",
+ "fund.cl.r1":"Advocaten",
+ "fund.cl.roof":"Onder één dak",
+ "fund.cl.p3":"Die holistische aanpak is zo vernieuwend dat ze wetenschappelijk onderzocht wordt. In het project Scala Legal (2025 tot 2028) bestuderen onderzoekers van de ULB en UCLouvain welke impact de werking van Casa Legal heeft, en hoe ze ook elders kan werken.",
+ "fund.cl.p2":"Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om die hulp ook te kunnen gebruiken.",
+ "fund.cl.p1":"Casa Legal in Brussel is de eerste vzw van advocaten in België. Hun vertrekpunt: het recht alleen is niet genoeg. Wie er binnenstapt, vindt advocaten met verschillende expertises, maatschappelijk werkers en psychologen onder één dak.",
+ "fund.cl.h":"Casa Legal: alle hulp onder één dak",
+ "fund.cl":"Het goede doel",
+ "fund.give.btn":"Steun met {a}",
+ "fund.give.split":"{a} naar Casa Legal · {b} naar de tocht",
+ "fund.kms":"{n} kilometer",
+ "fund.km1":"1 kilometer",
+ "fund.range":"Kies je bedrag",
+ "fund.your":"Jouw bijdrage",
+ "fund.km.done":"{n} van de {t} kilometer gesteund",
+ "fund.raised":"ingezameld",
+ "fund.meter.h":"Elke kilometer telt.",
+ "fund.meter":"Samen naar € 60.000",
+ "fund.split.b.t":"€ 50.000 in totaal",
+ "fund.split.a.t":"€ 10.000 in totaal, voor een deel van de kosten onderweg",
+ "fund.split.h":"€ 12 per kilometer",
  "credits":"Foto's: Elke Smit Photography, Marathon des Sables, Sergio Pro Foto, Kai P., JA Films, en Maziar zelf",
  "foot.note":"Deze site is een voorstel met placeholders. Het verhaal van Maziar is gebaseerd op wat hij zelf publiek deelde."
 },
@@ -139,11 +164,11 @@ en:{
  "ptier.1":"Main partner","ptier.1.p":"One partner carrying the whole run. Your name on everything we publish, and your own story in the vlog.",
  "ptier.2":"Stage partner","ptier.2.p":"One week of the run in your name. Credited in the calendar and in that stage's videos.",
  "ptier.3":"In kind","ptier.3.p":"Shoes, clothing, food, insurance. Anything that makes the run lighter.",
- "fund.crumb":"Support","fund.title":"Buy a kilometre","fund.lede":"Part of every contribution covers the journey. The rest goes to a non-profit. We'll announce which one soon.",
- "fund.goal":"goal: to be set","fund.note":"Payments will be connected through Mollie or Stripe. Buttons are placeholders for now.","fund.btn":"Support","fund.split":"Where your contribution goes","fund.split.a":"the run","fund.split.b":"the non-profit","fund.split.note":"provisional split",
+ "fund.crumb":"Support","fund.title":"Buy a kilometre","fund.lede":"Every kilometre of Eigen Koers is worth €12. €10 of it goes to Casa Legal and €2 to the journey.",
+ "fund.goal":"goal €60,000","fund.note":"The payment page is coming soon.","fund.btn":"Support","fund.split":"Where your contribution goes","fund.split.a":"to the journey","fund.split.b":"to Casa Legal","fund.split.note":"5,000 kilometres × €12 = €60,000",
  "fund.faq":"Questions",
- "ffaq.q1":"What if the run stops?","ffaq.a1":"The non-profit's share still goes to them, and the remainder of the run budget is accounted for on this page.",
- "ffaq.q2":"Do I get a tax certificate?","ffaq.a2":"That depends on the non-profit. This will be settled before departure.",
+ "ffaq.q1":"What if the run stops?","ffaq.a1":"Casa Legal's share still goes to them, and we account for the remainder of the journey budget on this page.",
+ "ffaq.q2":"Do I get a tax certificate?","ffaq.a2":"We'll settle this with Casa Legal before departure.",
  "ffaq.q3":"Can my company contribute?","ffaq.a3":"Yes. See Partners, or get in touch.",
  "shop.crumb":"Shop","shop.title":"Take something with you","shop.lede":"Every purchase supports the run. Range and prices are provisional.","shop.btn":"Add to cart","shop.soon":"coming soon","shop.ship":"Shipping within Belgium and the Netherlands, or pick up in Leuven.",
  "contact.crumb":"Contact","contact.title":"Join the run","contact.lede":"Press, partners, and runners who'd like to join for part of the route.",
@@ -172,7 +197,32 @@ en:{
  "run.why":"Why he runs","run.why.p":"Not because I want to prove something. But because I want to understand something. Perhaps because a part of me is still on the road. Perhaps because I want to feel what it is like to return to the place where my story began.",
  "run.gallery":"The road to departure",
  "partners.why":"Why companies join","partners.why.p":"Perseverance, entrepreneurship, a migration story, mental resilience and social impact. That is what carries this run, and what a partner carries with it.",
- "fund.quote":"I believe everyone can make a difference for someone else. It doesn't always have to be money. A conversation, a chance, a small act of support can change a life.",
+ "fund.quote":"I believe one person can make a difference. One lawyer changed the course of my life. Your contribution, however small or large, makes a real difference for people in a vulnerable situation.",
+ "fund.cl.r3.t":"for what people carry with them",
+ "fund.cl.r3":"Psychologists",
+ "fund.cl.r2.t":"for everything surrounding a case",
+ "fund.cl.r2":"Social workers",
+ "fund.cl.r1.t":"with different areas of expertise",
+ "fund.cl.r1":"Lawyers",
+ "fund.cl.roof":"Under one roof",
+ "fund.cl.p3":"This holistic approach is innovative enough to be the subject of scientific research. In the Scala Legal project (2025 to 2028), researchers from ULB and UCLouvain are studying the impact of Casa Legal's work, and how it could work elsewhere.",
+ "fund.cl.p2":"For people in a vulnerable situation, that makes help far easier to reach. They don't have to go from office to office, or tell their story again each time. In one place they get legal help, and the support they need to actually make use of it.",
+ "fund.cl.p1":"Casa Legal in Brussels is the first non-profit of lawyers in Belgium. Their starting point: the law alone is not enough. Anyone who walks in finds lawyers with different areas of expertise, social workers and psychologists under one roof.",
+ "fund.cl.h":"Casa Legal: all the help under one roof",
+ "fund.cl":"The cause",
+ "fund.give.btn":"Give {a}",
+ "fund.give.split":"{a} to Casa Legal · {b} to the journey",
+ "fund.kms":"{n} kilometres",
+ "fund.km1":"1 kilometre",
+ "fund.range":"Choose your amount",
+ "fund.your":"Your contribution",
+ "fund.km.done":"{n} of {t} kilometres supported",
+ "fund.raised":"raised",
+ "fund.meter.h":"Every kilometre counts.",
+ "fund.meter":"Together towards €60,000",
+ "fund.split.b.t":"€50,000 in total",
+ "fund.split.a.t":"€10,000 in total, towards part of the costs on the road",
+ "fund.split.h":"€12 per kilometre",
  "credits":"Photos: Elke Smit Photography, Marathon des Sables, Sergio Pro Foto, Kai P., JA Films, and Maziar himself",
  "foot.note":"This site is a proposal with placeholders. Maziar's story is based on what he shared publicly himself."
 },
@@ -237,11 +287,8 @@ const STAGES = (C.kalender.etappes||[]).map(x=>({from:x.van,to:x.tot,country:x.l
 const VLOG = (C.vlog.videos||[]).map(v=>({id:v.youtube_id,featured:!!v.uitgelicht,title:v.titel,sub:v.ondertitel}));
 const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p.rol,url:p.url,logo:p.logo}))
   .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
-const FUND = {raised:0,goal:null,splitA:50,splitB:50,tiers:[
- {amount:10,title:{nl:"Eén kilometer",en:"One kilometre"},txt:{nl:"Je naam op de kilometerlijst.",en:"Your name on the kilometre list."}},
- {amount:42,featured:true,title:{nl:"Eén marathon",en:"One marathon"},txt:{nl:"Een dag van de tocht op jouw naam, met een groet uit die etappe.",en:"One day of the run in your name, with a greeting from that stage."}},
- {amount:250,title:{nl:"Eén etappe",en:"One stage"},txt:{nl:"Een week onderweg, en een plek aan de Perzische tafel na afloop.",en:"A week on the road, and a seat at the Persian table afterwards."}}
-]};
+/* Steun. raised: het opgehaalde bedrag, met de hand bij te werken. payUrl: adres van de betaalpagina (leeg = nog niet klaar). */
+const FUND = {raised:0, goal:60000, perKm:12, toCause:10, toRun:2, maxKm:500, payUrl:""};
 const IMG = "assets/img/";
 const LIFE = [
  {img:"kitchen-cut.jpg",title:{nl:"De kok",en:"The cook"},meta:{nl:"Gezonde voeding als basis",en:"Healthy food as the foundation"},credit:"Elke Smit"},
@@ -394,15 +441,34 @@ function renderPartners(){
 }
 function renderFund(){
   const bar = $("meterBar"); if(!bar) return;
-  const pct = FUND.goal ? Math.min(100, FUND.raised/FUND.goal*100) : 0;
+  /* ?demo in het adres toont een voorbeeldbedrag, enkel om het ontwerp te bekijken */
+  const raised = /[?&]demo\b/.test(location.search) ? 18400 : FUND.raised;
+  const nf = n => new Intl.NumberFormat(lang==="nl"?"nl-BE":"en-IE").format(n);
+  const pct = Math.min(100, raised/FUND.goal*100);
   requestAnimationFrame(()=>{ bar.style.width = pct+"%"; });
-  $("raised").textContent = eur(FUND.raised);
-  $("goal").textContent = FUND.goal ? `${t("fund.goal").split(":")[0]}: ${eur(FUND.goal)}` : t("fund.goal");
-  if($("splitA")){ $("splitA").textContent = FUND.splitA+"%"; $("splitB").textContent = FUND.splitB+"%"; }
-  const c = $("tiers"); c.innerHTML="";
-  FUND.tiers.forEach(x => c.append(el(`<li class="${x.featured?"featured":""}"><span class="price">${eur(x.amount)}</span><div class="t"><strong>${esc(L(x.title))}</strong><span>${esc(L(x.txt))}</span></div><span class="link muted" aria-disabled="true">${esc(t("fund.choose"))} · ${esc(t("fund.soon"))}</span></li>`)));
+  $("raised").textContent = eur(raised);
+  $("goal").textContent = t("fund.goal");
+  $("kmDone").textContent = t("fund.km.done").replace("{n}", nf(Math.floor(raised/FUND.perKm))).replace("{t}", nf(Math.round(FUND.goal/FUND.perKm)));
+  const r = $("giveRange"); if(!r) return;
+  const kmOf = v => Math.max(1, Math.round(1 + (FUND.maxKm-1)*Math.pow(v/100,2)));
+  $("rangeMin").textContent = eur(FUND.perKm); $("rangeMax").textContent = eur(FUND.maxKm*FUND.perKm);
+  const upd = () => {
+    const v = +r.value, km = kmOf(v), amt = km*FUND.perKm;
+    $("giveAmt").textContent = eur(amt);
+    $("giveKm").textContent = km===1 ? t("fund.km1") : t("fund.kms").replace("{n}", nf(km));
+    $("giveSplit").textContent = t("fund.give.split").replace("{a}", eur(km*FUND.toCause)).replace("{b}", eur(km*FUND.toRun));
+    r.style.setProperty("--fill", v+"%");
+    r.setAttribute("aria-valuetext", eur(amt));
+    const add = Math.min(100-pct, amt/FUND.goal*100);
+    const ad = $("meterAdd"); ad.style.left = pct+"%"; ad.style.width = `max(8px, ${add}%)`;
+    const tag = $("meterTag"); tag.textContent = "+ "+eur(amt); tag.style.left = Math.min(94, Math.max(6, pct+add))+"%";
+    const btn = $("giveBtn"); btn.textContent = t("fund.give.btn").replace("{a}", eur(amt));
+    btn.href = FUND.payUrl ? `${FUND.payUrl}${FUND.payUrl.includes("?")?"&":"?"}bedrag=${amt}` : "#";
+  };
+  if(!r.dataset.wired){ r.dataset.wired = 1; r.addEventListener("input", upd);
+    $("giveBtn").addEventListener("click", e => { if(!FUND.payUrl){ e.preventDefault(); $("payNote").classList.add("flash"); setTimeout(()=>$("payNote").classList.remove("flash"),900); } }); }
+  upd();
 }
-const PIMG = ["portrait-stand.jpg","greens.jpg","hands-mortar.jpg","veg-board.jpg"];
 function renderShop(){
   const c = $("products"); if(!c) return; c.innerHTML="";
   PRODUCTS.forEach((p,i) => c.append(el(`<div class="tile">${p.img?`<div class="photo square"><img src="${esc(p.img)}" alt="${esc(L(p.name))}" loading="lazy"></div>`:photo(PIMG[i%PIMG.length],"square",L(p.name))}<h3>${esc(L(p.name))}</h3><div class="price-tag">${p.price!=null?eur(p.price):esc(t("shop.soon"))}</div><span class="link muted">${esc(t("shop.soon.long"))}</span></div>`)));

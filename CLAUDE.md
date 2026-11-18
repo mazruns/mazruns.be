@@ -83,7 +83,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 - Video's in `VLOG` hebben nog geen echte YouTube-id's; het YouTube-kanaal ligt nog niet vast.
 - Partners: enkel AfterLife, de rest zijn lege plekken.
-- Steun: doelbedrag, verdeling en betaallinks ontbreken; de knoppen doen nog niets. Voorstel: het deel voor de vzw via het platform van de vzw, het deel voor de tocht via partners en eventueel één crowdfundingpagina.
+- Steun: doel € 60.000 (5.000 km × € 12). Per kilometer € 10 naar Casa Legal en € 2 naar de tocht (€ 50.000 / € 10.000). In `site.js`: `FUND.raised` met de hand bijwerken; `FUND.payUrl` invullen zodra de betaalpagina bestaat (de knop stuurt dan `?bedrag=` mee). `steun.html?demo` toont een voorbeeldbedrag om het ontwerp te bekijken.
 - Shop: producten en prijzen zijn voorlopig; nog geen betaling. De pagina is tijdelijk verborgen (`SHOP_OPEN = False` bovenaan `build.py`): niet in het menu, niet in de sitemap, `noindex`. Zet op `True` en draai `python3 build.py` wanneer de shop opent.
 - Contactformulier en nieuwsbrief tonen enkel een bevestiging; ze zijn nog nergens aan gekoppeld.
 - Perskit: nog niet beschikbaar.

@@ -235,28 +235,59 @@ PAGES["partners"] = ("partners", "Partners · Mazruns", hero(
 </div></section>
 ''')
 
-PAGES["steun"] = ("steun", "Steun · Mazruns", hero(
+PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
   "sand-kick.jpg","60% 22%","fund.crumb","Steun",
   '<span data-t="fund.title">Koop een kilometer</span>',None,None,
-  "fund.lede","Een deel van elke bijdrage dekt de tocht. De rest gaat naar een vzw. Welke, maken we binnenkort bekend.","",short=True,credit="Marathon des Sables") + f'''
-<section class="band"><div class="wrap stack lg">
-  <div>
-    <div class="meter"><i id="meterBar"></i></div>
-    <div class="amounts"><span id="raised">€ 0</span><span id="goal" data-t="fund.goal">doel: nog te bepalen</span></div>
+  "fund.lede","Elke kilometer van Eigen Koers is € 12 waard. Daarvan gaat € 10 naar Casa Legal en € 2 naar de tocht.","",short=True,credit="Marathon des Sables") + f'''
+<section class="band"><div class="wrap give">
+  <div class="give-meter">
+    <p class="label" data-t="fund.meter">Samen naar € 60.000</p>
+    <h2 data-t="fund.meter.h">Elke kilometer telt.</h2>
+    <div class="meter big" aria-hidden="true"><i id="meterBar"></i><b id="meterAdd"></b><span class="tag" id="meterTag"></span></div>
+    <div class="amounts big"><span><strong id="raised">€ 0</strong> <span data-t="fund.raised">ingezameld</span></span><span id="goal" data-t="fund.goal">doel € 60.000</span></div>
+    <p class="note" id="kmDone"></p>
   </div>
-  <ul class="tiers" id="tiers"></ul>
-  <p class="note" data-t="fund.note"></p>
+  <div class="give-card">
+    <p class="label" data-t="fund.your">Jouw bijdrage</p>
+    <div class="give-out"><span class="amt" id="giveAmt">€ 120</span><span class="kms" id="giveKm">10 kilometer</span></div>
+    <input type="range" class="give-range" id="giveRange" min="0" max="100" step="0.1" value="13.4" aria-label="Kies je bedrag">
+    <div class="range-ends"><span id="rangeMin">€ 12</span><span id="rangeMax">€ 6.000</span></div>
+    <p class="give-split" id="giveSplit"></p>
+    <a class="btn fill accent" id="giveBtn" href="#">Steun</a>
+    <p class="note" id="payNote" data-t="fund.note">De betaalpagina volgt binnenkort.</p>
+  </div>
+</div></section>
+<section class="band alt"><div class="wrap stack lg">
+  <div class="head"><div class="stack"><p class="label" data-t="fund.split">Waar je bijdrage naartoe gaat</p><h2 data-t="fund.split.h">€ 12 per kilometer</h2></div></div>
+  <div class="km-split">
+    <div class="coins" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i></div>
+    <div class="split cl"><div><b>€ 10</b><span data-t="fund.split.b">naar Casa Legal</span><small data-t="fund.split.b.t">€ 50.000 in totaal</small></div><div><b>€ 2</b><span data-t="fund.split.a">naar de tocht</span><small data-t="fund.split.a.t">€ 10.000 in totaal, voor een deel van de kosten onderweg</small></div></div>
+  </div>
+  <p class="note" data-t="fund.split.note">5.000 kilometer × € 12 = € 60.000</p>
+</div></section>
+<section class="band"><div class="wrap cl-wrap">
+  <div class="stack">
+    <p class="label" data-t="fund.cl">Het goede doel</p>
+    <h2 data-t="fund.cl.h">Casa Legal: alle hulp onder één dak</h2>
+    <p class="lede" data-t="fund.cl.p1">Casa Legal in Brussel is de eerste vzw van advocaten in België. Hun vertrekpunt: het recht alleen is niet genoeg. Wie er binnenstapt, vindt advocaten met verschillende expertises, maatschappelijk werkers en psychologen onder één dak.</p>
+    <p data-t="fund.cl.p2">Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om die hulp ook te kunnen gebruiken.</p>
+    <p data-t="fund.cl.p3">Die holistische aanpak is zo vernieuwend dat ze wetenschappelijk onderzocht wordt. In het project Scala Legal (2025 tot 2028) bestuderen onderzoekers van de ULB en UCLouvain welke impact de werking van Casa Legal heeft, en hoe ze ook elders kan werken.</p>
+  </div>
+  <div class="roof">
+    <p class="label" data-t="fund.cl.roof">Onder één dak</p>
+    <ul>
+      <li><b data-t="fund.cl.r1">Advocaten</b><span data-t="fund.cl.r1.t">met verschillende expertises</span></li>
+      <li><b data-t="fund.cl.r2">Maatschappelijk werkers</b><span data-t="fund.cl.r2.t">voor alles wat rond een dossier speelt</span></li>
+      <li><b data-t="fund.cl.r3">Psychologen</b><span data-t="fund.cl.r3.t">voor wat iemand met zich meedraagt</span></li>
+    </ul>
+  </div>
 </div></section>
 <section class="band dark"><div class="wrap quote">
-  <blockquote data-t="fund.quote"></blockquote>
+  <blockquote class="long" data-t="fund.quote">Ik geloof dat één persoon het verschil kan maken. Eén advocaat veranderde mijn levensloop. Jouw bijdrage, hoe klein of groot ook, maakt een wezenlijk verschil voor mensen in een kwetsbare situatie.</blockquote>
   <cite data-t="story.cite">Maziar</cite>
 </div></section>
-<section class="band alt"><div class="wrap two" style="display:grid;gap:3rem">
-  <div class="stack">
-    <p class="label" data-t="fund.split">Waar je bijdrage naartoe gaat</p>
-    <div class="split"><div><b id="splitA">50%</b><span data-t="fund.split.a">de tocht</span></div><div><b id="splitB">50%</b><span data-t="fund.split.b">de vzw</span></div></div>
-    <p class="note" data-t="fund.split.note">verdeling voorlopig</p>
-  </div>
+<section class="band alt"><div class="wrap stack lg">
+  <p class="label" data-t="fund.faq">Vragen</p>
   <div>
     <details><summary data-t="ffaq.q1"></summary><p data-t="ffaq.a1"></p></details>
     <details><summary data-t="ffaq.q2"></summary><p data-t="ffaq.a2"></p></details>
