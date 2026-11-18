@@ -88,7 +88,6 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Contactformulier en nieuwsbrief tonen enkel een bevestiging; ze zijn nog nergens aan gekoppeld.
 - Perskit: nog niet beschikbaar.
 - Logo van de expeditie.
-- Hotel Anywhere bij Partners: logo en link ontbreken nog (toe te voegen via `/admin` → Partners).
 - Vlog staat niet op de homepagina tot de vlog start (`VLOG_ON_HOME = False` in `build.py`).
 
 ## Lancering
