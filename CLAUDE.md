@@ -29,7 +29,7 @@ Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2
 
 **In `content/*.json`** (Claude, zelfde inhoud als `/admin`):
 - **Kalender** `kalender.json`: `evenementen` met `datum` (JJJJ-MM-DD), `soort`, `titel`, `tekst`. `enkel_maand: true` als enkel de maand vastligt; zo'n item komt in de lijst maar niet in het kalenderraster. `etappes` (`van`, `tot`, `land`, `kleur`) kleuren hun dagen in de kalender; één vaste kleur per land, afgeleid van de merkkleuren.
-- **De loop** `deloop.json`: titel, intro, de drie cijfers (ook op de homepagina), "waarom hij loopt", de voorbereiding, de FAQ.
+- **De tocht** `deloop.json` (pagina `detocht.html`; het oude adres /deloop stuurt door via `_redirects`): titel, intro, de drie cijfers (ook op de homepagina), "waarom hij loopt", de voorbereiding, de FAQ.
 - **Vlog** `vlog.json`: kanaal-url en video's met YouTube-id. **Partners** `partners.json`: partners en het aantal lege plekken. **Shop** `shop.json`: producten met prijs (leeg = binnenkort).
 - Na een wijziging: `python3 build.py` (maakt `assets/content.js` en de html opnieuw). Cloudflare doet dat zelf bij elke push.
 
@@ -44,11 +44,11 @@ Wijzig `build.py` en draai daarna `python3 build.py`. Dat schrijft alle `.html`-
 
 ### Nieuwe foto
 
-Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet hem in `assets/img/`. Vermeld de fotograaf bij de foto (`credit`) en voeg een nieuwe fotograaf toe aan de lijst in de footer (functie `renderChrome` in `site.js`). Controleer het fotokader op desktop én mobiel en stuur bij met `object-position`.
+Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet hem in `assets/img/`. Vermeld de fotograaf bij de foto (`credit`) en voeg een nieuwe fotograaf toe aan de lijst in de footer (functie `renderChrome` in `site.js`). Controleer het fotokader op desktop én mobiel en stuur bij met `object-position`. **Nooit lichaamsdelen afsnijden** (hoofd, armen, handen, voeten): kies een ander kader, zoom uit, of neem een andere foto.
 
 ## Vaste afspraken over de inhoud
 
-- De bestemming is **Iran**. Niet "Shiraz" en niet "het dorp". Op de pagina De loop staat: "Van België naar de stad waar ik geboren werd".
+- De bestemming is **Iran**. Niet "Shiraz" en niet "het dorp". Op de pagina De tocht staat: "Van België naar de grens met Iran".
 - **Nooit "naar huis"** of "thuis" voor Iran. Iran is niet zijn thuis; gebruik "terug" of "naar waar zijn verhaal begon".
 - Hij kreeg in 2013 een **verblijfsvergunning**, niet de Belgische nationaliteit.
 - Hij slaapt onderweg in een **camper**. Jolien reist mee. Hij nodigt lopers uit om een stuk mee te lopen.
@@ -81,7 +81,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 ## Nog open (plaatshouders)
 
-- Video's in `VLOG` hebben nog geen echte YouTube-id's; het YouTube-kanaal ligt nog niet vast.
+- Video's in `VLOG` hebben nog geen echte YouTube-id's; het YouTube-kanaal ligt nog niet vast. Video's zonder echte id (11 tekens) worden niet getoond; zonder echte video's verbergt de vlogpagina de videoblokken.
 - Partners: enkel AfterLife, de rest zijn lege plekken.
 - Steun: doel € 60.000 (5.000 km × € 12). Per kilometer € 10 naar Casa Legal en € 2 naar de tocht (€ 50.000 / € 10.000). In `site.js`: `FUND.raised` met de hand bijwerken; `FUND.payUrl` invullen zodra de betaalpagina bestaat (de knop stuurt dan `?bedrag=` mee). `steun.html?demo` toont een voorbeeldbedrag om het ontwerp te bekijken.
 - Shop: producten en prijzen zijn voorlopig; nog geen betaling. De pagina is tijdelijk verborgen (`SHOP_OPEN = False` bovenaan `build.py`): niet in het menu, niet in de sitemap, `noindex`. Zet op `True` en draai `python3 build.py` wanneer de shop opent.

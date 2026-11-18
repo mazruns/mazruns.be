@@ -185,7 +185,7 @@ collections:
               - { name: foto, label: Foto, widget: image, required: false, choose_url: false }
 
       - name: deloop
-        label: De loop
+        label: De tocht
         file: content/deloop.json
         format: json
         fields:
