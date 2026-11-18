@@ -204,8 +204,11 @@ const MONTHS = {
  fa:["ژانویه","فوریه","مارس","آوریل","مه","ژوئن","ژوئیه","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"]};
 const DOW = {nl:["ma","di","wo","do","vr","za","zo"],en:["mo","tu","we","th","fr","sa","su"],fa:["د","س","چ","پ","ج","ش","ی"]};
 
+/* Farsi-versie tijdelijk verborgen. Zet op true om de FA-knop terug te tonen; de Farsi-teksten blijven bewaard. */
+const SHOW_FA = false;
+const LANGS = SHOW_FA ? ["nl","en","fa"] : ["nl","en"];
 let lang = "nl";
-try{ const s = localStorage.getItem("maz-lang"); if(T[s]) lang = s; }catch(e){}
+try{ const s = localStorage.getItem("maz-lang"); if(T[s] && LANGS.includes(s)) lang = s; }catch(e){}
 const t = k => (T[lang] && T[lang][k]) || T.en[k] || T.nl[k] || k;
 const L = o => (o && (o[lang] || o.en || o.nl)) || "";
 
@@ -270,7 +273,7 @@ function renderChrome(){
       <div class="bar">
         <a class="brand" href="index.html"><b>Maziar Toghraie</b><small>Leuven → Iran · 2027</small></a>
         <div class="right">
-          <div class="langs" role="group" aria-label="Language"><button data-lang="nl">NL</button><button data-lang="en">EN</button><button data-lang="fa">FA</button></div>
+          <div class="langs" role="group" aria-label="Language">${LANGS.map(l=>`<button data-lang="${l}">${l.toUpperCase()}</button>`).join("")}</div>
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" data-t="nav.menu"></button>
           <nav class="menu" id="menu" hidden><ul>${links}<li><a class="cta" href="steun.html" data-t="nav.support"></a></li></ul></nav>
         </div>
