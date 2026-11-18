@@ -222,10 +222,10 @@ const TIMELINE = [
  {y:"2013–2017",title:{nl:"Kok",en:"Cook"},txt:{nl:"Opleiding tot kok, daarna werknemer en zaakvoerder in een vegan restaurant.",en:"Trains as a cook, then works at a vegan restaurant and becomes its manager."}},
  {y:"2017",title:{nl:"Life Bar opent",en:"Life Bar opens"},txt:{nl:"Zijn visie komt tot leven in zijn eigen plantaardige ontbijt- en brunchbar. Negen jaar lang een ontmoetingsplek voor velen.",en:"His vision comes to life in his own plant-based breakfast and brunch bar. For nine years, a meeting place for many."}},
  {y:"2020",title:{nl:"Beginnen lopen",en:"Starting to run"},txt:{nl:"COVID geeft tijd en ruimte. Wandelen gaat over in lopen.",en:"COVID brings time and space. Walking turns into running."}},
- {y:"dec 2023",title:{nl:"Eerste marathon",en:"First marathon"},txt:{nl:"Na veel trainen en een overwonnen blessure loopt hij zijn eerste marathon, in Madrid.",en:"After a lot of training and overcoming an injury, he runs his first marathon, in Madrid."}},
+ {y:"dec 2023",title:{nl:"Eerste marathon",en:"First marathon"},txt:{nl:"Na veel trainen en een overwonnen blessure loopt hij zijn eerste marathon, in Valencia.",en:"After a lot of training and overcoming an injury, he runs his first marathon, in Valencia."}},
  {y:"feb 2026",title:{nl:"Marathon des Sables",en:"Marathon des Sables"},txt:{nl:"Atlantic Coast, Marokko. 120 km in drie dagen, 12:44:06, tiende bij de mannen.",en:"Atlantic Coast, Morocco. 120 km in three days, 12:44:06, tenth among the men."}},
  {y:"26 jul 2026",title:{nl:"Life Bar sluit",en:"Life Bar closes"},txt:{nl:"The end of an era. Ruimte om de expeditie Eigen Koers vorm te geven.",en:"The end of an era. Room to shape the Eigen Koers expedition."}},
- {y:"nov 2026",title:{nl:"100 km",en:"100 km"},txt:{nl:"Een ultramarathon van 100 km in de Kempen.",en:"A 100 km ultramarathon in the Kempen."}},
+ {y:"31 okt 2026",title:{nl:"100 km",en:"100 km"},txt:{nl:"Een ultramarathon van 100 km in de Kempen.",en:"A 100 km ultramarathon in the Kempen."}},
  {y:"1 mrt 2027",title:{nl:"Richting Iran",en:"Towards Iran"},txt:{nl:"Vertrek in Leuven, al lopend naar waar zijn leven begon.",en:"Departure from Leuven, running back to where his life began."}}
 ];
 /* ===== Inhoud uit content/*.json (via /admin bewerkbaar), gebundeld in assets/content.js ===== */
