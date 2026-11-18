@@ -43,10 +43,13 @@ def hero(img, pos, label_key, label, h1_html, sub_key=None, sub=None, lede_key=N
   </div></div>{cr}
 </section>'''
 
-def frag(img, key, rev=False, credit=""):
+SUPPORT_BTN = '<a class="btn fill" href="steun.html" data-t="home.support">Steun een kilometer</a>'
+
+def frag(img, key, rev=False, credit="", cta=""):
+    a = f'<div class="actions">{cta}</div>' if cta else ''
     return f'''<div class="frag{' rev' if rev else ''}">
   {photo(img,"",credit=credit)}
-  <div class="txt"><p class="big" data-t="{key}.big"></p><p data-t="{key}.p1"></p><p class="muted" data-t="{key}.p2"></p></div>
+  <div class="txt"><p class="big" data-t="{key}.big"></p><p data-t="{key}.p1"></p><p class="muted" data-t="{key}.p2"></p>{a}</div>
 </div>'''
 
 NEWS = '''<section class="band dark"><div class="wrap news">
@@ -131,11 +134,11 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
 PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
   "portrait-stand.jpg","50% 16%","story.crumb","Verhaal",
   '<span data-t="story.title">Ik loop niet weg. Ik loop terug.</span>',
-  None,None,"story.lede","Het verhaal van Maziar Toghraie, in zijn eigen woorden.","",short=True,credit="Elke Smit Photography") + f'''
+  None,None,"story.lede","Het verhaal van Maziar Toghraie, in zijn eigen woorden.",SUPPORT_BTN,short=True,credit="Elke Smit Photography") + f'''
 <section class="band"><div class="wrap stack" style="gap:clamp(3rem,7vw,5rem)">
   {frag("desert-empty.jpg","f1",credit="Marathon des Sables")}
   {frag("road-run.jpg","f2",rev=True)}
-  {frag("hands-mortar.jpg","f3",credit="Elke Smit Photography")}
+  {frag("hands-mortar.jpg","f3",credit="Elke Smit Photography",cta=SUPPORT_BTN)}
 </div></section>
 <section class="band dark"><div class="wrap quote">
   <blockquote data-t="story.quote">Ik ben niet boos op wat me overkomen is. Integendeel. De pijn heeft me gevormd.</blockquote>
@@ -144,12 +147,12 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
 <section class="band"><div class="wrap stack" style="gap:clamp(3rem,7vw,5rem)">
   {frag("lifebar.jpg","f4",rev=True)}
   {frag("winter-run.jpg","f5")}
-  {frag("portrait-laugh.jpg","f6",rev=True,credit="Elke Smit Photography")}
+  {frag("portrait-laugh.jpg","f6",rev=True,credit="Elke Smit Photography",cta=SUPPORT_BTN)}
 </div></section>
 <section class="band alt"><div class="wrap stack lg">
   <div class="stack"><p class="label" data-t="story.timeline">Tijdslijn</p><h2 data-t="story.title.a">Ooit moest hij vluchten.</h2></div>
   <ol class="timeline" id="timeline"></ol>
-  <div><a class="btn fill" href="deloop.html" data-t="story.read.run">Over de loop</a></div>
+  <div class="actions">{SUPPORT_BTN}<a class="btn" href="deloop.html" data-t="story.read.run">Over de loop</a></div>
 </div></section>
 ''')
 
