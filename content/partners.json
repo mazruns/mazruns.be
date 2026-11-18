@@ -4,18 +4,8 @@
     "en": "Shoes, clothing, food, insurance, kilometres. Every partner gets a place here, and a place in the vlog from the road.",
     "fa": ""
   },
-  "lege_plekken": 4,
+  "lege_plekken": 5,
   "partners": [
-    {
-      "naam": "AfterLife",
-      "rol": {
-        "nl": "Perzische tafels",
-        "en": "Persian tables",
-        "fa": ""
-      },
-      "url": "https://www.lifebar.be/",
-      "logo": ""
-    },
     {
       "naam": "Hotel Anywhere",
       "rol": {
