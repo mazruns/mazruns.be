@@ -82,7 +82,7 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
       <p class="label" data-t="home.about">Over Maziar</p>
       <h2 data-t="home.about.h">Achter de loper zit een bijzonder verhaal.</h2>
       <p class="lede" data-t="home.about.p">Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij al lopend richting Iran.</p>
-      <div class="actions"><a class="btn fill" href="verhaal.html" data-t="home.read">Lees zijn verhaal</a><a class="link" href="deloop.html" data-t="home.run">Over de loop</a></div>
+      <div class="actions"><a class="btn fill" href="verhaal.html" data-t="home.read">Lees zijn verhaal</a><a class="link" href="detocht.html" data-t="home.run">Over de tocht</a></div>
     </div>
   </div>
 </div></section>
@@ -99,9 +99,9 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
   <div class="tiles three" id="life"></div>
 </div></section>
 
-<section class="band dark"><a class="wrap quote quote-link" href="deloop.html">
+<section class="band dark"><a class="wrap quote quote-link" href="detocht.html">
   <blockquote data-t="home.quote">Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen.</blockquote>
-  <cite data-t="home.quote.cite">Maziar, over de loop naar Iran</cite>
+  <cite data-t="home.quote.cite">Maziar, over de tocht naar Iran</cite>
   <span class="more" data-t="home.quote.more">Waarom ik loop</span>
 </a></section>
 
@@ -147,22 +147,22 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
 <section class="band alt"><div class="wrap stack lg">
   <div class="stack"><p class="label" data-t="story.timeline">Tijdslijn</p><h2 data-t="story.title.a">Ooit moest hij vluchten.</h2></div>
   <ol class="timeline" id="timeline"></ol>
-  <div class="actions">{SUPPORT_BTN}<a class="btn" href="deloop.html" data-t="story.read.run">Over de loop</a></div>
+  <div class="actions">{SUPPORT_BTN}<a class="btn" href="detocht.html" data-t="story.read.run">Over de tocht</a></div>
 </div></section>
 ''')
 
-PAGES["deloop"] = ("deloop", "De loop · Mazruns", hero(
-  "rocks.jpg","62% 45%","run.eyebrow","Eigen Koers · De loop",
+PAGES["detocht"] = ("deloop", "De tocht · Mazruns", hero(
+  "rocks.jpg","62% 45%","run.eyebrow","Eigen Koers · De tocht",
   '<span data-t="run.title">Elke dag een marathon, naar waar zijn verhaal begon</span>',
-  "run.sub","Van België naar de stad waar ik geboren werd",
-  "run.lede","Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
+  "run.sub","Van België naar de grens met Iran",
+  "run.lede","Niet om iets te bewijzen, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Maar Iran heeft hem gemaakt tot wie hij is.",
   '<a class="btn fill" href="steun.html" data-t="run.read.support">Steun de tocht</a>',credit="Marathon des Sables") + f'''
 <section class="wrap" style="padding-block:clamp(3rem,7vw,5.5rem)">{FACTS}</section>
 <section class="band"><div class="wrap">
   <div class="feature">
     {photo("dune-ridge.jpg","",credit="Marathon des Sables")}
     <div class="txt">
-      <p class="label" data-t="run.crumb">De loop</p>
+      <p class="label" data-t="run.crumb">De tocht</p>
       <h2 data-t="run.why">Waarom hij loopt</h2>
       <p class="lede" data-t="run.why.p"></p>
     </div>
@@ -209,10 +209,10 @@ PAGES["vlog"] = ("vlog", "Vlog · Mazruns", hero(
   '<span data-t="vlog.title">Volg de tocht</span>',None,None,
   "vlog.lede","Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.",
   f'<a class="btn fill" href="{YT}" data-t="vlog.sub">Abonneer op YouTube</a>',short=True,credit="Marathon des Sables") + f'''
-<section class="band"><div class="wrap">
+<section class="band" data-vlog-videos><div class="wrap">
   <div id="vlogFeatured"></div>
 </div></section>
-<section class="band alt"><div class="wrap stack lg">
+<section class="band alt" data-vlog-videos><div class="wrap stack lg">
   <div class="head"><div class="stack"><p class="label" data-t="vlog.all">Alle video's</p></div><a class="link" href="{YT}" data-t="vlog.more">Alle video's op YouTube</a></div>
   <div class="tiles three" id="vlogCards"></div>
 </div></section>
