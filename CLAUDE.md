@@ -83,6 +83,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 - Kleine wijzigingen (een kalenderitem, een tekstcorrectie) mogen rechtstreeks op `main`. Wat via `/admin` wordt opgeslagen, komt ook rechtstreeks op `main`.
 - Grotere wijzigingen (nieuwe pagina, andere opbouw, nieuwe foto's) op een aparte tak met een pull request. Cloudflare maakt automatisch een voorbeeldlink; Hans keurt goed voor het live gaat.
+- **Eén tak per pull request.** Kijk voor je verder werkt op een bestaande tak eerst of de pull request nog open is (`gh pr view`, of op GitHub). Is hij al samengevoegd of gesloten, begin dan een nieuwe tak vanaf de laatste `main` en open een nieuwe pull request. Commits op een tak waarvan de pull request al dicht is, komen nooit live.
 - Leg in elke commit in gewone taal uit wat er veranderde.
 
 ## Nog open (plaatshouders)
