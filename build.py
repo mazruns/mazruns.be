@@ -96,6 +96,11 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
 
 <section class="wrap" style="padding-bottom:clamp(3rem,7vw,5.5rem)">{FACTS}</section>
 
+<section class="band"><div class="wrap stack lg">
+  <div class="head"><div class="stack"><h2 data-t="run.route">De route</h2></div><a class="link" href="detocht.html" data-t="home.run">Over de tocht</a></div>
+  <figure class="routefig">{ROUTE_SVG}<figcaption class="note" id="routeCountries"></figcaption></figure>
+</div></section>
+
 <section class="band alt"><div class="wrap stack lg">
   <div class="head"><div class="stack"><p class="label" data-t="home.when">Wanneer</p><h2 data-t="home.when.h">Tussen nu en vertrek</h2></div><a class="link" href="kalender.html" data-t="home.all">Volledige kalender</a></div>
   <div class="cards four" id="nextEvent"></div>
