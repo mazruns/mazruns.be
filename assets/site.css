@@ -348,6 +348,8 @@ a.quote-link:hover blockquote{color:#fff}
 .routemap .rm-land{fill:var(--sand);stroke:var(--line);stroke-width:.7}
 .routemap .rm-on{fill:var(--surface);stroke:var(--line);stroke-width:.9}
 .routemap .rm-route{fill:none;stroke:var(--blue);stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}
+.routemap .rm-arrow{fill:none;stroke:var(--blue);stroke-width:3.2;stroke-dasharray:2 9;stroke-linecap:round}
+.routemap .rm-head{fill:var(--blue)}
 .routemap .rm-end{fill:var(--wine,#722F2B);stroke:var(--surface);stroke-width:2.5}
 .routemap text{font-family:var(--mono);font-size:17px;fill:var(--ink);letter-spacing:.06em;text-transform:uppercase;paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
 .routemap .rm-place{font-family:var(--display);font-weight:700;font-size:28px;fill:var(--wine,#722F2B);letter-spacing:.02em}

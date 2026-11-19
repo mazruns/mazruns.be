@@ -3,7 +3,8 @@
 Bewust GEEN etappes of dagposities: die liggen niet vast, en samen met de vertrekdatum zouden ze tonen
 waar Maziar op welke dag is (veiligheid). Ook de lijn wordt vereenvoudigd, zodat ze geen exacte weg toont.
 
-Gebruik:  python3 tools/routekaart.py route.gpx countries-50m.json cities.json
+Gebruik:  python3 tools/routekaart.py route.gpx countries-50m.json 496
+(496 = de lijn stopt 496 km voor het einde, bij Erzurum, en gaat verder als een pijl naar de grens; keuze van Jolien)
 - countries-50m.json: uit het npm-pakket world-atlas@2 (Natural Earth, publiek domein)
 - cities.json: niet meer nodig (mag weggelaten worden)
 """
