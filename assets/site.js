@@ -269,8 +269,8 @@ const L = o => (o && (o[lang] || o.en || o.nl)) || "";
 /* ===== content data (a CMS will replace these) ===== */
 const TIMELINE = [
  {y:"± 2003",title:{nl:"Weg uit Iran",en:"Leaving Iran"},txt:{nl:"Hij laat familie, vrienden en een bedrijf in auto-onderdelen achter. Aankomst in België, zonder zekerheid.",en:"He leaves family, friends and a car-parts business behind. Arrival in Belgium, with no certainty."}},
- {y:"2003–2013",title:{nl:"Tien jaar wachten",en:"Ten years of waiting"},txt:{nl:"Procedures, papieren, opnieuw beginnen. Een marathon zonder finishlijn.",en:"Procedures, paperwork, starting over. A marathon without a finish line."}},
- {y:"± 2013",title:{nl:"Verblijfsvergunning",en:"Residence permit"},txt:{nl:"Na tien jaar mag hij blijven. Voor het eerst vaste grond onder zijn voeten.",en:"After ten years he is allowed to stay. For the first time, solid ground under his feet."}},
+ {y:"2003–2013",title:{nl:"Jarenlang wachten",en:"Years of waiting"},txt:{nl:"Procedures, papieren, opnieuw beginnen. Een marathon zonder finishlijn.",en:"Procedures, paperwork, starting over. A marathon without a finish line."}},
+ {y:"± 2013",title:{nl:"Verblijfsvergunning",en:"Residence permit"},txt:{nl:"Eindelijk vaste grond onder zijn voeten.",en:"At last, solid ground under his feet."}},
  {y:"2013–2017",title:{nl:"Kok",en:"Cook"},txt:{nl:"Opleiding tot kok, daarna werknemer en zaakvoerder in een vegan restaurant.",en:"Trains as a cook, then works at a vegan restaurant and becomes its manager."}},
  {y:"2017",title:{nl:"Life Bar opent",en:"Life Bar opens"},txt:{nl:"Zijn visie komt tot leven in zijn eigen plantaardige ontbijt- en brunchbar. Negen jaar lang een ontmoetingsplek voor velen.",en:"His vision comes to life in his own plant-based breakfast and brunch bar. For nine years, a meeting place for many."}},
  {y:"2020",title:{nl:"Beginnen lopen",en:"Starting to run"},txt:{nl:"COVID geeft tijd en ruimte. Wandelen gaat over in lopen.",en:"COVID brings time and space. Walking turns into running."}},
