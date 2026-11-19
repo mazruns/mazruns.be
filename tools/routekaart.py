@@ -3,7 +3,8 @@
 Bewust GEEN etappes of dagposities: die liggen niet vast, en samen met de vertrekdatum zouden ze tonen
 waar Maziar op welke dag is (veiligheid). Ook de lijn wordt vereenvoudigd, zodat ze geen exacte weg toont.
 
-Gebruik:  python3 tools/routekaart.py route.gpx countries-50m.json cities.json
+Gebruik:  python3 tools/routekaart.py route.gpx countries-50m.json 496
+(496 = de lijn stopt 496 km voor het einde, bij Erzurum, en gaat verder als een pijl naar de grens; keuze van Jolien)
 - countries-50m.json: uit het npm-pakket world-atlas@2 (Natural Earth, publiek domein)
 - cities.json: niet meer nodig (mag weggelaten worden)
 """
@@ -12,6 +13,10 @@ from shapely.geometry import Polygon, MultiPolygon, Point, LineString, box
 from shapely.prepared import prep
 
 GPX, WORLD = sys.argv[1:3]
+# Veiligheid: de lijn stopt CUT_KM voor het einde en gaat verder als een gestippelde pijl richting de grens,
+# zodat de exacte eindplaats en grenspost niet te zien zijn. 0 = volledige lijn.
+CUT_KM = float(sys.argv[3]) if len(sys.argv) > 3 else 0
+ARROW_TO = (43.55, 39.25)   # lon, lat waar de pijlpunt stopt: ruim voor de grens, niet bij een grenspost
 ISO = {'Belgium':'BE','Netherlands':'NL','Germany':'DE','Czechia':'CZ','Austria':'AT','Hungary':'HU','Croatia':'HR',
        'Serbia':'RS','Bulgaria':'BG','Greece':'GR','Turkey':'TR','Iran':'IR'}
 NAMES = {'BE':('België','Belgium'),'NL':('Nederland','Netherlands'),'DE':('Duitsland','Germany'),'CZ':('Tsjechië','Czechia'),
@@ -85,7 +90,8 @@ for name, g in countries:
     d = path(g, 0.03)
     if not d: continue
     (on if name in ISO and name != 'Iran' else land).append(d)
-line = LineString([(lo, la) for la, lo in pts]).simplify(0.03)
+cut = len(pts) if not CUT_KM else bisect.bisect_left(cum, total - CUT_KM)
+line = LineString([(lo, la) for la, lo in pts[:cut]]).simplify(0.03)
 rd = 'M' + 'L'.join('{:.1f},{:.1f}'.format(*P(x, y)) for x, y in line.coords)
 # landnamen: midden van het routestuk in dat land, iets naast de lijn
 lab = {}
@@ -94,14 +100,24 @@ for i in range(0, len(pts), 200):
     if cc: lab.setdefault(cc, []).append({'lat': pts[i][0], 'lon': pts[i][1]})
 # (dx, dy, anker) per land, zodat de namen naast de lijn staan
 OFF = {'BE':(-4,34,'middle'),'NL':None,'DE':(10,-18,'middle'),'CZ':(22,0,'start'),'AT':(-22,6,'end'),'HU':(22,0,'start'),
-       'HR':(-22,8,'end'),'RS':(22,6,'start'),'BG':(14,-22,'middle'),'GR':(-6,40,'end'),'TR':(0,44,'middle')}
+       'HR':(-22,8,'end'),'RS':(22,6,'start'),'BG':(14,-22,'middle'),'GR':(-6,40,'end'),'TR':(-40,-26,'middle')}
 labels = ''
 for cc, sts in lab.items():
     o = OFF.get(cc, (12, -10, 'start'))
     if o is None: continue
     st = sts[len(sts)//2]; x, y = P(st['lon'], st['lat']); dx, dy, anc = o
     labels += f'<text x="{x+dx:.0f}" y="{y+dy:.0f}" text-anchor="{anc}" data-nl="{NAMES[cc][0]}" data-en="{NAMES[cc][1]}">{NAMES[cc][0]}</text>'
-sx0, sy0 = P(pts[0][1], pts[0][0]); ex, ey = P(pts[-1][1], pts[-1][0])
+sx0, sy0 = P(pts[0][1], pts[0][0])
+if CUT_KM:
+    ax, ay = P(pts[cut-1][1], pts[cut-1][0]); bx, by = P(*ARROW_TO)
+    ang = math.atan2(by-ay, bx-ax); hx, hy = bx-12*math.cos(ang), by-12*math.sin(ang)
+    end = (f'<path class="rm-arrow" d="M{ax:.1f},{ay:.1f}L{hx:.1f},{hy:.1f}"/>'
+           f'<path class="rm-head" d="M{bx:.1f},{by:.1f}L{hx-7*math.sin(ang):.1f},{hy+7*math.cos(ang):.1f}L{hx+7*math.sin(ang):.1f},{hy-7*math.cos(ang):.1f}Z"/>'
+           f'<text class="rm-place" x="{bx+14:.0f}" y="{by+40:.0f}" text-anchor="end" data-nl="Naar de grens met Iran" data-en="To the Iranian border">Naar de grens met Iran</text>')
+else:
+    ex, ey = P(pts[-1][1], pts[-1][0])
+    end = (f'<circle class="rm-end" cx="{ex:.1f}" cy="{ey:.1f}" r="7"/><text class="rm-place" x="{ex-16:.0f}" y="{ey+34:.0f}" text-anchor="end" '
+           f'data-nl="Grens met Iran" data-en="Iranian border">Grens met Iran</text>')
 svg = f'''<svg class="routemap" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Route van Leuven tot de grens met Iran">
 <rect class="rm-sea" width="{W}" height="{H}"/>
 <path class="rm-land" d="{''.join(land)}"/>
@@ -109,7 +125,7 @@ svg = f'''<svg class="routemap" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2
 <path class="rm-route" d="{rd}"/>
 <g class="rm-labels">{labels}</g>
 <circle class="rm-end" cx="{sx0:.1f}" cy="{sy0:.1f}" r="7"/><text class="rm-place rm-start" x="{sx0:.0f}" y="{sy0-16:.0f}" text-anchor="middle">Leuven</text>
-<circle class="rm-end" cx="{ex:.1f}" cy="{ey:.1f}" r="7"/><text class="rm-place" x="{ex-16:.0f}" y="{ey+34:.0f}" text-anchor="end" data-nl="Grens met Iran" data-en="Iranian border">Grens met Iran</text>
+{end}
 </svg>'''
 open('assets/route.svg', 'w').write(svg)
 print(round(total, 1), 'km,', 'svg', len(svg)//1024, 'kB')
