@@ -56,6 +56,10 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Niet vermelden: verhalen onderweg verzamelen, rustdagen, koken voor vreemden, een bed onderweg vragen.
 - **Niets over de reden van zijn vlucht of over familie in Iran** zonder uitdrukkelijk akkoord van Maziar. Ook het zwangerschapsverlies van Maziar en Jolien staat bewust niet op de site.
 - **Geen zelfpromotie** van de beheerders (geen Hi!). Uitzonderingen: de podcastaflevering Hotel Anywhere #25 (8 december 2026) staat in de kalender (vraag van Maziar), en Hotel Anywhere staat als partner bij Partners (vraag van Jolien, 18 november 2026).
+- **Veiligheid onderweg** (afspraak met Jolien, 19 november 2026), voor de site, de vlog en Instagram:
+  - In Europa mag er getoond worden waar ze zijn, maar nooit waar de camper 's nachts staat.
+  - In Turkije, en zeker in het oosten: niets live. Posts en vlogs verschijnen met minstens een dag vertraging, zonder live locatie, en ontmoetingen worden niet vooraf met plaats en uur aangekondigd.
+  - Reden: Iraanse inlichtingendiensten bedreigen en ontvoeren in Turkije mensen die uit Iran gevlucht zijn, ook in de provincie Van, waar de route eindigt.
 - Bijschrift onder citaten: enkel "Maziar".
 - De vzw die gesteund wordt is **Casa Legal** (Brussel): advocaten en maatschappelijk werkers die samen mensen in een kwetsbare positie bijstaan. Op de homepagina sinds 18 november 2026, op vraag van Jolien.
 - De naam van de expeditie is **Eigen Koers**. Altijd zo geschreven, ook in het Engels (eigennaam). Staat in de kop van elke pagina, de hero van Home en De loop, de footer, de paginatitel en beschrijving, en bij het vertrek in de kalender.
