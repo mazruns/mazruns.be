@@ -1,0 +1,60 @@
+{
+ "totaal_km": 5258,
+ "landen": [
+  {
+   "code": "BE",
+   "nl": "België",
+   "en": "Belgium"
+  },
+  {
+   "code": "NL",
+   "nl": "Nederland",
+   "en": "Netherlands"
+  },
+  {
+   "code": "DE",
+   "nl": "Duitsland",
+   "en": "Germany"
+  },
+  {
+   "code": "CZ",
+   "nl": "Tsjechië",
+   "en": "Czechia"
+  },
+  {
+   "code": "AT",
+   "nl": "Oostenrijk",
+   "en": "Austria"
+  },
+  {
+   "code": "HU",
+   "nl": "Hongarije",
+   "en": "Hungary"
+  },
+  {
+   "code": "HR",
+   "nl": "Kroatië",
+   "en": "Croatia"
+  },
+  {
+   "code": "RS",
+   "nl": "Servië",
+   "en": "Serbia"
+  },
+  {
+   "code": "BG",
+   "nl": "Bulgarije",
+   "en": "Bulgaria"
+  },
+  {
+   "code": "GR",
+   "nl": "Griekenland",
+   "en": "Greece"
+  },
+  {
+   "code": "TR",
+   "nl": "Turkije",
+   "en": "Turkey"
+  }
+ ]
+}
