@@ -176,7 +176,7 @@ PAGES["detocht"] = ("deloop", "De tocht · Mazruns", hero(
   </div>
 </div></section>
 <section class="band"><div class="wrap stack lg">
-  <div class="stack"><p class="label" data-t="run.route">De route</p><h2 data-t="run.route.h">5.257 kilometer, elf landen</h2></div>
+  <div class="stack"><p class="label" data-t="run.route">De route</p><h2 data-t="run.route.h">Meer dan 5.000 kilometer, elf landen</h2></div>
   <figure class="routefig">{ROUTE_SVG}<figcaption class="note" id="routeCountries"></figcaption></figure>
   <p class="note" data-t="route.note">Voorlopige route. De etappes liggen nog niet vast.</p>
 </div></section>
