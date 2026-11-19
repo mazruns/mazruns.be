@@ -138,8 +138,8 @@
   }
  ],
  "route_opmerking": {
-  "nl": "indicatieve route, etappes volgen na vertrek",
-  "en": "indicative route, stages follow after departure",
+  "nl": "Voorlopige route. De etappes liggen nog niet vast.",
+  "en": "Provisional route. The stages are not fixed yet.",
   "fa": ""
  },
  "faq": [

@@ -30,6 +30,8 @@ Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2
 **In `content/*.json`** (Claude, zelfde inhoud als `/admin`):
 - **Kalender** `kalender.json`: `evenementen` met `datum` (JJJJ-MM-DD), `soort`, `titel`, `tekst`. `enkel_maand: true` als enkel de maand vastligt; zo'n item komt in de lijst maar niet in het kalenderraster. `etappes` (`van`, `tot`, `land`, `kleur`) kleuren hun dagen in de kalender; één vaste kleur per land, afgeleid van de merkkleuren.
 - **De tocht** `deloop.json` (pagina `detocht.html`; het oude adres /deloop stuurt door via `_redirects`): titel, intro, de drie cijfers (ook op de homepagina), "waarom hij loopt", de voorbereiding, de FAQ.
+- **Route** `route.json` en `assets/route.svg`: gemaakt met `tools/routekaart.py` uit de GPX-route van Komoot (5.257 km, elf landen). Nieuwe route? Draai het script opnieuw; uitleg staat bovenaan het script. Niet met de hand bewerken.
+- **Veiligheid: geen etappes, dagplanning of exacte locaties op de site** (ook niet verborgen in de code). Met de vertrekdatum erbij zou iedereen kunnen zien waar Maziar op welke dag is. De routelijn blijft vereenvoudigd.
 - **Vlog** `vlog.json`: kanaal-url en video's met YouTube-id. **Partners** `partners.json`: partners en het aantal lege plekken. **Shop** `shop.json`: producten met prijs (leeg = binnenkort).
 - Na een wijziging: `python3 build.py` (maakt `assets/content.js` en de html opnieuw). Cloudflare doet dat zelf bij elke push.
 

@@ -7,8 +7,10 @@ OUT = os.path.dirname(os.path.abspath(__file__))
 # De pagina, de producten en /admin blijven bestaan. Zet op True wanneer de shop opent.
 SHOP_OPEN = False
 
+ROUTE_SVG = open(os.path.join(OUT,"assets","route.svg"), encoding="utf-8").read()
+
 CONTENT = {}
-for name in ["deloop","kalender","vlog","partners","shop"]:
+for name in ["deloop","kalender","vlog","partners","shop","route"]:
     with open(os.path.join(OUT,"content",name+".json"), encoding="utf-8") as f:
         CONTENT[name] = json.load(f)
 with open(os.path.join(OUT,"assets","content.js"),"w",encoding="utf-8") as f:
@@ -173,6 +175,11 @@ PAGES["detocht"] = ("deloop", "De tocht · Mazruns", hero(
     </div>
   </div>
 </div></section>
+<section class="band"><div class="wrap stack lg">
+  <div class="stack"><p class="label" data-t="run.route">De route</p><h2 data-t="run.route.h">5.257 kilometer, elf landen</h2></div>
+  <figure class="routefig">{ROUTE_SVG}<figcaption class="note" id="routeCountries"></figcaption></figure>
+  <p class="note" data-t="route.note">Voorlopige route. De etappes liggen nog niet vast.</p>
+</div></section>
 <section class="band alt"><div class="wrap stack lg">
   <div class="stack"><p class="label" data-t="run.prep.title">De voorbereiding</p><h2 data-t="run.gallery">Onderweg naar het vertrek</h2></div>
   <ol class="timeline prep" id="prepList"></ol>
@@ -181,7 +188,7 @@ PAGES["detocht"] = ("deloop", "De tocht · Mazruns", hero(
   <div class="mosaic" id="gallery"></div>
 </div></section>
 <section class="band alt"><div class="wrap two" style="display:grid;gap:3rem">
-  <div class="stack"><p class="label" data-t="run.route">De route</p><h2 data-t="run.route.h">Leuven → Iran</h2><p class="note" data-t="route.note">indicatieve route, etappes volgen na vertrek</p></div>
+  <div class="stack"><p class="label" data-t="run.faq">Praktisch</p><h2 data-t="run.faq.h">Vragen over de tocht</h2></div>
   <div id="faq"></div>
 </div></section>
 {NEWS}

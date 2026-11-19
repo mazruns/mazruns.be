@@ -40,7 +40,7 @@ nl:{
  "story.food.p":"Eten moet kracht geven, zegt hij. Niet alleen om te overleven, maar om op te staan. Hij kookt met de kruiden waarmee hij opgroeide. In Life Bar deed hij Perzische dineravonden, Diner aan een Perzische tafel. Met AfterLife kookt hij nu voor groepen tot twintig mensen: verse, lokale ingrediënten, groenten in de hoofdrol, Perzische specerijen.",
  "story.mom":"Zijn moeder zei dat hij altijd het moeilijke pad koos: je draait de lepel rond je hoofd voor je hem in je mond steekt.",
  "run.crumb":"De tocht","run.eyebrow":"Eigen Koers · De tocht","run.title":"Elke dag een marathon, naar waar zijn verhaal begon","run.lede":"Niet om iets te bewijzen, zegt hij, maar om zijn afkomst eer aan te doen. Zijn toekomst ligt in België. Iran heeft hem gemaakt tot wie hij is.",
- "run.route":"De route","run.stories.title":"De verhalen onderweg",
+ "run.route":"De route","run.faq.h":"Vragen over de tocht","run.stories.title":"De verhalen onderweg",
  "run.stories.p":"Verhalen van mensen die hun thuis verloren. Mensen die moesten vertrekken. Mensen die nog altijd onderweg zijn. Ik wil een ander gezicht tonen van vluchtelingen en migranten. Niet de cijfers. Niet de dossiers. Maar de mensen. Want niemand verlaat zomaar zijn thuis.",
  "run.prep.title":"De voorbereiding",
  "run.prep.p":"Februari 2026: Marathon des Sables Atlantic Coast, Marokko. 120 km door het zand in drie dagen, zelfvoorzienend met 9 kg op de rug, tiende bij de mannen. Mei 2026: GTLC, 88 km en 3.250 hoogtemeters. September 2026: testblok van 145 km in drie dagen.",
@@ -75,7 +75,7 @@ nl:{
  "home.when":"Wanneer","home.all":"Alle data","home.allvideos":"Alle video's","home.partner":"Loop mee als partner",
  "news.title":"Loop mee in je mailbox","news.p":"Af en toe een mail van onderweg. Meer niet.","news.btn":"Inschrijven","news.ok":"Dank. Je staat op de lijst zodra de nieuwsbrief gekoppeld is.","news.ph":"je@mail.be",
  "story.read.run":"Over de tocht","run.read.support":"Steun de tocht","cal.read.contact":"Heb je een bed onderweg?","fund.choose":"Kies","fund.soon":"binnenkort","shop.soon.long":"Binnenkort beschikbaar","vlog.more":"Alle video's op YouTube","partners.contact":"Neem contact op",
- "story.title.a":"Ooit moest hij vluchten.","story.title.b":"Nu loopt hij terug.","run.route.h":"Leuven → Iran",
+ "story.title.a":"Ooit moest hij vluchten.","story.title.b":"Nu loopt hij terug.","run.route.h":"5.257 kilometer, elf landen",
 "hero.sub":"Elke dag een marathon, van België naar Iran",
  "home.about":"Over Maziar","home.about.h":"Achter de loper zit een bijzonder verhaal.",
  "home.about.p":"Kok, ondernemer en ultraloper uit Leuven. Geboren in het zuiden van Iran. Tien jaar wachten op papieren, negen jaar Life Bar. Op 1 maart 2027 vertrekt hij al lopend richting Iran.","home.when.h":"Tussen nu en vertrek",
@@ -147,7 +147,7 @@ en:{
  "story.food.p":"Food has to give strength, he says. Not just to survive, but to get up. He cooks with the spices he grew up with. At Life Bar he hosted Persian dinner nights. With AfterLife he now cooks for groups of up to twenty: fresh local ingredients, vegetables in the lead, Persian spices.",
  "story.mom":"His mother said he always chose the hard path: you spin the spoon around your head before you put it in your mouth.",
  "run.crumb":"The journey","run.eyebrow":"Eigen Koers · The journey","run.title":"A marathon every day, back to where his story began","run.lede":"Not to prove anything, he says, but to honour where he comes from. His future is in Belgium. Iran made him who he is.",
- "run.route":"The route","run.stories.title":"The stories along the way",
+ "run.route":"The route","run.faq.h":"Questions about the journey","run.stories.title":"The stories along the way",
  "run.stories.p":"Stories of people who lost their home. People who had to leave. People who are still on their way. I want to show another side of refugees and migrants. Not the numbers. Not the case files. The people. Because nobody leaves home for no reason.",
  "run.prep.title":"The preparation",
  "run.prep.p":"February 2026: Marathon des Sables Atlantic Coast, Morocco. 120 km through sand in three days, self-supported with 9 kg on his back, tenth among the men. May 2026: GTLC, 88 km with 3,250 m of climbing. September 2026: a 145 km test block in three days.",
@@ -182,7 +182,7 @@ en:{
  "home.when":"When","home.all":"All dates","home.allvideos":"All videos","home.partner":"Join as a partner",
  "news.title":"Follow along by email","news.p":"An email from the road now and then. Nothing more.","news.btn":"Subscribe","news.ok":"Thanks. You are on the list once the newsletter is connected.","news.ph":"you@mail.com",
  "story.read.run":"About the journey","run.read.support":"Support the run","cal.read.contact":"Do you have a bed on the route?","fund.choose":"Choose this amount","fund.soon":"soon","shop.soon.long":"Available soon","vlog.more":"All videos on YouTube","partners.contact":"Get in touch",
- "story.title.a":"Once he had to flee.","story.title.b":"Now he runs back.","run.route.h":"Leuven → Iran",
+ "story.title.a":"Once he had to flee.","story.title.b":"Now he runs back.","run.route.h":"5,257 kilometres, eleven countries",
 "hero.sub":"A marathon every day, from Belgium to Iran",
  "home.about":"About Maziar","home.about.h":"Behind the runner lies a remarkable story.",
  "home.about.p":"Cook, entrepreneur and ultrarunner from Leuven. Born in southern Iran. Ten years waiting for his papers, nine years of Life Bar. On 1 March 2027 he sets off running towards Iran.","home.when.h":"Between now and departure",
@@ -281,7 +281,7 @@ const TIMELINE = [
  {y:"1 mrt 2027",title:{nl:"Richting Iran",en:"Towards Iran"},txt:{nl:"Vertrek in Leuven, al lopend naar waar zijn leven begon.",en:"Departure from Leuven, running back to where his life began."}}
 ];
 /* ===== Inhoud uit content/*.json (via /admin bewerkbaar), gebundeld in assets/content.js ===== */
-const C = window.CONTENT || {deloop:{},kalender:{},vlog:{},partners:{},shop:{}};
+const C = window.CONTENT || {deloop:{},kalender:{},vlog:{},partners:{},shop:{},route:null};
 const RUNCARDS = [];
 const PREP = (C.deloop.voorbereiding||[]).map(p=>({y:p.periode,title:p.titel,txt:p.tekst}));
 const FAQ = C.deloop.faq||[];
@@ -374,7 +374,13 @@ function renderTimeline(){
   const ol = $("timeline"); if(!ol) return; ol.innerHTML="";
   TIMELINE.forEach(e => ol.append(el(`<li><time>${esc(e.y)}</time><div><strong>${esc(L(e.title))}</strong><span>${esc(L(e.txt))}</span></div></li>`)));
 }
+function renderRoute(){
+  const R = C.route; if(!R || !$("routeCountries")) return;
+  document.querySelectorAll(".routemap [data-nl]").forEach(x => x.textContent = lang==="nl" ? x.dataset.nl : x.dataset.en);
+  $("routeCountries").textContent = R.landen.map(x => lang==="nl" ? x.nl : x.en).join(" → ");
+}
 function renderRun(){
+  renderRoute();
   const c = $("runCards"); if(!c) return; c.innerHTML="";
   RUNCARDS.forEach(r => c.append(el(`<div class="tile"><div class="num">${esc(r.num)}</div><h3>${esc(L(r.title))}</h3><p class="muted">${esc(L(r.txt))}</p></div>`)));
 }
