@@ -161,6 +161,12 @@ PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
   <ol class="timeline" id="timeline"></ol>
   <div class="actions">{SUPPORT_BTN}<a class="btn" href="detocht.html" data-t="story.read.run">Over de tocht</a></div>
 </div></section>
+<section class="band"><div class="wrap">
+  <div class="frag cl-frag">
+    <a class="cl-card" href="https://casalegal.be" target="_blank" rel="noopener"><img src="assets/img/casa-legal-logo.png" alt="Casa Legal" width="321" height="236" loading="lazy"></a>
+    <div class="txt"><p class="label" data-t="story.cl.label">Eigen Koers</p><p class="big" data-t="story.cl.big"></p><p data-t="story.cl.p1"></p><p class="muted" data-t="story.cl.p2"></p><div class="actions">{SUPPORT_BTN}</div></div>
+  </div>
+</div></section>
 ''')
 
 PAGES["detocht"] = ("deloop", "De tocht · Mazruns", hero(
