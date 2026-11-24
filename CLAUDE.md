@@ -4,7 +4,7 @@ Lees dit volledig voor je iets aan deze site verandert. De afspraken hieronder k
 
 ## Waarover gaat het
 
-Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2027 (voorlopige datum) te voet van Leuven naar Iran, vier tot zes maanden, elke dag een marathon.
+Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2027 (voorlopige datum) van Leuven naar Iran, vier tot zes maanden, elke dag een marathon.
 
 - Beheer: Jolien (dagelijkse opvolging) en Hans De Reydt (overzicht, keurt grotere wijzigingen goed). Maziar beheert zelf niets.
 - Mailadres van het team: team@mazruns.be
@@ -52,6 +52,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 
 - De bestemming is **Iran**. Niet "Shiraz" en niet "het dorp". Op de pagina De tocht staat: "Van België naar de grens met Iran".
 - **Nooit "naar huis"** of "thuis" voor Iran. Iran is niet zijn thuis; gebruik "terug" of "naar waar zijn verhaal begon".
+- **Nooit "te voet"** om de expeditie Eigen Koers te beschrijven: dat klinkt als wandelen. Schrijf "al lopend" of "hij loopt". In het Engels ook niet "on foot" of "walk", maar "running" of "he runs" (afspraak met Jolien, 24 november 2026).
 - Hij kreeg in 2013 een **verblijfsvergunning**, niet de Belgische nationaliteit.
 - Hij slaapt onderweg in een **camper**. Jolien reist mee. Hij nodigt lopers uit om een stuk mee te lopen.
 - Voeding: "fueled by nature", zo weinig mogelijk bewerkt. **Niet "plantaardig"** (Life Bar was wel plantaardig).
