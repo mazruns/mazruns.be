@@ -80,9 +80,9 @@ collections:
                   - { name: fa, label: Farsi, widget: string, required: false }
               - { name: kleur, label: Kleur, widget: color, default: "#123C74", hint: "Merkkleuren: navy #123C74, bordeaux #722F2B, goud #C98B3B." }
 
-      - name: vlog
-        label: Vlog
-        file: content/vlog.json
+      - name: blog
+        label: Blog
+        file: content/blog.json
         format: json
         fields:
           - { name: kanaal, label: Link naar het YouTube-kanaal, widget: string }
@@ -93,29 +93,74 @@ collections:
               - { name: nl, label: Nederlands, widget: text }
               - { name: en, label: Engels, widget: text }
               - { name: fa, label: Farsi, widget: text, required: false }
-          - name: videos
-            label: Video's
-            label_singular: Video
+          - name: berichten
+            label: Berichten
+            label_singular: Bericht
             widget: list
             add_to_top: true
-            summary: "{{fields.titel.nl}}"
+            summary: "{{fields.datum}} · {{fields.titel.nl}}"
+            hint: "Een bericht heeft tekst, een video of allebei. Veiligheid: in Turkije pas publiceren met minstens een dag vertraging. Nooit de plek waar de camper 's nachts staat, en geen ontmoetingen vooraf met plaats en uur."
             fields:
-              - { name: youtube_id, label: YouTube-id, widget: string, hint: "Het stuk na v= in de link, bv. dQw4w9WgXcQ" }
-              - { name: uitgelicht, label: Uitgelicht (grote video bovenaan en op de homepagina), widget: boolean, default: false }
+              - { name: datum, label: Datum, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
               - name: titel
                 label: Titel
                 widget: object
                 fields:
                   - { name: nl, label: Nederlands, widget: string }
-                  - { name: en, label: Engels, widget: string }
+                  - { name: en, label: Engels, widget: string, required: false, hint: "Leeg = de site toont de Nederlandse titel" }
                   - { name: fa, label: Farsi, widget: string, required: false }
-              - name: ondertitel
-                label: Ondertitel
-                widget: object
-                fields:
-                  - { name: nl, label: Nederlands, widget: string, required: false }
-                  - { name: en, label: Engels, widget: string, required: false }
-                  - { name: fa, label: Farsi, widget: string, required: false }
+              - name: inhoud
+                label: Inhoud
+                label_singular: blok
+                widget: list
+                required: false
+                hint: "Zet blokken onder elkaar: Tekst, Foto, Tekst ... Zo komt een foto tussen twee alinea's. Leeg laten mag als het bericht enkel een video is."
+                types:
+                  - name: tekst
+                    label: Tekst
+                    widget: object
+                    summary: "{{fields.nl}}"
+                    fields:
+                      - { name: nl, label: Nederlands, widget: text, hint: "Een lege regel maakt een nieuwe alinea." }
+                      - { name: en, label: Engels, widget: text, required: false, hint: "Leeg = de site toont de Nederlandse tekst" }
+                      - { name: fa, label: Farsi, widget: text, required: false }
+                  - name: foto
+                    label: Foto
+                    widget: object
+                    summary: "{{fields.onderschrift.nl}}"
+                    fields:
+                      - name: foto
+                        label: Foto
+                        widget: image
+                        choose_url: false
+                        hint: "Wordt bij het opladen automatisch verkleind tot max. 2000 px, scherp genoeg voor elk scherm."
+                        media_libraries:
+                          default:
+                            config:
+                              transformations:
+                                raster_image: { format: webp, quality: 85, width: 2000, height: 2000 }
+                      - { name: fotograaf, label: Fotograaf, widget: string, required: false }
+                      - name: onderschrift
+                        label: Onderschrift (mag leeg blijven)
+                        widget: object
+                        required: false
+                        fields:
+                          - { name: nl, label: Nederlands, widget: string, required: false }
+                          - { name: en, label: Engels, widget: string, required: false }
+                          - { name: fa, label: Farsi, widget: string, required: false }
+              - { name: youtube_id, label: YouTube-video (link of id), widget: string, required: false, hint: "Plak de link van de video, bv. https://www.youtube.com/watch?v=dQw4w9WgXcQ. Leeg = geen video." }
+              - name: foto
+                label: Hoofdfoto (bovenaan het bericht en op het kaartje in het overzicht)
+                widget: image
+                required: false
+                choose_url: false
+                hint: "Wordt bij het opladen automatisch verkleind tot max. 2000 px. Heeft het bericht een video, dan toont het kaartje de video."
+                media_libraries:
+                  default:
+                    config:
+                      transformations:
+                        raster_image: { format: webp, quality: 85, width: 2000, height: 2000 }
+              - { name: fotograaf, label: Fotograaf van de hoofdfoto, widget: string, required: false }
 
       - name: partners
         label: Partners

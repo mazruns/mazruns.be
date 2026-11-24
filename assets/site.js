@@ -5,7 +5,7 @@ const PAGES = [
  {id:"verhaal",file:"verhaal.html",t:"nav.story"},
  {id:"deloop",file:"detocht.html",t:"nav.run"},
  {id:"kalender",file:"kalender.html",t:"nav.calendar"},
- {id:"vlog",file:"vlog.html",t:"nav.vlog"},
+ {id:"blog",file:"blog.html",t:"nav.blog"},
  {id:"partners",file:"partners.html",t:"nav.partners"},
  {id:"steun",file:"steun.html",t:"nav.support"},
  {id:"shop",file:"shop.html",t:"nav.shop"},
@@ -21,7 +21,7 @@ nl:{
  "home.cause.h":"Eén mens kan het verschil maken.",
  "home.cause":"Het goede doel",
  "home.quote.more":"Waarom hij loopt",
- "nav.home":"Home","nav.story":"Verhaal","nav.run":"De tocht","nav.calendar":"Kalender","nav.vlog":"Vlog","nav.partners":"Partners","nav.support":"Steun","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
+ "nav.home":"Home","nav.story":"Verhaal","nav.run":"De tocht","nav.calendar":"Kalender","nav.blog":"Blog","nav.partners":"Partners","nav.support":"Steun","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
  "hero.eyebrow":"Eigen Koers · Leuven → Iran · vertrek 1 maart 2027","hero.arrow":"al lopend naar",
  "hero.lede":"Ooit liep Maziar Toghraie weg uit Iran, omdat blijven geen optie meer was. Op 1 maart 2027 vertrekt hij opnieuw. Deze keer loopt hij van België naar Iran. Vier tot zes maanden onderweg, elke dag een marathon.",
  "hero.cta1":"Steun de tocht","hero.cta2":"Lees zijn verhaal",
@@ -30,7 +30,7 @@ nl:{
  "home.next":"Eerstvolgende","home.teaser.story":"Het verhaal","home.teaser.story.p":"Weggelopen van huis, tien jaar wachten, negen jaar Life Bar. En nu terug, al lopend.",
  "home.teaser.run":"De tocht","home.teaser.run.p":"Ruim 5.000 kilometer. Elke dag een marathon. Vier tot zes maanden.",
  "home.teaser.support":"Koop een kilometer","home.teaser.support.p":"Steun de tocht en het goede doel.","home.more":"Lees verder",
- "home.partners":"Zij lopen mee","home.vlog":"Laatste video",
+ "home.partners":"Zij lopen mee","home.blog":"Op de blog","home.blog.h":"Laatste berichten",
  "story.crumb":"Verhaal","story.title":"Hij loopt niet weg. Hij loopt terug.","story.lede":"Het verhaal van Maziar Toghraie.",
  "story.p1":"Maziar Toghraie is kok, ondernemer en langeafstandsloper uit Leuven. Hij werd geboren in Shiraz, in het zuiden van Iran. Ruim twintig jaar geleden vertrok hij. Niet omdat hij wilde, en niet voor het avontuur. Blijven was geen optie meer. Hij liet familie, vrienden en een jong bedrijf achter.",
  "story.p2":"In België dacht hij dat de zwaarste kilometers achter hem lagen. Er volgden tien jaar van procedures, papieren, wachten en opnieuw beginnen. Een marathon zonder finishlijn, noemt hij het zelf. Een advocaat gaf hem geen wonderen, maar tijd, en vooral hoop. Daar houdt hij een overtuiging aan over: een mens kan het verschil maken voor een ander, vaak met iets heel klein.",
@@ -52,7 +52,7 @@ nl:{
  "cal.crumb":"Kalender","cal.title":"Wanneer","cal.lede":"Wat vastligt en wat nog volgt. Zodra de route bekend is, krijgt elk land hier een eigen kleur.",
  "cal.upcoming":"Binnenkort","cal.tbd":"datum volgt","cal.legend.event":"evenement","cal.legend.today":"vandaag",
  "cal.prev":"Vorige maand","cal.next":"Volgende maand",
- "vlog.crumb":"Vlog","vlog.title":"Volg de tocht","vlog.lede":"Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.","vlog.watch":"Bekijk op YouTube","vlog.featured":"Uitgelicht","vlog.all":"Alle video's","vlog.sub":"Abonneer op YouTube",
+ "blog.crumb":"Blog","blog.title":"Volg de tocht","blog.lede":"Verhalen en video's van Eigen Koers, van de voorbereiding tot de tocht zelf.","blog.sub":"Abonneer op YouTube","blog.f.all":"Alles","blog.f.text":"Verhalen","blog.f.video":"Video's","blog.empty":"Het eerste bericht komt binnenkort.","blog.back":"Alle berichten","blog.read":"Lees verder","blog.watch":"Bekijk de video","blog.pill.text":"Verhaal","blog.pill.video":"Video","blog.notfound":"Dit bericht bestaat niet (meer).","blog.yt":"Bekijk op YouTube",
  "partners.crumb":"Partners","partners.title":"Wie loopt mee","partners.lede":"Schoenen, kledij, voeding, verzekering, kilometers. Elke partner krijgt hier een plek, en een plek in de vlog van onderweg.",
  "partners.cta":"Word partner","partners.slot":"Jouw logo hier","partners.how":"Hoe je kunt meelopen",
  "ptier.1":"Hoofdpartner","ptier.1.p":"Eén partner die de hele tocht draagt. Naam op alle communicatie, eigen verhaal in de vlog.",
@@ -72,9 +72,9 @@ nl:{
  "foot.p":"Met Eigen Koers loopt Maziar Toghraie in 2027 van Leuven naar Iran. Elke dag een marathon, vier tot zes maanden lang.","foot.copy":"kopieer","foot.copied":"gekopieerd","foot.follow":"Volg","foot.pages":"Foto's",
 "home.intro":"Als wij onze koffer pakken, gaan we op reis. Maziar pakte zijn koffer en er was geen weg terug. Drieëntwintig jaar later keert hij terug naar Iran. Al lopend, en deze keer op zijn eigen voorwaarden.",
  "home.read":"Lees het verhaal","home.run":"Over de tocht","home.support":"Steun een kilometer","home.stories":"Verhalen onderweg","home.stories.p":"Onderweg zoekt Maziar mensen op die hun thuis verloren. Niet de cijfers, de mensen.",
- "home.when":"Wanneer","home.all":"Alle data","home.allvideos":"Alle video's","home.partner":"Loop mee als partner",
+ "home.when":"Wanneer","home.all":"Alle data","home.allposts":"Alle berichten","home.partner":"Loop mee als partner",
  "news.title":"Loop mee in je mailbox","news.p":"Af en toe een mail van onderweg. Meer niet.","news.btn":"Inschrijven","news.ok":"Dank. Je staat op de lijst zodra de nieuwsbrief gekoppeld is.","news.ph":"je@mail.be",
- "story.read.run":"Over de tocht","run.read.support":"Steun de tocht","cal.read.contact":"Heb je een bed onderweg?","fund.choose":"Kies","fund.soon":"binnenkort","shop.soon.long":"Binnenkort beschikbaar","vlog.more":"Alle video's op YouTube","partners.contact":"Neem contact op",
+ "story.read.run":"Over de tocht","run.read.support":"Steun de tocht","cal.read.contact":"Heb je een bed onderweg?","fund.choose":"Kies","fund.soon":"binnenkort","shop.soon.long":"Binnenkort beschikbaar","partners.contact":"Neem contact op",
  "story.title.a":"Ooit moest hij vluchten.","story.title.b":"Nu loopt hij terug.","run.route.h":"Meer dan 5.000 kilometer, elf landen",
 "hero.sub":"Elke dag een marathon, van België naar Iran",
  "home.about":"Over Maziar","home.about.h":"Achter de loper zit een bijzonder verhaal.",
@@ -128,7 +128,7 @@ en:{
  "home.cause.h":"One person can make all the difference.",
  "home.cause":"The cause",
  "home.quote.more":"Why he runs",
- "nav.home":"Home","nav.story":"Story","nav.run":"The journey","nav.calendar":"Calendar","nav.vlog":"Vlog","nav.partners":"Partners","nav.support":"Support","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
+ "nav.home":"Home","nav.story":"Story","nav.run":"The journey","nav.calendar":"Calendar","nav.blog":"Blog","nav.partners":"Partners","nav.support":"Support","nav.shop":"Shop","nav.contact":"Contact","nav.menu":"Menu",
  "hero.eyebrow":"Eigen Koers · Leuven → Iran · departure 1 March 2027","hero.arrow":"running to",
  "hero.lede":"Once, Maziar Toghraie fled Iran because staying was no longer an option. On 1 March 2027 he sets off again. This time he runs from Belgium to Iran. Four to six months on the road, a marathon every day.",
  "hero.cta1":"Support the run","hero.cta2":"Read his story",
@@ -137,7 +137,7 @@ en:{
  "home.next":"Coming up","home.teaser.story":"The story","home.teaser.story.p":"Ran away from home, ten years of waiting, nine years of Life Bar. Now running back.",
  "home.teaser.run":"The journey","home.teaser.run.p":"Over 5,000 kilometres. A marathon every day. Four to six months.",
  "home.teaser.support":"Buy a kilometre","home.teaser.support.p":"Support the run and the cause behind it.","home.more":"Read more",
- "home.partners":"Running with him","home.vlog":"Latest video",
+ "home.partners":"Running with him","home.blog":"From the blog","home.blog.h":"Latest posts",
  "story.crumb":"Story","story.title":"He is not running away. He is running back.","story.lede":"The story of Maziar Toghraie.",
  "story.p1":"Maziar Toghraie is a cook, entrepreneur and long-distance runner from Leuven, Belgium. He was born in Shiraz, in southern Iran. More than twenty years ago he left. Not because he wanted to, and not for adventure. Staying was no longer an option. He left behind family, friends and a young business.",
  "story.p2":"In Belgium he thought the hardest kilometres were behind him. Ten years of procedures, paperwork, waiting and starting over followed. A marathon without a finish line, he calls it. A lawyer gave him no miracles, but time, and above all hope. One conviction stayed with him: one person can make the difference for another, often with something very small.",
@@ -159,7 +159,7 @@ en:{
  "cal.crumb":"Calendar","cal.title":"When","cal.lede":"What's set, and what's still to come. Once the route is known, each country gets its own colour here.",
  "cal.upcoming":"Coming up","cal.tbd":"date to be confirmed","cal.legend.event":"event","cal.legend.today":"today",
  "cal.prev":"Previous month","cal.next":"Next month",
- "vlog.crumb":"Vlog","vlog.title":"Follow the run","vlog.lede":"A short video for every stage. Subscribe to the channel and don't miss a kilometre.","vlog.watch":"Watch on YouTube","vlog.featured":"Featured","vlog.all":"All videos","vlog.sub":"Subscribe on YouTube",
+ "blog.crumb":"Blog","blog.title":"Follow the run","blog.lede":"Stories and videos from Eigen Koers, from the preparation to the run itself.","blog.sub":"Subscribe on YouTube","blog.f.all":"All","blog.f.text":"Stories","blog.f.video":"Videos","blog.empty":"The first post is coming soon.","blog.back":"All posts","blog.read":"Read more","blog.watch":"Watch the video","blog.pill.text":"Story","blog.pill.video":"Video","blog.notfound":"This post no longer exists.","blog.yt":"Watch on YouTube",
  "partners.crumb":"Partners","partners.title":"Who's running with him","partners.lede":"Shoes, clothing, food, insurance, kilometres. Every partner gets a place here, and a place in the vlog from the road.",
  "partners.cta":"Become a partner","partners.slot":"Your logo here","partners.how":"How to join",
  "ptier.1":"Main partner","ptier.1.p":"One partner carrying the whole run. Your name on everything we publish, and your own story in the vlog.",
@@ -179,9 +179,9 @@ en:{
  "foot.p":"With Eigen Koers, Maziar Toghraie runs from Leuven to Iran in 2027. A marathon every day, for four to six months.","foot.copy":"copy","foot.copied":"copied","foot.follow":"Follow","foot.pages":"Photos",
 "home.intro":"When we pack a suitcase, we go on a trip. Maziar packed his suitcase and there was no way back. Twenty-three years later he returns to Iran. Running, and this time on his own terms.",
  "home.read":"Read the story","home.run":"About the journey","home.support":"Support a kilometre","home.stories":"Stories on the road","home.stories.p":"Along the way Maziar seeks out people who lost their home. Not the numbers, the people.",
- "home.when":"When","home.all":"All dates","home.allvideos":"All videos","home.partner":"Join as a partner",
+ "home.when":"When","home.all":"All dates","home.allposts":"All posts","home.partner":"Join as a partner",
  "news.title":"Follow along by email","news.p":"An email from the road now and then. Nothing more.","news.btn":"Subscribe","news.ok":"Thanks. You are on the list once the newsletter is connected.","news.ph":"you@mail.com",
- "story.read.run":"About the journey","run.read.support":"Support the run","cal.read.contact":"Do you have a bed on the route?","fund.choose":"Choose this amount","fund.soon":"soon","shop.soon.long":"Available soon","vlog.more":"All videos on YouTube","partners.contact":"Get in touch",
+ "story.read.run":"About the journey","run.read.support":"Support the run","cal.read.contact":"Do you have a bed on the route?","fund.choose":"Choose this amount","fund.soon":"soon","shop.soon.long":"Available soon","partners.contact":"Get in touch",
  "story.title.a":"Once he had to flee.","story.title.b":"Now he runs back.","run.route.h":"More than 5,000 kilometres, eleven countries",
 "hero.sub":"A marathon every day, from Belgium to Iran",
  "home.about":"About Maziar","home.about.h":"Behind the runner lies a remarkable story.",
@@ -231,17 +231,17 @@ en:{
 fa:{
  "home.cause":"هدف خیریه",
  "home.quote.more":"چرا می‌دود",
- "nav.home":"خانه","nav.story":"داستان","nav.run":"دویدن","nav.calendar":"تقویم","nav.vlog":"ولاگ","nav.partners":"همراهان","nav.support":"حمایت","nav.shop":"فروشگاه","nav.contact":"تماس","nav.menu":"منو",
+ "nav.home":"خانه","nav.story":"داستان","nav.run":"دویدن","nav.calendar":"تقویم","nav.blog":"بلاگ","nav.partners":"همراهان","nav.support":"حمایت","nav.shop":"فروشگاه","nav.contact":"تماس","nav.menu":"منو",
  "hero.eyebrow":"لوون ← ایران · حرکت: ۱ مارس ۲۰۲۷","hero.arrow":"پیاده تا",
  "hero.lede":"روزی مازیار تغرایی ناچار شد از ایران برود، چون ماندن دیگر ممکن نبود. در ۱ مارس ۲۰۲۷ دوباره راه می‌افتد، این بار پیاده، از بلژیک تا ایران. چهار تا شش ماه در راه، هر روز یک ماراتن.",
  "hero.cta1":"از سفر حمایت کن","hero.cta2":"داستان او را بخوان",
  "stat.km":"کیلومتر","stat.day":"کیلومتر در روز","stat.months":"ماه",
- "home.next":"به‌زودی","home.teaser.story":"داستان","home.teaser.run":"دویدن","home.teaser.support":"یک کیلومتر بخر","home.more":"ادامه","home.partners":"همراهان","home.vlog":"آخرین ویدیو",
+ "home.next":"به‌زودی","home.teaser.story":"داستان","home.teaser.run":"دویدن","home.teaser.support":"یک کیلومتر بخر","home.more":"ادامه","home.partners":"همراهان",
  "story.crumb":"داستان","story.title":"روزی ناچار شد بگریزد. حالا به خانه برمی‌گردد.",
  "story.quote":"«این بار با شرایط خودم می‌دوم.»","story.cite":"مازیار","story.timeline":"گاه‌شمار",
  "run.crumb":"دویدن","run.title":"هر روز یک ماراتن، تا جایی که داستانش آغاز شد","run.route":"مسیر",
  "cal.crumb":"تقویم","cal.title":"کی","cal.upcoming":"به‌زودی","cal.tbd":"تاریخ متعاقباً",
- "vlog.crumb":"ولاگ","vlog.title":"سفر را دنبال کن",
+ "blog.crumb":"بلاگ","blog.title":"سفر را دنبال کن",
  "partners.crumb":"همراهان","partners.title":"همراهان","partners.cta":"همراه شوید","partners.slot":"لوگوی شما",
  "fund.crumb":"حمایت","fund.title":"یک کیلومتر بخر","fund.btn":"حمایت",
  "shop.crumb":"فروشگاه","shop.title":"چیزی با خود ببر","shop.btn":"افزودن به سبد","shop.soon":"به‌زودی",
@@ -281,7 +281,7 @@ const TIMELINE = [
  {y:"1 mrt 2027",title:{nl:"Richting Iran",en:"Towards Iran"},txt:{nl:"Vertrek in Leuven, al lopend naar waar zijn leven begon.",en:"Departure from Leuven, running back to where his life began."}}
 ];
 /* ===== Inhoud uit content/*.json (via /admin bewerkbaar), gebundeld in assets/content.js ===== */
-const C = window.CONTENT || {deloop:{},kalender:{},vlog:{},partners:{},shop:{},route:null};
+const C = window.CONTENT || {deloop:{},kalender:{},blog:{},partners:{},shop:{},route:null};
 const RUNCARDS = [];
 const PREP = (C.deloop.voorbereiding||[]).map(p=>({y:p.periode,title:p.titel,txt:p.tekst}));
 const FAQ = C.deloop.faq||[];
@@ -289,8 +289,18 @@ const FAQ = C.deloop.faq||[];
 const EVENTS = (C.kalender.evenementen||[]).map(e=>({date:e.datum,tbd:!!e.enkel_maand,kind:e.soort,title:e.titel,sub:e.tekst}));
 /* Etappes per land kleuren hun dagen in de kalender */
 const STAGES = (C.kalender.etappes||[]).map(x=>({from:x.van,to:x.tot,country:x.land,color:x.kleur||"#123C74"}));
-/* Enkel echte YouTube-id's (11 tekens) worden getoond; plaatshouders zoals VIDEO_ID_1 blijven verborgen */
-const VLOG = (C.vlog.videos||[]).filter(v=>/^[A-Za-z0-9_-]{11}$/.test(v.youtube_id||"")).map(v=>({id:v.youtube_id,featured:!!v.uitgelicht,title:v.titel,sub:v.ondertitel}));
+/* Blog: berichten met tekst, video of allebei. Enkel echte YouTube-id's (11 tekens) tellen als video.
+   De inhoud is een reeks blokken (type "tekst" of "foto"), zodat een foto tussen twee alinea's kan staan.
+   Een bericht zonder datum, of zonder tekst en zonder video, wordt niet getoond. Nieuwste eerst. */
+const ytId = x => { x=String(x||"").trim(); const m=x.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{11})/); return m?m[1]:(/^[A-Za-z0-9_-]{11}$/.test(x)?x:""); };
+const anyText = o => !!(o && (o.nl||o.en||o.fa||"").trim());
+const slugify = x => String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60);
+const blocksOf = p => (p.tekst ? [Object.assign({type:"tekst"},p.tekst)] : []).concat((p.inhoud||[]).filter(b=>b && (b.type==="foto" ? !!b.foto : anyText(b))));
+const POSTS = (C.blog.berichten||[]).map(p=>({date:String(p.datum||"").slice(0,10),title:p.titel||{},blocks:blocksOf(p),vid:ytId(p.youtube_id),img:p.foto||"",credit:p.fotograaf||""}))
+  .map(p=>Object.assign(p,{firstText:p.blocks.find(b=>b.type!=="foto")}))
+  .filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.date) && (p.firstText || p.vid))
+  .map(p=>Object.assign(p,{slug:(p.date+"-"+slugify(p.title.nl||p.title.en)).replace(/-$/,""),hasText:!!p.firstText}))
+  .sort((a,b)=>b.date.localeCompare(a.date));
 const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p.rol,url:p.url,logo:p.logo}))
   .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
 /* Steun. raised: het opgehaalde bedrag, met de hand bij te werken. payUrl: adres van de betaalpagina (leeg = nog niet klaar). */
@@ -309,7 +319,7 @@ const PRODUCTS = (C.shop.producten||[]).map(p=>({name:p.naam,price:(p.prijs===""
   const put=(k,o)=>{ if(!o) return; ["nl","en","fa"].forEach(l=>{ if(o[l]) (T[l]=T[l]||{})[k]=o[l]; }); };
   const d=C.deloop; put("run.title",d.titel); put("run.sub",d.ondertitel); put("run.lede",d.intro); put("run.why",d.waarom_titel); put("run.why.p",d.waarom_tekst); put("route.note",d.route_opmerking);
   (d.cijfers||[]).forEach((c,i)=>put("stat."+i,c.label));
-  put("cal.lede",C.kalender.intro); put("vlog.lede",C.vlog.intro); put("partners.lede",C.partners.intro); put("shop.lede",C.shop.intro); put("shop.ship",C.shop.verzending);
+  put("cal.lede",C.kalender.intro); put("blog.lede",C.blog.intro); put("partners.lede",C.partners.intro); put("shop.lede",C.shop.intro); put("shop.ship",C.shop.verzending);
 })();
 
 /* ===== helpers ===== */
@@ -432,19 +442,50 @@ function renderNextEvent(){
   const box = $("nextEvent"); if(!box) return; box.innerHTML="";
   upcoming().slice(0,4).forEach(e => box.append(eventCard(e)));
 }
-function videoCard(v, big, img){
-  /* Live site: this <a class="video"> becomes <iframe src="https://www.youtube-nocookie.com/embed/ID"> */
-  return `<a class="video${big?" big":""}" href="https://www.youtube.com/watch?v=${esc(v.id)}" data-yt="${esc(v.id)}" aria-label="${esc(L(v.title))}">${photo(img,"l169",L(v.title))}<span class="play">▶</span></a>`;
+/* ===== Blog ===== */
+let blogFilter = "all";
+const fmtDate = d => new Intl.DateTimeFormat(lang==="nl"?"nl-BE":lang==="fa"?"fa-IR":"en-GB",{day:"numeric",month:"long",year:"numeric"}).format(new Date(d+"T12:00:00"));
+const ytThumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+const paras = s => String(s||"").trim().split(/\n\s*\n/).map(p=>`<p>${esc(p.trim()).replace(/\n/g,"<br>")}</p>`).join("");
+const excerpt = s => { s=String(s||"").replace(/\s+/g," ").trim(); return s.length>170 ? s.slice(0,170).replace(/\s+\S*$/,"")+"…" : s; };
+const figure = (src, credit, cap) => `<figure>${`<div class="photo"><img src="${esc(src)}" alt="${esc(cap||"")}" loading="lazy">${credit?`<span class="credit">© ${esc(credit)}</span>`:""}</div>`}${cap?`<figcaption>${esc(cap)}</figcaption>`:""}</figure>`;
+const blockHtml = b => b.type==="foto" ? figure(b.foto, b.fotograaf, L(b.onderschrift)) : paras(L(b));
+function postCard(p){
+  const media = p.vid
+    ? `<div class="photo l169 vthumb"><img src="${ytThumb(p.vid)}" alt="" loading="lazy"><span class="play">▶</span></div>`
+    : p.img ? `<div class="photo l169"><img src="${esc(p.img)}" alt="" loading="lazy">${p.credit?`<span class="credit">© ${esc(p.credit)}</span>`:""}</div>` : "";
+  const pills = (p.hasText?`<span class="pill">${esc(t("blog.pill.text"))}</span>`:"") + (p.vid?`<span class="pill accent">${esc(t("blog.pill.video"))}</span>`:"");
+  return el(`<a class="tile post-card${media?"":" textonly"}" href="blog.html?bericht=${encodeURIComponent(p.slug)}">${media}<span class="meta">${esc(fmtDate(p.date))}</span><h3>${esc(L(p.title))}</h3>${p.hasText?`<p class="s">${esc(excerpt(L(p.firstText)))}</p>`:""}<span class="pills">${pills}</span></a>`);
 }
-const VIMG = ["dune-ridge.jpg","road-run.jpg","kitchen-bw.jpg","field-sun.jpg"];
-function renderVlog(){
-  document.querySelectorAll("[data-vlog-videos]").forEach(x => x.hidden = !VLOG.length);
-  if(!VLOG.length) return;
-  const f = $("vlogFeatured");
-  if(f){ const v = VLOG.find(x=>x.featured) || VLOG[0]; f.innerHTML = `${videoCard(v,true,VIMG[0])}<div class="stack" style="margin-top:1.2rem;gap:.3rem"><h3>${esc(L(v.title))}</h3><p class="muted">${esc(L(v.sub))}</p></div>`; }
-  const c = $("vlogCards"); if(c){ c.innerHTML="";
-    VLOG.forEach((v,i) => c.append(el(`<div class="tile wide">${videoCard(v,false,VIMG[i%VIMG.length])}<h3>${esc(L(v.title))}</h3><span class="meta">${esc(L(v.sub))}</span></div>`))); }
-  const h = $("homeVideo"); if(h){ const v = VLOG.find(x=>x.featured) || VLOG[0]; h.innerHTML = `${videoCard(v,true,VIMG[0])}<h3 style="margin-top:1rem">${esc(L(v.title))}</h3>`; }
+function renderBlog(){
+  const h = $("homePosts"); if(h){ h.innerHTML=""; POSTS.slice(0,3).forEach(p=>h.append(postCard(p))); }
+  const list = $("blogList"); if(!list) return;
+  const want = new URLSearchParams(location.search).get("bericht");
+  const idx = $("blogIndex"), box = $("blogPost"), art = $("blogArticle");
+  if(want){
+    const p = POSTS.find(x=>x.slug===want);
+    idx.hidden = true; box.hidden = false;
+    if(!p){ art.innerHTML = `<p class="lede">${esc(t("blog.notfound"))}</p><a class="link" href="blog.html">${esc(t("blog.back"))}</a>`; return; }
+    document.title = L(p.title) + " · Blog · Eigen Koers";
+    const video = p.vid ? `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${p.vid}" title="${esc(L(p.title))}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>` : "";
+    const pic = p.img ? figure(p.img, p.credit, "") : "";
+    art.innerHTML = `<a class="link back" href="blog.html">${esc(t("blog.back"))}</a>
+      <p class="label">${esc(fmtDate(p.date))}</p><h2>${esc(L(p.title))}</h2>${video}${pic}<div class="body">${p.blocks.map(blockHtml).join("")}</div>
+      <div class="actions"><a class="btn fill" href="steun.html">${esc(t("home.support"))}</a>${p.vid?`<a class="btn" href="https://www.youtube.com/watch?v=${p.vid}" target="_blank" rel="noopener">${esc(t("blog.yt"))}</a>`:""}</div>`;
+    return;
+  }
+  idx.hidden = false; box.hidden = true;
+  const both = POSTS.some(p=>p.hasText) && POSTS.some(p=>p.vid);
+  $("blogFilter").hidden = !both;
+  if(!both) blogFilter = "all";
+  $("blogFilter").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.f===blogFilter)));
+  const shown = POSTS.filter(p=>blogFilter==="all" || (blogFilter==="text"?p.hasText:!!p.vid));
+  list.innerHTML = ""; shown.forEach(p=>list.append(postCard(p)));
+  $("blogEmpty").hidden = POSTS.length>0;
+}
+function wireBlog(){
+  const f = $("blogFilter"); if(!f) return;
+  f.addEventListener("click", e => { const b=e.target.closest("button[data-f]"); if(!b) return; blogFilter=b.dataset.f; renderBlog(); });
 }
 function renderPartners(){
   const c = $("logos"); if(!c) return; c.innerHTML="";
@@ -498,9 +539,9 @@ function wireCalendar(){
   $("calPrev").addEventListener("click", () => { calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth()-1, 1); renderCalendar(); });
   $("calNext").addEventListener("click", () => { calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth()+1, 1); renderCalendar(); });
 }
-function renderAll(){ renderTimeline(); renderPrep(); renderFaq(); renderRun(); renderLife(); renderCalendar(); renderNextEvent(); renderVlog(); renderPartners(); renderFund(); renderShop(); renderStatic(); }
+function renderAll(){ renderTimeline(); renderPrep(); renderFaq(); renderRun(); renderLife(); renderCalendar(); renderNextEvent(); renderBlog(); renderPartners(); renderFund(); renderShop(); renderStatic(); }
 
-renderChrome(); wireForms(); wireCalendar(); renderAll();
+renderChrome(); wireForms(); wireCalendar(); wireBlog(); renderAll();
 
 /* every page opens at the top; the viewer otherwise restores the previous page's scroll position */
 try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(e){}

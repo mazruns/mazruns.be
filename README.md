@@ -2,7 +2,7 @@
 
 Website van Maziar Toghraie, die vanaf 1 maart 2027 van Leuven naar Iran loopt.
 
-Statische site in drie talen (Nederlands, Engels, Farsi), zonder databank. De inhoud van De loop, Kalender, Vlog, Partners en Shop staat in `content/*.json` en is te bewerken op `/admin` (Sveltia CMS). De rest staat in `assets/site.js`. `build.py` maakt de pagina's.
+Statische site in drie talen (Nederlands, Engels, Farsi), zonder databank. De inhoud van De loop, Kalender, Blog, Partners en Shop staat in `content/*.json` en is te bewerken op `/admin` (Sveltia CMS). De rest staat in `assets/site.js`. `build.py` maakt de pagina's.
 
 ## Bekijken
 
@@ -36,7 +36,7 @@ Zelf aanpassen kan ook: teksten en lijsten in `assets/site.js`, pagina-opbouw in
 
 ```
 build.py            pagina-opbouw, genereert de .html-bestanden en assets/content.js
-content/            inhoud die via /admin beheerd wordt (de loop, kalender, vlog, partners, shop)
+content/            inhoud die via /admin beheerd wordt (de loop, kalender, blog, partners, shop)
 admin/              het beheerscherm (Sveltia CMS) en zijn configuratie
 assets/content.js   gegenereerd uit content/, niet bewerken
 assets/site.js      vaste teksten (nl, en, fa), verhaal, steun en de pagina-logica

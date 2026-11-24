@@ -14,7 +14,7 @@ Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2
 
 | Bestand | Wat erin staat |
 |---|---|
-| `content/*.json` | De inhoud die Jolien via `/admin` beheert: De loop, Kalender, Vlog, Partners, Shop. Elke tekst heeft `nl`, `en` en `fa` |
+| `content/*.json` | De inhoud die Jolien via `/admin` beheert: De loop, Kalender, Blog, Partners, Shop. Elke tekst heeft `nl`, `en` en `fa` |
 | `admin/` | Het beheerscherm (Sveltia CMS): `config.yml` beschrijft de velden, `sveltia-cms.js` is de CMS zelf |
 | `assets/content.js` | Gegenereerd door `build.py` uit `content/*.json`. Nooit rechtstreeks bewerken |
 | `assets/site.js` | De vaste teksten in drie talen (woordenboek `T`: `nl`, `en`, `fa`), de rest van de inhoud (Verhaal, Steun, homepagina) en alle pagina-logica |
@@ -25,14 +25,14 @@ Website van Maziar Toghraie. Hij vluchtte ooit uit Iran en loopt vanaf 1 maart 2
 
 ### Inhoud aanpassen
 
-**Via `/admin`** (Jolien): De loop, Kalender, Vlog, Partners en Shop. Opslaan = meteen online. De velden staan in `admin/config.yml`; wat daar niet in staat, kan Jolien niet aanpassen.
+**Via `/admin`** (Jolien): De loop, Kalender, Blog, Partners en Shop. Opslaan = meteen online. De velden staan in `admin/config.yml`; wat daar niet in staat, kan Jolien niet aanpassen.
 
 **In `content/*.json`** (Claude, zelfde inhoud als `/admin`):
 - **Kalender** `kalender.json`: `evenementen` met `datum` (JJJJ-MM-DD), `soort`, `titel`, `tekst`. `enkel_maand: true` als enkel de maand vastligt; zo'n item komt in de lijst maar niet in het kalenderraster. `etappes` (`van`, `tot`, `land`, `kleur`) kleuren hun dagen in de kalender; één vaste kleur per land, afgeleid van de merkkleuren.
 - **De tocht** `deloop.json` (pagina `detocht.html`; het oude adres /deloop stuurt door via `_redirects`): titel, intro, de drie cijfers (ook op de homepagina), "waarom hij loopt", de voorbereiding, de FAQ.
 - **Route** `route.json` en `assets/route.svg`: gemaakt met `tools/routekaart.py` uit de GPX-route van Komoot (meer dan 5.000 km, elf landen; de exacte afstand staat bewust niet op de site). De lijn stopt bij Erzurum (ongeveer 500 km voor het einde) en gaat verder als een gestippelde pijl "Naar de grens met Iran": geen eindpunt, geen grenspost, Van niet bij naam. Nieuwe route? Draai het script opnieuw; uitleg staat bovenaan het script. Niet met de hand bewerken.
 - **Veiligheid: geen etappes, dagplanning of exacte locaties op de site** (ook niet verborgen in de code). Met de vertrekdatum erbij zou iedereen kunnen zien waar Maziar op welke dag is. De routelijn blijft vereenvoudigd.
-- **Vlog** `vlog.json`: kanaal-url en video's met YouTube-id. **Partners** `partners.json`: partners en het aantal lege plekken. **Shop** `shop.json`: producten met prijs (leeg = binnenkort).
+- **Blog** `blog.json` (pagina `blog.html`; het oude adres /vlog stuurt door via `_redirects`): blog en vlog samen onder één menu-item, op vraag van Jolien (24 november 2026). Elk bericht heeft een `datum`, een `titel` en een `inhoud`: een reeks blokken van het type `tekst` (`nl`, `en`, `fa`) of `foto` (`foto`, `fotograaf`, `onderschrift`), zodat een foto tussen twee alinea's kan staan. Daarnaast eventueel een `youtube_id` (link of id) en een hoofdfoto (`foto`, `fotograaf`) bovenaan en op het kaartje. Foto's die via `/admin` voor de blog worden opgeladen, verkleint het beheerscherm zelf tot max. 2000 px en zet het om naar WebP (kwaliteit 85; instelling `media_libraries` bij die fotovakjes in `admin/config.yml`). De andere foto's van de site blijven met de hand verkleind. Tekst, video of allebei; een bericht zonder datum, of zonder tekst en zonder echte video, wordt niet getoond. Nieuwste eerst, met een filter Alles / Verhalen / Video's zodra er van beide soorten berichten zijn. Elk bericht heeft een eigen adres `blog.html?bericht=<datum>-<titel>`; een titel wijzigen verandert dus het adres. Lege Engelse tekst = de site toont de Nederlandse. De blog start al voor het vertrek. **Partners** `partners.json`: partners en het aantal lege plekken. **Shop** `shop.json`: producten met prijs (leeg = binnenkort).
 - Na een wijziging: `python3 build.py` (maakt `assets/content.js` en de html opnieuw). Cloudflare doet dat zelf bij elke push.
 
 **In `assets/site.js`** (enkel Claude):
@@ -59,9 +59,9 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - Niet vermelden: verhalen onderweg verzamelen, rustdagen, koken voor vreemden, een bed onderweg vragen.
 - **Niets over de reden van zijn vlucht of over familie in Iran** zonder uitdrukkelijk akkoord van Maziar. Ook het zwangerschapsverlies van Maziar en Jolien staat bewust niet op de site.
 - **Geen zelfpromotie** van de beheerders (geen Hi!). Uitzonderingen: de podcastaflevering Hotel Anywhere #25 (8 december 2026) staat in de kalender (vraag van Maziar), en Hotel Anywhere staat als partner bij Partners (vraag van Jolien, 18 november 2026).
-- **Veiligheid onderweg** (afspraak met Jolien, 19 november 2026), voor de site, de vlog en Instagram:
+- **Veiligheid onderweg** (afspraak met Jolien, 19 november 2026), voor de site, de blog, de vlog en Instagram:
   - In Europa mag er getoond worden waar ze zijn, maar nooit waar de camper 's nachts staat.
-  - In Turkije, en zeker in het oosten: niets live. Posts en vlogs verschijnen met minstens een dag vertraging, zonder live locatie, en ontmoetingen worden niet vooraf met plaats en uur aangekondigd.
+  - In Turkije, en zeker in het oosten: niets live. Posts, blogberichten en vlogs verschijnen met minstens een dag vertraging, zonder live locatie, en ontmoetingen worden niet vooraf met plaats en uur aangekondigd.
   - Reden: Iraanse inlichtingendiensten bedreigen en ontvoeren in Turkije mensen die uit Iran gevlucht zijn, ook in de provincie Van, waar de route eindigt.
 - **De site spreekt over Maziar in de derde persoon** ("hij", "Maziar"), nooit in de ik-vorm. Enkel citaten met het bijschrift "Maziar" blijven in de ik-vorm (afspraak met Jolien, 24 november 2026).
 - Bijschrift onder citaten: enkel "Maziar".
@@ -101,14 +101,14 @@ Communicatiestrategie (afspraak met Jolien, 24 november 2026). Elk kanaal heeft 
 
 ## Nog open (plaatshouders)
 
-- Video's in `VLOG` hebben nog geen echte YouTube-id's; het YouTube-kanaal ligt nog niet vast. Video's zonder echte id (11 tekens) worden niet getoond; zonder echte video's verbergt de vlogpagina de videoblokken.
+- Blog: nog geen berichten; de pagina toont "Het eerste bericht komt binnenkort." Het YouTube-kanaal ligt nog niet vast.
 - Partners: enkel Hotel Anywhere (AfterLife is weg sinds 18 november 2026, op vraag van Jolien), de rest zijn lege plekken.
 - Steun: doel € 60.000 (5.000 km × € 12). Per kilometer € 10 naar Casa Legal en € 2 naar de tocht (€ 50.000 / € 10.000). In `site.js`: `FUND.raised` met de hand bijwerken; `FUND.payUrl` invullen zodra de betaalpagina bestaat (de knop stuurt dan `?bedrag=` mee). `steun.html?demo` toont een voorbeeldbedrag om het ontwerp te bekijken.
 - Shop: producten en prijzen zijn voorlopig; nog geen betaling. De pagina is tijdelijk verborgen (`SHOP_OPEN = False` bovenaan `build.py`): niet in het menu, niet in de sitemap, `noindex`. Zet op `True` en draai `python3 build.py` wanneer de shop opent.
 - Contactformulier en nieuwsbrief tonen enkel een bevestiging; ze zijn nog nergens aan gekoppeld.
 - Perskit: nog niet beschikbaar.
 - Logo van de expeditie.
-- Vlog staat niet op de homepagina tot de vlog start (`VLOG_ON_HOME = False` in `build.py`).
+- De laatste blogberichten staan niet op de homepagina tot de blog start (`BLOG_ON_HOME = False` in `build.py`).
 
 ## Lancering
 
