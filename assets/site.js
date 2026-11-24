@@ -295,7 +295,7 @@ const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p
   .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
 /* Steun. raised: het opgehaalde bedrag, met de hand bij te werken. payUrl: adres van de betaalpagina (leeg = nog niet klaar). */
 /* Formulieren. contactKey: de Web3Forms-sleutel voor team@mazruns.be (mag publiek). Leeg = formulier toont enkel een bevestiging. De nieuwsbrief loopt via functions/api/nieuwsbrief.js. */
-const FORMS = {contactKey:""};
+const FORMS = {contactKey:"4c6d2e00-7b05-4a22-baf3-506e36a8358f"};
 const FUND = {raised:0, goal:60000, perKm:12, toCause:10, toRun:2, maxKm:500, payUrl:""};
 const IMG = "assets/img/";
 const LIFE = [
