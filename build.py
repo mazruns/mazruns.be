@@ -114,7 +114,7 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
 <section class="band dark wine"><a class="wrap quote quote-link" href="detocht.html">
   <blockquote data-t="home.quote">Niet omdat ik iets wil bewijzen. Maar omdat ik iets wil begrijpen.</blockquote>
   <cite data-t="home.quote.cite">Maziar, over de tocht naar Iran</cite>
-  <span class="more" data-t="home.quote.more">Waarom ik loop</span>
+  <span class="more" data-t="home.quote.more">Waarom hij loopt</span>
 </a></section>
 
 <section class="band"><div class="wrap">
@@ -140,8 +140,8 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
 
 PAGES["verhaal"] = ("verhaal", "Verhaal · Mazruns", hero(
   "portrait-stand.jpg","50% 16%","story.crumb","Verhaal",
-  '<span data-t="story.title">Ik loop niet weg. Ik loop terug.</span>',
-  None,None,"story.lede","Het verhaal van Maziar Toghraie, in zijn eigen woorden.",SUPPORT_BTN,short=True,credit="Elke Smit Photography") + f'''
+  '<span data-t="story.title">Hij loopt niet weg. Hij loopt terug.</span>',
+  None,None,"story.lede","Het verhaal van Maziar Toghraie.",SUPPORT_BTN,short=True,credit="Elke Smit Photography") + f'''
 <section class="band"><div class="wrap stack" style="gap:clamp(3rem,7vw,5rem)">
   {frag("desert-empty.jpg","f1",credit="Marathon des Sables")}
   {frag("road-run.jpg","f2",rev=True)}
