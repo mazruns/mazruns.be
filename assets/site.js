@@ -290,13 +290,16 @@ const EVENTS = (C.kalender.evenementen||[]).map(e=>({date:e.datum,tbd:!!e.enkel_
 /* Etappes per land kleuren hun dagen in de kalender */
 const STAGES = (C.kalender.etappes||[]).map(x=>({from:x.van,to:x.tot,country:x.land,color:x.kleur||"#123C74"}));
 /* Blog: berichten met tekst, video of allebei. Enkel echte YouTube-id's (11 tekens) tellen als video.
+   De inhoud is een reeks blokken (type "tekst" of "foto"), zodat een foto tussen twee alinea's kan staan.
    Een bericht zonder datum, of zonder tekst en zonder video, wordt niet getoond. Nieuwste eerst. */
 const ytId = x => { x=String(x||"").trim(); const m=x.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{11})/); return m?m[1]:(/^[A-Za-z0-9_-]{11}$/.test(x)?x:""); };
 const anyText = o => !!(o && (o.nl||o.en||o.fa||"").trim());
 const slugify = x => String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60);
-const POSTS = (C.blog.berichten||[]).map(p=>({date:String(p.datum||"").slice(0,10),title:p.titel||{},text:p.tekst||{},vid:ytId(p.youtube_id),img:p.foto||"",credit:p.fotograaf||""}))
-  .filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.date) && (anyText(p.text) || p.vid))
-  .map(p=>Object.assign(p,{slug:(p.date+"-"+slugify(p.title.nl||p.title.en)).replace(/-$/,""),hasText:anyText(p.text)}))
+const blocksOf = p => (p.tekst ? [Object.assign({type:"tekst"},p.tekst)] : []).concat((p.inhoud||[]).filter(b=>b && (b.type==="foto" ? !!b.foto : anyText(b))));
+const POSTS = (C.blog.berichten||[]).map(p=>({date:String(p.datum||"").slice(0,10),title:p.titel||{},blocks:blocksOf(p),vid:ytId(p.youtube_id),img:p.foto||"",credit:p.fotograaf||""}))
+  .map(p=>Object.assign(p,{firstText:p.blocks.find(b=>b.type!=="foto")}))
+  .filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.date) && (p.firstText || p.vid))
+  .map(p=>Object.assign(p,{slug:(p.date+"-"+slugify(p.title.nl||p.title.en)).replace(/-$/,""),hasText:!!p.firstText}))
   .sort((a,b)=>b.date.localeCompare(a.date));
 const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p.rol,url:p.url,logo:p.logo}))
   .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
@@ -445,12 +448,14 @@ const fmtDate = d => new Intl.DateTimeFormat(lang==="nl"?"nl-BE":lang==="fa"?"fa
 const ytThumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 const paras = s => String(s||"").trim().split(/\n\s*\n/).map(p=>`<p>${esc(p.trim()).replace(/\n/g,"<br>")}</p>`).join("");
 const excerpt = s => { s=String(s||"").replace(/\s+/g," ").trim(); return s.length>170 ? s.slice(0,170).replace(/\s+\S*$/,"")+"…" : s; };
+const figure = (src, credit, cap) => `<figure>${`<div class="photo"><img src="${esc(src)}" alt="${esc(cap||"")}" loading="lazy">${credit?`<span class="credit">© ${esc(credit)}</span>`:""}</div>`}${cap?`<figcaption>${esc(cap)}</figcaption>`:""}</figure>`;
+const blockHtml = b => b.type==="foto" ? figure(b.foto, b.fotograaf, L(b.onderschrift)) : paras(L(b));
 function postCard(p){
   const media = p.vid
     ? `<div class="photo l169 vthumb"><img src="${ytThumb(p.vid)}" alt="" loading="lazy"><span class="play">▶</span></div>`
     : p.img ? `<div class="photo l169"><img src="${esc(p.img)}" alt="" loading="lazy">${p.credit?`<span class="credit">© ${esc(p.credit)}</span>`:""}</div>` : "";
   const pills = (p.hasText?`<span class="pill">${esc(t("blog.pill.text"))}</span>`:"") + (p.vid?`<span class="pill accent">${esc(t("blog.pill.video"))}</span>`:"");
-  return el(`<a class="tile post-card${media?"":" textonly"}" href="blog.html?bericht=${encodeURIComponent(p.slug)}">${media}<span class="meta">${esc(fmtDate(p.date))}</span><h3>${esc(L(p.title))}</h3>${p.hasText?`<p class="s">${esc(excerpt(L(p.text)))}</p>`:""}<span class="pills">${pills}</span></a>`);
+  return el(`<a class="tile post-card${media?"":" textonly"}" href="blog.html?bericht=${encodeURIComponent(p.slug)}">${media}<span class="meta">${esc(fmtDate(p.date))}</span><h3>${esc(L(p.title))}</h3>${p.hasText?`<p class="s">${esc(excerpt(L(p.firstText)))}</p>`:""}<span class="pills">${pills}</span></a>`);
 }
 function renderBlog(){
   const h = $("homePosts"); if(h){ h.innerHTML=""; POSTS.slice(0,3).forEach(p=>h.append(postCard(p))); }
@@ -463,9 +468,9 @@ function renderBlog(){
     if(!p){ art.innerHTML = `<p class="lede">${esc(t("blog.notfound"))}</p><a class="link" href="blog.html">${esc(t("blog.back"))}</a>`; return; }
     document.title = L(p.title) + " · Blog · Eigen Koers";
     const video = p.vid ? `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${p.vid}" title="${esc(L(p.title))}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>` : "";
-    const pic = p.img ? `<div class="photo"><img src="${esc(p.img)}" alt="">${p.credit?`<span class="credit">© ${esc(p.credit)}</span>`:""}</div>` : "";
+    const pic = p.img ? figure(p.img, p.credit, "") : "";
     art.innerHTML = `<a class="link back" href="blog.html">${esc(t("blog.back"))}</a>
-      <p class="label">${esc(fmtDate(p.date))}</p><h2>${esc(L(p.title))}</h2>${video}${pic}<div class="body">${paras(L(p.text))}</div>
+      <p class="label">${esc(fmtDate(p.date))}</p><h2>${esc(L(p.title))}</h2>${video}${pic}<div class="body">${p.blocks.map(blockHtml).join("")}</div>
       <div class="actions"><a class="btn fill" href="steun.html">${esc(t("home.support"))}</a>${p.vid?`<a class="btn" href="https://www.youtube.com/watch?v=${p.vid}" target="_blank" rel="noopener">${esc(t("blog.yt"))}</a>`:""}</div>`;
     return;
   }

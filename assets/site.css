@@ -380,3 +380,6 @@ a.quote-link:hover blockquote{color:#fff}
 .post-card .photo{aspect-ratio:16/9}
 .post-card .photo img{object-position:50% 30%}
 .post-card.textonly{align-self:start}
+.post figure{margin:.4rem 0;display:grid;gap:.5rem}
+.post figure .photo img{height:auto}
+.post figcaption{font-size:.9rem;color:var(--muted)}

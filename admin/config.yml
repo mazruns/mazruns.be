@@ -109,18 +109,58 @@ collections:
                   - { name: nl, label: Nederlands, widget: string }
                   - { name: en, label: Engels, widget: string, required: false, hint: "Leeg = de site toont de Nederlandse titel" }
                   - { name: fa, label: Farsi, widget: string, required: false }
-              - name: tekst
-                label: Tekst
-                widget: object
+              - name: inhoud
+                label: Inhoud
+                label_singular: blok
+                widget: list
                 required: false
-                hint: "Een lege regel tussen twee alinea's maakt een nieuwe alinea. Leeg laten mag als het bericht enkel een video is."
-                fields:
-                  - { name: nl, label: Nederlands, widget: text, required: false }
-                  - { name: en, label: Engels, widget: text, required: false, hint: "Leeg = de site toont de Nederlandse tekst" }
-                  - { name: fa, label: Farsi, widget: text, required: false }
+                hint: "Zet blokken onder elkaar: Tekst, Foto, Tekst ... Zo komt een foto tussen twee alinea's. Leeg laten mag als het bericht enkel een video is."
+                types:
+                  - name: tekst
+                    label: Tekst
+                    widget: object
+                    summary: "{{fields.nl}}"
+                    fields:
+                      - { name: nl, label: Nederlands, widget: text, hint: "Een lege regel maakt een nieuwe alinea." }
+                      - { name: en, label: Engels, widget: text, required: false, hint: "Leeg = de site toont de Nederlandse tekst" }
+                      - { name: fa, label: Farsi, widget: text, required: false }
+                  - name: foto
+                    label: Foto
+                    widget: object
+                    summary: "{{fields.onderschrift.nl}}"
+                    fields:
+                      - name: foto
+                        label: Foto
+                        widget: image
+                        choose_url: false
+                        hint: "Wordt bij het opladen automatisch verkleind tot max. 2000 px, scherp genoeg voor elk scherm."
+                        media_libraries:
+                          default:
+                            config:
+                              transformations:
+                                raster_image: { format: webp, quality: 85, width: 2000, height: 2000 }
+                      - { name: fotograaf, label: Fotograaf, widget: string, required: false }
+                      - name: onderschrift
+                        label: Onderschrift (mag leeg blijven)
+                        widget: object
+                        required: false
+                        fields:
+                          - { name: nl, label: Nederlands, widget: string, required: false }
+                          - { name: en, label: Engels, widget: string, required: false }
+                          - { name: fa, label: Farsi, widget: string, required: false }
               - { name: youtube_id, label: YouTube-video (link of id), widget: string, required: false, hint: "Plak de link van de video, bv. https://www.youtube.com/watch?v=dQw4w9WgXcQ. Leeg = geen video." }
-              - { name: foto, label: Foto (enkel als er geen video is), widget: image, required: false, choose_url: false }
-              - { name: fotograaf, label: Fotograaf, widget: string, required: false }
+              - name: foto
+                label: Hoofdfoto (bovenaan het bericht en op het kaartje in het overzicht)
+                widget: image
+                required: false
+                choose_url: false
+                hint: "Wordt bij het opladen automatisch verkleind tot max. 2000 px. Heeft het bericht een video, dan toont het kaartje de video."
+                media_libraries:
+                  default:
+                    config:
+                      transformations:
+                        raster_image: { format: webp, quality: 85, width: 2000, height: 2000 }
+              - { name: fotograaf, label: Fotograaf van de hoofdfoto, widget: string, required: false }
 
       - name: partners
         label: Partners
