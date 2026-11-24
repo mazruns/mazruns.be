@@ -68,6 +68,17 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
 - De vzw die gesteund wordt is **Casa Legal** (Brussel): advocaten en maatschappelijk werkers die samen mensen in een kwetsbare positie bijstaan. Op de homepagina sinds 18 november 2026, op vraag van Jolien.
 - De naam van de expeditie is **Eigen Koers**. Altijd zo geschreven, ook in het Engels (eigennaam). Staat in de kop van elke pagina, de hero van Home en De loop, de footer, de paginatitel en beschrijving, en bij het vertrek in de kalender.
 
+## Communicatie
+
+Communicatiestrategie (afspraak met Jolien, 24 november 2026). Elk kanaal heeft een eigen rol:
+
+- **Instagram** (@maz.runs): elke dag korte updates in stories, twee keer per week een post. In Turkije enkel beelden van de dag ervoor, zonder locatiesticker of geotag (zie Veiligheid onderweg).
+- **Vlog** (YouTube, op de site onder Blog): beelden die de omgeving tonen en hoe het voelt, wie er meeloopt. Vraag toestemming aan wie in beeld komt; in Turkije niemand herkenbaar zonder dat het voor die persoon veilig is.
+- **Blog** (op de site): verhalen van onderweg en van de voorbereiding, zoals een ontmoeting, een moeilijke dag of wat de tocht met Maziar doet. Alles wat niet in de vlog past, bijvoorbeeld het verhaal van de sportarts die zijn longen opnieuw test. Medische gegevens en namen van anderen enkel met hun akkoord.
+- **Nieuwsbrief**: een voorsmaakje van het nieuwste blogbericht of de nieuwste vlog (een paar zinnen en een foto), met een link naar de site. Nog niet gekoppeld; de nieuwsbriefdienst ligt nog niet vast.
+- **Ritme** van blog en vlog: nog niet vast, Jolien en Maziar ondervinden gaandeweg wat haalbaar is.
+- **Reeks over de mensen achter het label vluchteling**: op de blog, met telkens een Instagram-post die ernaar verwijst en een voorsmaakje in de nieuwsbrief. Een vlog enkel voor wie graag in beeld komt. De details worden nog uitgewerkt met Casa Legal: toestemming (schriftelijk, in te trekken), geen deelnemers met een lopende procedure zonder akkoord van Casa Legal, anonimiteit waar nodig (ook met het oog op familie in het land van herkomst), wie schrijft en wie naleest voor publicatie, talen en ritme. Publiceer niets uit deze reeks voor die afspraken vastliggen. Dit staat los van "verhalen onderweg verzamelen", dat niet vermeld wordt.
+
 ## Stijl
 
 - Merkkleuren (uit het logo): navy `#123C74` en bordeaux `#722F2B` zijn de twee merkkleuren, goud `#C98B3B` is de accentkleur. Zand `#F1EDE6` is de achtergrond. Afgeleid: tekst `#14213A`, licht goud `#E3A853` (tekst op foto's, navy en bordeaux), donker bordeaux `#5E2622` (kaarten op bordeaux), donker zand `#E7E1D6`. Goud nooit als tekstkleur op een lichte achtergrond (te weinig contrast). Het oude roest en salie zijn vervallen. Alle kleuren staan als variabelen bovenaan `site.css`; gebruik die variabelen.
