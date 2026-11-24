@@ -63,6 +63,7 @@ Verklein tot maximaal 2400 px aan de lange zijde, JPG-kwaliteit rond 78, en zet 
   - In Europa mag er getoond worden waar ze zijn, maar nooit waar de camper 's nachts staat.
   - In Turkije, en zeker in het oosten: niets live. Posts en vlogs verschijnen met minstens een dag vertraging, zonder live locatie, en ontmoetingen worden niet vooraf met plaats en uur aangekondigd.
   - Reden: Iraanse inlichtingendiensten bedreigen en ontvoeren in Turkije mensen die uit Iran gevlucht zijn, ook in de provincie Van, waar de route eindigt.
+- **De site spreekt over Maziar in de derde persoon** ("hij", "Maziar"), nooit in de ik-vorm. Enkel citaten met het bijschrift "Maziar" blijven in de ik-vorm (afspraak met Jolien, 24 november 2026).
 - Bijschrift onder citaten: enkel "Maziar".
 - De vzw die gesteund wordt is **Casa Legal** (Brussel): advocaten en maatschappelijk werkers die samen mensen in een kwetsbare positie bijstaan. Op de homepagina sinds 18 november 2026, op vraag van Jolien.
 - De naam van de expeditie is **Eigen Koers**. Altijd zo geschreven, ook in het Engels (eigennaam). Staat in de kop van elke pagina, de hero van Home en De loop, de footer, de paginatitel en beschrijving, en bij het vertrek in de kalender.
