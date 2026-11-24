@@ -10,14 +10,14 @@ SHOP_OPEN = False
 ROUTE_SVG = open(os.path.join(OUT,"assets","route.svg"), encoding="utf-8").read()
 
 CONTENT = {}
-for name in ["deloop","kalender","vlog","partners","shop","route"]:
+for name in ["deloop","kalender","blog","partners","shop","route"]:
     with open(os.path.join(OUT,"content",name+".json"), encoding="utf-8") as f:
         CONTENT[name] = json.load(f)
 with open(os.path.join(OUT,"assets","content.js"),"w",encoding="utf-8") as f:
     f.write("/* Gegenereerd door build.py uit content/*.json. Niet bewerken: pas de JSON aan of gebruik /admin. */\n")
     f.write("window.CONTENT = " + json.dumps(CONTENT, ensure_ascii=False) + ";\n")
     f.write("window.SHOP_OPEN = " + ("true" if SHOP_OPEN else "false") + ";\n")
-YT = CONTENT["vlog"].get("kanaal") or "https://www.youtube.com/@maz.runs"
+YT = CONTENT["blog"].get("kanaal") or "https://www.youtube.com/@maz.runs"
 
 FONTS = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;700&display=swap'
 I = "assets/img/"
@@ -65,13 +65,12 @@ FACTS = '<div class="facts">' + "".join(
     f'<div class="fact"><b>{c["getal"]}</b><span data-t="stat.{i}">{c["label"]["nl"]}</span></div>'
     for i,c in enumerate(CONTENT["deloop"]["cijfers"][:3])) + '</div>'
 
-# Vlog-blok op de homepagina: verborgen tot de vlog effectief start. Zet op True om het terug te tonen.
-VLOG_ON_HOME = False
-VLOG_HOME = '''<section class="band alt"><div class="wrap stack lg">
-  <div class="head"><div class="stack"><p class="label" data-t="home.vlog">Volg de tocht</p><h2>Vlog</h2></div><a class="link" href="vlog.html" data-t="home.allvideos">Alle video's</a></div>
-  <div id="homeVideo"></div>
-</div></section>
-'''
+# Blog-blok op de homepagina (laatste berichten): verborgen tot de blog start. Zet op True om het te tonen.
+BLOG_ON_HOME = False
+BLOG_HOME = '''<section class="band alt"><div class="wrap stack lg">
+  <div class="head"><div class="stack"><p class="label" data-t="home.blog">Op de blog</p><h2 data-t="home.blog.h">Laatste berichten</h2></div><a class="link" href="blog.html" data-t="home.allposts">Alle berichten</a></div>
+  <div class="tiles three" id="homePosts"></div>
+</div></section>'''
 
 PAGES = {}
 
@@ -130,7 +129,7 @@ PAGES["index"] = ("home", "Eigen Koers · Mazruns", hero(
   </div>
 </div></section>
 
-{VLOG_HOME if VLOG_ON_HOME else ""}
+{BLOG_HOME if BLOG_ON_HOME else ""}
 <section class="band"><div class="wrap stack lg">
   <div class="head"><div class="stack"><p class="label" data-t="home.partners">Zij lopen mee</p><h2>Partners</h2></div><a class="link" href="partners.html" data-t="home.partner">Loop mee als partner</a></div>
   <div class="logos" id="logos"></div>
@@ -221,18 +220,21 @@ PAGES["kalender"] = ("kalender", "Kalender · Mazruns", hero(
 </div></section>
 ''' + NEWS)
 
-PAGES["vlog"] = ("vlog", "Vlog · Mazruns", hero(
-  "dune-wide.jpg","50% 50%","vlog.crumb","Vlog",
-  '<span data-t="vlog.title">Volg de tocht</span>',None,None,
-  "vlog.lede","Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.",
-  f'<a class="btn fill" href="{YT}" data-t="vlog.sub">Abonneer op YouTube</a>',short=True,credit="Marathon des Sables") + f'''
-<section class="band" data-vlog-videos><div class="wrap">
-  <div id="vlogFeatured"></div>
+PAGES["blog"] = ("blog", "Blog · Eigen Koers · Mazruns", hero(
+  "dune-wide.jpg","50% 50%","blog.crumb","Blog",
+  '<span data-t="blog.title">Volg de tocht</span>',None,None,
+  "blog.lede","Verhalen en video's van Eigen Koers, van de voorbereiding tot de tocht zelf.",
+  f'<a class="btn fill" href="{YT}" target="_blank" rel="noopener" data-t="blog.sub">Abonneer op YouTube</a>',short=True,credit="Marathon des Sables") + f'''
+<section class="band" id="blogIndex"><div class="wrap stack lg">
+  <div class="blog-filter" id="blogFilter" role="group" hidden>
+    <button type="button" data-f="all" aria-pressed="true" data-t="blog.f.all">Alles</button>
+    <button type="button" data-f="text" aria-pressed="false" data-t="blog.f.text">Verhalen</button>
+    <button type="button" data-f="video" aria-pressed="false" data-t="blog.f.video">Video's</button>
+  </div>
+  <div class="tiles three" id="blogList"></div>
+  <p class="lede muted" id="blogEmpty" data-t="blog.empty" hidden>Het eerste bericht komt binnenkort.</p>
 </div></section>
-<section class="band alt" data-vlog-videos><div class="wrap stack lg">
-  <div class="head"><div class="stack"><p class="label" data-t="vlog.all">Alle video's</p></div><a class="link" href="{YT}" data-t="vlog.more">Alle video's op YouTube</a></div>
-  <div class="tiles three" id="vlogCards"></div>
-</div></section>
+<section class="band" id="blogPost" hidden><div class="wrap"><article class="post" id="blogArticle"></article></div></section>
 ''' + NEWS)
 
 PAGES["partners"] = ("partners", "Partners · Mazruns", hero(

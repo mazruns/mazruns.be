@@ -80,9 +80,9 @@ collections:
                   - { name: fa, label: Farsi, widget: string, required: false }
               - { name: kleur, label: Kleur, widget: color, default: "#123C74", hint: "Merkkleuren: navy #123C74, bordeaux #722F2B, goud #C98B3B." }
 
-      - name: vlog
-        label: Vlog
-        file: content/vlog.json
+      - name: blog
+        label: Blog
+        file: content/blog.json
         format: json
         fields:
           - { name: kanaal, label: Link naar het YouTube-kanaal, widget: string }
@@ -93,29 +93,34 @@ collections:
               - { name: nl, label: Nederlands, widget: text }
               - { name: en, label: Engels, widget: text }
               - { name: fa, label: Farsi, widget: text, required: false }
-          - name: videos
-            label: Video's
-            label_singular: Video
+          - name: berichten
+            label: Berichten
+            label_singular: Bericht
             widget: list
             add_to_top: true
-            summary: "{{fields.titel.nl}}"
+            summary: "{{fields.datum}} · {{fields.titel.nl}}"
+            hint: "Een bericht heeft tekst, een video of allebei. Veiligheid: in Turkije pas publiceren met minstens een dag vertraging. Nooit de plek waar de camper 's nachts staat, en geen ontmoetingen vooraf met plaats en uur."
             fields:
-              - { name: youtube_id, label: YouTube-id, widget: string, hint: "Het stuk na v= in de link, bv. dQw4w9WgXcQ" }
-              - { name: uitgelicht, label: Uitgelicht (grote video bovenaan en op de homepagina), widget: boolean, default: false }
+              - { name: datum, label: Datum, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
               - name: titel
                 label: Titel
                 widget: object
                 fields:
                   - { name: nl, label: Nederlands, widget: string }
-                  - { name: en, label: Engels, widget: string }
+                  - { name: en, label: Engels, widget: string, required: false, hint: "Leeg = de site toont de Nederlandse titel" }
                   - { name: fa, label: Farsi, widget: string, required: false }
-              - name: ondertitel
-                label: Ondertitel
+              - name: tekst
+                label: Tekst
                 widget: object
+                required: false
+                hint: "Een lege regel tussen twee alinea's maakt een nieuwe alinea. Leeg laten mag als het bericht enkel een video is."
                 fields:
-                  - { name: nl, label: Nederlands, widget: string, required: false }
-                  - { name: en, label: Engels, widget: string, required: false }
-                  - { name: fa, label: Farsi, widget: string, required: false }
+                  - { name: nl, label: Nederlands, widget: text, required: false }
+                  - { name: en, label: Engels, widget: text, required: false, hint: "Leeg = de site toont de Nederlandse tekst" }
+                  - { name: fa, label: Farsi, widget: text, required: false }
+              - { name: youtube_id, label: YouTube-video (link of id), widget: string, required: false, hint: "Plak de link van de video, bv. https://www.youtube.com/watch?v=dQw4w9WgXcQ. Leeg = geen video." }
+              - { name: foto, label: Foto (enkel als er geen video is), widget: image, required: false, choose_url: false }
+              - { name: fotograaf, label: Fotograaf, widget: string, required: false }
 
       - name: partners
         label: Partners

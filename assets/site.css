@@ -358,3 +358,25 @@ a.quote-link:hover blockquote{color:#fff}
 .routemap .rm-place{font-family:var(--display);font-weight:700;font-size:28px;fill:var(--wine,#722F2B);letter-spacing:.02em}
 @media (max-width:640px){.routemap .rm-labels{display:none}.routemap .rm-place{font-size:40px}.routemap .rm-start{text-anchor:start}.routemap .rm-route{stroke-width:4.5}}
 
+
+/* blog */
+.blog-filter{display:flex;flex-wrap:wrap;gap:.5rem}
+.blog-filter[hidden]{display:none}
+.blog-filter button{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.55rem .9rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.blog-filter button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#FFFFFF}
+.post-card .s{color:var(--muted);font-size:.95rem;margin:0}
+.post-card .pills{display:flex;gap:.4rem;flex-wrap:wrap}
+.post-card.textonly{background:var(--surface);border-radius:var(--r);padding:1.3rem;border-top:4px solid var(--wine)}
+.post-card:hover h3{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+.vthumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;color:#1E1A17;font-size:1.2rem}
+.post{max-width:46rem;margin:0 auto;display:grid;gap:1.2rem}
+.post .back::before{content:"← "}
+.post h2{font-size:clamp(2rem,5vw,3rem);line-height:1.05}
+.post .embed{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000}
+.post .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.post .body{display:grid;gap:1rem;font-size:1.1rem}
+.post .body p{margin:0}
+.post .back::after{content:""}
+.post-card .photo{aspect-ratio:16/9}
+.post-card .photo img{object-position:50% 30%}
+.post-card.textonly{align-self:start}

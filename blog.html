@@ -5,34 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Ooit moest Maziar Toghraie vluchten uit Iran. Met Eigen Koers loopt hij vanaf 1 maart 2027 terug: van Leuven naar Iran, elke dag een marathon.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vlog · Mazruns">
+<meta property="og:title" content="Blog · Eigen Koers · Mazruns">
 <meta property="og:description" content="Ooit moest Maziar Toghraie vluchten uit Iran. Met Eigen Koers loopt hij vanaf 1 maart 2027 terug: van Leuven naar Iran, elke dag een marathon.">
 <meta property="og:image" content="https://mazruns.be/assets/img/hero-dunes.jpg">
-<meta property="og:url" content="https://mazruns.be/vlog.html">
+<meta property="og:url" content="https://mazruns.be/blog.html">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<title>Vlog · Mazruns</title>
+<title>Blog · Eigen Koers · Mazruns</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=4adfd81c">
+<link rel="stylesheet" href="assets/site.css?v=32ee79f0">
 </head>
-<body data-page="vlog">
+<body data-page="blog">
 <header class="nav" id="hdr"></header>
 <main>
 <section class="hero on-photo short">
   <img src="assets/img/dune-wide.jpg" alt="" style="object-position:50% 50%" fetchpriority="high">
   <div class="wrap"><div class="over">
-    <p class="label" data-t="vlog.crumb">Vlog</p>
-    <h1><span data-t="vlog.title">Volg de tocht</span></h1>
-    <p class="lede" data-t="vlog.lede">Elke etappe een korte video. Abonneer op het kanaal en mis geen kilometer.</p>
-    <div class="cta-row"><a class="btn fill" href="https://www.youtube.com/@maz.runs" data-t="vlog.sub">Abonneer op YouTube</a></div>
+    <p class="label" data-t="blog.crumb">Blog</p>
+    <h1><span data-t="blog.title">Volg de tocht</span></h1>
+    <p class="lede" data-t="blog.lede">Verhalen en video's van Eigen Koers, van de voorbereiding tot de tocht zelf.</p>
+    <div class="cta-row"><a class="btn fill" href="https://www.youtube.com/@maz.runs" target="_blank" rel="noopener" data-t="blog.sub">Abonneer op YouTube</a></div>
   </div></div><span class="credit">© Marathon des Sables</span>
 </section>
-<section class="band" data-vlog-videos><div class="wrap">
-  <div id="vlogFeatured"></div>
+<section class="band" id="blogIndex"><div class="wrap stack lg">
+  <div class="blog-filter" id="blogFilter" role="group" hidden>
+    <button type="button" data-f="all" aria-pressed="true" data-t="blog.f.all">Alles</button>
+    <button type="button" data-f="text" aria-pressed="false" data-t="blog.f.text">Verhalen</button>
+    <button type="button" data-f="video" aria-pressed="false" data-t="blog.f.video">Video's</button>
+  </div>
+  <div class="tiles three" id="blogList"></div>
+  <p class="lede muted" id="blogEmpty" data-t="blog.empty" hidden>Het eerste bericht komt binnenkort.</p>
 </div></section>
-<section class="band alt" data-vlog-videos><div class="wrap stack lg">
-  <div class="head"><div class="stack"><p class="label" data-t="vlog.all">Alle video's</p></div><a class="link" href="https://www.youtube.com/@maz.runs" data-t="vlog.more">Alle video's op YouTube</a></div>
-  <div class="tiles three" id="vlogCards"></div>
-</div></section>
+<section class="band" id="blogPost" hidden><div class="wrap"><article class="post" id="blogArticle"></article></div></section>
 <section class="band dark"><div class="wrap news">
   <p class="label" data-t="news.title">Loop mee in je mailbox</p>
   <h2 data-t="news.p">Af en toe een mail van onderweg. Meer niet.</h2>
@@ -41,7 +44,7 @@
 </div></section>
 </main>
 <footer id="ftr"></footer>
-<script src="assets/content.js?v=0cc44b17"></script>
-<script src="assets/site.js?v=f6930107"></script>
+<script src="assets/content.js?v=404f903c"></script>
+<script src="assets/site.js?v=f3936393"></script>
 </body>
 </html>
