@@ -75,7 +75,7 @@ Communicatiestrategie (afspraak met Jolien, 24 november 2026). Elk kanaal heeft 
 - **Instagram** (@maz.runs): elke dag korte updates in stories, twee keer per week een post. In Turkije enkel beelden van de dag ervoor, zonder locatiesticker of geotag (zie Veiligheid onderweg).
 - **Vlog** (YouTube, op de site onder Blog): beelden die de omgeving tonen en hoe het voelt, wie er meeloopt. Vraag toestemming aan wie in beeld komt; in Turkije niemand herkenbaar zonder dat het voor die persoon veilig is.
 - **Blog** (op de site): verhalen van onderweg en van de voorbereiding, zoals een ontmoeting, een moeilijke dag of wat de tocht met Maziar doet. Alles wat niet in de vlog past, bijvoorbeeld het verhaal van de sportarts die zijn longen opnieuw test. Medische gegevens en namen van anderen enkel met hun akkoord.
-- **Nieuwsbrief**: een voorsmaakje van het nieuwste blogbericht of de nieuwste vlog (een paar zinnen en een foto), met een link naar de site. Nog niet gekoppeld; de nieuwsbriefdienst ligt nog niet vast.
+- **Nieuwsbrief**: een voorsmaakje van het nieuwste blogbericht of de nieuwste vlog (een paar zinnen en een foto), met een link naar de site. Dienst: Flodesk (inschrijven via `functions/api/nieuwsbrief.js`).
 - **Ritme** van blog en vlog: nog niet vast, Jolien en Maziar ondervinden gaandeweg wat haalbaar is.
 - **Reeks over de mensen achter het label vluchteling**: op de blog, met telkens een Instagram-post die ernaar verwijst en een voorsmaakje in de nieuwsbrief. Een vlog enkel voor wie graag in beeld komt. De details worden nog uitgewerkt met Casa Legal: toestemming (schriftelijk, in te trekken), geen deelnemers met een lopende procedure zonder akkoord van Casa Legal, anonimiteit waar nodig (ook met het oog op familie in het land van herkomst), wie schrijft en wie naleest voor publicatie, talen en ritme. Publiceer niets uit deze reeks voor die afspraken vastliggen. Dit staat los van "verhalen onderweg verzamelen", dat niet vermeld wordt.
 
@@ -105,7 +105,8 @@ Communicatiestrategie (afspraak met Jolien, 24 november 2026). Elk kanaal heeft 
 - Partners: enkel Hotel Anywhere (AfterLife is weg sinds 18 november 2026, op vraag van Jolien), de rest zijn lege plekken.
 - Steun: doel € 60.000 (5.000 km × € 12). Per kilometer € 10 naar Casa Legal en € 2 naar de tocht (€ 50.000 / € 10.000). In `site.js`: `FUND.raised` met de hand bijwerken; `FUND.payUrl` invullen zodra de betaalpagina bestaat (de knop stuurt dan `?bedrag=` mee). `steun.html?demo` toont een voorbeeldbedrag om het ontwerp te bekijken.
 - Shop: producten en prijzen zijn voorlopig; nog geen betaling. De pagina is tijdelijk verborgen (`SHOP_OPEN = False` bovenaan `build.py`): niet in het menu, niet in de sitemap, `noindex`. Zet op `True` en draai `python3 build.py` wanneer de shop opent.
-- Contactformulier en nieuwsbrief tonen enkel een bevestiging; ze zijn nog nergens aan gekoppeld.
+- Contactformulier: verstuurt via Web3Forms naar team@mazruns.be zodra `FORMS.contactKey` in `site.js` ingevuld is (sleutel aanvragen op web3forms.com met team@mazruns.be). Tot dan toont het enkel een bevestiging.
+- Nieuwsbrief: `functions/api/nieuwsbrief.js` zet inschrijvingen in Flodesk (met bevestigingsmail) zodra `FLODESK_API_KEY` en `FLODESK_SEGMENT_ID` in Cloudflare ingesteld zijn. Tot dan toont het formulier enkel een bevestiging.
 - Perskit: nog niet beschikbaar.
 - Logo van de expeditie.
 - Vlog staat niet op de homepagina tot de vlog start (`VLOG_ON_HOME = False` in `build.py`).
