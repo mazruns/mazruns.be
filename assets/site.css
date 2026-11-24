@@ -262,6 +262,9 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 .cl-wrap .stack p:not(.label):not(.lede){max-width:36em}
 .quote blockquote.long{font-size:clamp(1.5rem,3.2vw,2.4rem);max-width:30em;margin-inline:auto}
 .roof{display:grid;gap:.9rem}
+.cl-logo{display:block;justify-self:start;background:#FFFFFF;border-radius:var(--r);padding:1rem 1.4rem;margin-bottom:.6rem;transition:transform .2s}
+.cl-logo:hover{transform:translateY(-2px)}
+.cl-logo img{display:block;width:180px;height:auto}
 .roof ul{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
 .roof li{background:var(--surface);border-radius:var(--r);padding:1.1rem 1.3rem;border-left:4px solid var(--blue);display:grid;gap:.2rem}
 .roof li b{font-family:var(--display);font-weight:700;font-size:1.3rem}

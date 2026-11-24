@@ -295,6 +295,7 @@ PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
     <a class="link" href="https://casalegal.be" target="_blank" rel="noopener" data-t="fund.cl.more">Lees hier meer over Casa Legal</a>
   </div>
   <div class="roof">
+    <a class="cl-logo" href="https://casalegal.be" target="_blank" rel="noopener"><img src="assets/img/casa-legal-logo.png" alt="Casa Legal" width="321" height="236" loading="lazy"></a>
     <p class="label" data-t="fund.cl.roof">Onder één dak</p>
     <ul>
       <li><b data-t="fund.cl.r1">Advocaten</b><span data-t="fund.cl.r1.t">met verschillende expertises</span></li>
