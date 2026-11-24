@@ -159,6 +159,9 @@ html[dir="rtl"] .photo .credit{inset:auto auto 8px 10px}
 .frag .txt{display:grid;gap:1rem}
 .frag .txt p{font-size:1.1rem}
 .frag .txt .big{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.1;text-transform:uppercase}
+.cl-card{display:grid;place-items:center;aspect-ratio:4/3;background:#FFFFFF;border-radius:var(--r);padding:2rem;transition:transform .2s}
+.cl-card:hover{transform:translateY(-2px)}
+.cl-card img{width:min(60%,280px);height:auto}
 
 /* cards grid */
 .cards{display:grid;gap:1.2rem}
