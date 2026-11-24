@@ -66,14 +66,14 @@ nl:{
  "ffaq.q3":"Kan ik als bedrijf steunen?","ffaq.a3":"Ja. Kijk bij Partners, of neem contact op.",
  "shop.crumb":"Shop","shop.title":"Neem iets mee","shop.lede":"Elke aankoop steunt de tocht. Het assortiment en de prijzen zijn voorlopig.","shop.btn":"In winkelmand","shop.soon":"binnenkort","shop.ship":"Verzending in België en Nederland. Afhalen in Leuven kan ook.",
  "contact.crumb":"Contact","contact.title":"Loop mee","contact.lede":"Pers, partners, en lopers die een stuk van de route willen meelopen.",
- "form.name":"Naam","form.email":"E-mail","form.why":"Waarvoor","form.msg":"Bericht","form.send":"Verstuur","form.ok":"Bedankt. Je bericht is klaar om te verzenden zodra het formulier gekoppeld is.",
+ "form.name":"Naam","form.email":"E-mail","form.why":"Waarvoor","form.msg":"Bericht","form.send":"Verstuur","form.ok":"Bedankt. Je bericht is verstuurd, we antwoorden zo snel we kunnen.","form.wait":"Bedankt. Je bericht is klaar om te verzenden zodra het formulier gekoppeld is.","form.err":"Dat lukte niet. Probeer het later opnieuw, of mail naar team@mazruns.be.",
  "form.o1":"Pers","form.o2":"Partner","form.o3":"Een stuk meelopen","form.o4":"Iets anders",
  "contact.press":"Perskit","contact.press.p":"Foto's, bio en de feiten op een rij. Binnenkort beschikbaar.",
  "foot.p":"Met Eigen Koers loopt Maziar Toghraie in 2027 van Leuven naar Iran. Elke dag een marathon, vier tot zes maanden lang.","foot.copy":"kopieer","foot.copied":"gekopieerd","foot.follow":"Volg","foot.pages":"Foto's",
 "home.intro":"Als wij onze koffer pakken, gaan we op reis. Maziar pakte zijn koffer en er was geen weg terug. Drieëntwintig jaar later keert hij terug naar Iran. Al lopend, en deze keer op zijn eigen voorwaarden.",
  "home.read":"Lees het verhaal","home.run":"Over de tocht","home.support":"Steun een kilometer","home.stories":"Verhalen onderweg","home.stories.p":"Onderweg zoekt Maziar mensen op die hun thuis verloren. Niet de cijfers, de mensen.",
  "home.when":"Wanneer","home.all":"Alle data","home.allvideos":"Alle video's","home.partner":"Loop mee als partner",
- "news.title":"Loop mee in je mailbox","news.p":"Af en toe een mail van onderweg. Meer niet.","news.btn":"Inschrijven","news.ok":"Dank. Je staat op de lijst zodra de nieuwsbrief gekoppeld is.","news.ph":"je@mail.be",
+ "news.title":"Loop mee in je mailbox","news.p":"Af en toe een mail van onderweg. Meer niet.","news.btn":"Inschrijven","news.ok":"Bijna klaar. Bevestig je inschrijving via de mail die je net kreeg.","news.wait":"Dank. Je staat op de lijst zodra de nieuwsbrief gekoppeld is.","news.err":"Dat lukte niet. Probeer het later opnieuw.","news.ph":"je@mail.be",
  "story.read.run":"Over de tocht","run.read.support":"Steun de tocht","cal.read.contact":"Heb je een bed onderweg?","fund.choose":"Kies","fund.soon":"binnenkort","shop.soon.long":"Binnenkort beschikbaar","vlog.more":"Alle video's op YouTube","partners.contact":"Neem contact op",
  "story.title.a":"Ooit moest hij vluchten.","story.title.b":"Nu loopt hij terug.","run.route.h":"Meer dan 5.000 kilometer, elf landen",
 "hero.sub":"Elke dag een marathon, van België naar Iran",
@@ -173,14 +173,14 @@ en:{
  "ffaq.q3":"Can my company contribute?","ffaq.a3":"Yes. See Partners, or get in touch.",
  "shop.crumb":"Shop","shop.title":"Take something with you","shop.lede":"Every purchase supports the run. Range and prices are provisional.","shop.btn":"Add to cart","shop.soon":"coming soon","shop.ship":"Shipping within Belgium and the Netherlands, or pick up in Leuven.",
  "contact.crumb":"Contact","contact.title":"Join the run","contact.lede":"Press, partners, and runners who'd like to join for part of the route.",
- "form.name":"Name","form.email":"Email","form.why":"Reason","form.msg":"Message","form.send":"Send","form.ok":"Thank you. Your message is ready to send once the form is connected.",
+ "form.name":"Name","form.email":"Email","form.why":"Reason","form.msg":"Message","form.send":"Send","form.ok":"Thank you. Your message has been sent, we will reply as soon as we can.","form.wait":"Thank you. Your message is ready to send once the form is connected.","form.err":"That did not work. Please try again later, or email team@mazruns.be.",
  "form.o1":"Press","form.o2":"Partner","form.o3":"Running part of the route","form.o4":"Something else",
  "contact.press":"Press kit","contact.press.p":"Photos, bio and the key facts in one place. Available soon.",
  "foot.p":"With Eigen Koers, Maziar Toghraie runs from Leuven to Iran in 2027. A marathon every day, for four to six months.","foot.copy":"copy","foot.copied":"copied","foot.follow":"Follow","foot.pages":"Photos",
 "home.intro":"When we pack a suitcase, we go on a trip. Maziar packed his suitcase and there was no way back. Twenty-three years later he returns to Iran. Running, and this time on his own terms.",
  "home.read":"Read the story","home.run":"About the journey","home.support":"Support a kilometre","home.stories":"Stories on the road","home.stories.p":"Along the way Maziar seeks out people who lost their home. Not the numbers, the people.",
  "home.when":"When","home.all":"All dates","home.allvideos":"All videos","home.partner":"Join as a partner",
- "news.title":"Follow along by email","news.p":"An email from the road now and then. Nothing more.","news.btn":"Subscribe","news.ok":"Thanks. You are on the list once the newsletter is connected.","news.ph":"you@mail.com",
+ "news.title":"Follow along by email","news.p":"An email from the road now and then. Nothing more.","news.btn":"Subscribe","news.ok":"Almost done. Please confirm your subscription through the email we just sent you.","news.wait":"Thanks. You are on the list once the newsletter is connected.","news.err":"That did not work. Please try again later.","news.ph":"you@mail.com",
  "story.read.run":"About the journey","run.read.support":"Support the run","cal.read.contact":"Do you have a bed on the route?","fund.choose":"Choose this amount","fund.soon":"soon","shop.soon.long":"Available soon","vlog.more":"All videos on YouTube","partners.contact":"Get in touch",
  "story.title.a":"Once he had to flee.","story.title.b":"Now he runs back.","run.route.h":"More than 5,000 kilometres, eleven countries",
 "hero.sub":"A marathon every day, from Belgium to Iran",
@@ -294,6 +294,8 @@ const VLOG = (C.vlog.videos||[]).filter(v=>/^[A-Za-z0-9_-]{11}$/.test(v.youtube_
 const PARTNERS = (C.partners.partners||[]).map(p=>({real:true,name:p.naam,role:p.rol,url:p.url,logo:p.logo}))
   .concat(Array.from({length:+(C.partners.lege_plekken||0)},()=>({slot:true})));
 /* Steun. raised: het opgehaalde bedrag, met de hand bij te werken. payUrl: adres van de betaalpagina (leeg = nog niet klaar). */
+/* Formulieren. contactKey: de Web3Forms-sleutel voor team@mazruns.be (mag publiek). Leeg = formulier toont enkel een bevestiging. De nieuwsbrief loopt via functions/api/nieuwsbrief.js. */
+const FORMS = {contactKey:""};
 const FUND = {raised:0, goal:60000, perKm:12, toCause:10, toRun:2, maxKm:500, payUrl:""};
 const IMG = "assets/img/";
 const LIFE = [
@@ -488,10 +490,35 @@ function renderShop(){
   PRODUCTS.forEach((p,i) => c.append(el(`<div class="tile">${p.img?`<div class="photo square"><img src="${esc(p.img)}" alt="${esc(L(p.name))}" loading="lazy"></div>`:photo(PIMG[i%PIMG.length],"square",L(p.name))}<h3>${esc(L(p.name))}</h3><div class="price-tag">${p.price!=null?eur(p.price):esc(t("shop.soon"))}</div><span class="link muted">${esc(t("shop.soon.long"))}</span></div>`)));
 }
 function wireForms(){
+  const say = (id, key) => { $(id).hidden=false; $(id).textContent=t(key); };
   const f = $("contactForm");
-  if(f) f.addEventListener("submit", e => { e.preventDefault(); $("formToast").hidden=false; $("formToast").textContent=t("form.ok"); f.reset(); });
+  if(f) f.addEventListener("submit", async e => {
+    e.preventDefault();
+    if(!FORMS.contactKey){ say("formToast","form.wait"); f.reset(); return; }
+    const btn = f.querySelector("button"); btn.disabled = true;
+    const why = $("f-why").value;
+    const body = {access_key:FORMS.contactKey, subject:`mazruns.be: ${why}`, from_name:"mazruns.be",
+      name:$("f-name").value, email:$("f-email").value, waarvoor:why, bericht:$("f-msg").value, botcheck:""};
+    try{
+      const r = await fetch("https://api.web3forms.com/submit", {method:"POST", headers:{"Content-Type":"application/json",Accept:"application/json"}, body:JSON.stringify(body)});
+      const j = await r.json();
+      if(!j.success) throw 0;
+      say("formToast","form.ok"); f.reset();
+    }catch(_){ say("formToast","form.err"); }
+    btn.disabled = false;
+  });
   const n = $("newsForm");
-  if(n) n.addEventListener("submit", e => { e.preventDefault(); $("newsToast").hidden=false; $("newsToast").textContent=t("news.ok"); n.reset(); });
+  if(n) n.addEventListener("submit", async e => {
+    e.preventDefault();
+    const btn = n.querySelector("button"); btn.disabled = true;
+    try{
+      const r = await fetch("/api/nieuwsbrief", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({email:$("newsMail").value})});
+      if(r.status === 503){ say("newsToast","news.wait"); n.reset(); }
+      else if(r.ok){ say("newsToast","news.ok"); n.reset(); }
+      else throw 0;
+    }catch(_){ say("newsToast","news.err"); }
+    btn.disabled = false;
+  });
 }
 function wireCalendar(){
   if(!$("calPrev")) return;
