@@ -1,6 +1,6 @@
 # mazruns.be
 
-Website van Maziar Toghraie, die vanaf 1 maart 2027 te voet van Leuven naar Iran loopt.
+Website van Maziar Toghraie, die vanaf 1 maart 2027 van Leuven naar Iran loopt.
 
 Statische site in drie talen (Nederlands, Engels, Farsi), zonder databank. De inhoud van De loop, Kalender, Vlog, Partners en Shop staat in `content/*.json` en is te bewerken op `/admin` (Sveltia CMS). De rest staat in `assets/site.js`. `build.py` maakt de pagina's.
 
