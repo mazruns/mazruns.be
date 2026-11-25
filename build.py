@@ -290,7 +290,7 @@ PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
     <p class="label" data-t="fund.cl">Het goede doel</p>
     <h2 data-t="fund.cl.h">Casa Legal: alle hulp onder één dak</h2>
     <p class="lede" data-t="fund.cl.p1">Casa Legal is een innoverende vzw met een holistische aanpak. Het is een one-stop shop voor juridische hulp op verschillende domeinen en psychosociale ondersteuning.</p>
-    <p data-t="fund.cl.p2">Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om hun leven op te bouwen. Het is exact de soort hulp die Maz gemist heeft toen hij 13 jaar geleden in een precaire situatie zat.</p>
+    <p data-t="fund.cl.p2">Voor mensen in een kwetsbare situatie verlaagt dat de drempel enorm. Ze moeten niet van loket naar loket, en hun verhaal niet telkens opnieuw doen. Op één plek krijgen ze juridische hulp, en de steun die ze nodig hebben om hun leven op te bouwen.</p>
     <p data-t="fund.cl.p3">De holistische aanpak is zo vernieuwend dat ze wetenschappelijk onderzocht wordt. In het project Scala Legal (2025 tot 2028) bestuderen onderzoekers van de ULB en UCLouvain welke impact de werking van Casa Legal heeft, en hoe ze ook elders kan werken.</p>
     <a class="link" href="https://casalegal.be" target="_blank" rel="noopener" data-t="fund.cl.more">Lees hier meer over Casa Legal</a>
   </div>
@@ -302,6 +302,17 @@ PAGES["steun"] = ("steun", "Steun · Eigen Koers · Mazruns", hero(
       <li><b data-t="fund.cl.r2">Maatschappelijk werkers</b><span data-t="fund.cl.r2.t">voor alles wat rond een dossier speelt</span></li>
       <li><b data-t="fund.cl.r3">Psychologen</b><span data-t="fund.cl.r3.t">voor wat iemand met zich meedraagt</span></li>
     </ul>
+  </div>
+</div></section>
+<section class="band alt"><div class="wrap">
+  <div class="prose">
+    <p class="label" data-t="fund.why">Waarom Casa Legal</p>
+    <h2 data-t="fund.why.h">Hulp die hij bij toeval vond</h2>
+    <p data-t="fund.why.p1">Toen Maziar hoorde dat hij het land moest verlaten, ging hij in het justitiepaleis op zoek naar iemand die hem kon helpen. Puur toevallig kende de persoon die hij aansprak een advocaat vreemdelingenrecht. Diens kantoor was in Dendermonde, niet makkelijk te bereiken voor Maziar. De advocaat hielp hem om beroep aan te tekenen.</p>
+    <p data-t="fund.why.p2">Maziar had geluk. Voor sommige mensen duurt het jaren voor ze de juiste hulp vinden, anderen vinden ze nooit. Juridische hulp vond hij dus bij toeval. Psychosociale ondersteuning tijdens die lange procedure had hij niet.</p>
+    <p data-t="fund.why.p3">Casa Legal biedt precies wat Maziar toen gemist heeft: toegankelijke juridische en psychosociale hulp onder één dak. Advocaten, maatschappelijk werkers en psychologen werken er samen. Mensen in een kwetsbare situatie hoeven daardoor niet van loket naar loket, en hun verhaal niet telkens opnieuw te doen.</p>
+    <p data-t="fund.why.p4">Wie hulp nodig heeft, zou niet op toeval moeten rekenen om ze te vinden. Juridische hulp is een basisrecht. In België staat het recht op juridische bijstand in de Grondwet, in artikel 23, als onderdeel van het recht op een menswaardig leven.</p>
+    <a class="link" href="https://casalegal.be" target="_blank" rel="noopener" data-t="fund.cl.more">Lees hier meer over Casa Legal</a>
   </div>
 </div></section>
 <section class="band dark wine"><div class="wrap quote">
